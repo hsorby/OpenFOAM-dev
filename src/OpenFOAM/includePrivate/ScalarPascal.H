@@ -136,11 +136,11 @@ transFunc(erfc)
 transFunc(lgamma)
 transFunc(tgamma)
 
-transFunc(j0)
-transFunc(j1)
+//transFunc(j0)
+//transFunc(j1_)
 
-transFunc(y0)
-transFunc(y1)
+//transFunc(y0_)
+//transFunc(y1_)
 
 
 inline Scalar& setComponent(Scalar& s, const direction)
