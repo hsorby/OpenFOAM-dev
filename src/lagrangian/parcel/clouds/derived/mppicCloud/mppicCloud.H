@@ -32,10 +32,10 @@ Description
 #ifndef mppicCloud_H
 #define mppicCloud_H
 
-#include "ParcelCloudBase.H"
+#include "ParcelCloudBasePascal.H"
 #include "MomentumCloud.H"
 #include "MPPICCloud.H"
-#include "ParcelCloud.H"
+#include "ParcelCloudPascal.H"
 #include "mppicParcel.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

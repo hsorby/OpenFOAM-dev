@@ -46,7 +46,7 @@ SourceFiles
 #ifndef PatchFlowRateInjection_H
 #define PatchFlowRateInjection_H
 
-#include "InjectionModel.H"
+#include "InjectionModelPascal.H"
 #include "patchInjectionBase.H"
 #include "TimeFunction1.H"
 

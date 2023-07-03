@@ -32,12 +32,12 @@ Description
 #ifndef reactingMultiphaseCloud_H
 #define reactingMultiphaseCloud_H
 
-#include "ParcelCloudBase.H"
+#include "ParcelCloudBasePascal.H"
 #include "MomentumCloud.H"
 #include "ThermoCloud.H"
 #include "ReactingCloud.H"
 #include "ReactingMultiphaseCloud.H"
-#include "ParcelCloud.H"
+#include "ParcelCloudPascal.H"
 #include "reactingMultiphaseParcel.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

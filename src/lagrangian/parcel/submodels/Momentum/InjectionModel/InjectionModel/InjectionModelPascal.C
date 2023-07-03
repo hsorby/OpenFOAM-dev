@@ -23,7 +23,7 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "InjectionModel.H"
+#include "InjectionModelPascal.H"
 #include "mathematicalConstants.H"
 #include "meshTools.H"
 #include "volFields.H"

@@ -23,7 +23,7 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "TwoResistanceHeatTransferPhaseSystem.H"
+#include "TwoResistanceHeatTransferPhaseSystemPascal.H"
 #include "heatTransferModel.H"
 #include "fvmSup.H"
 #include "rhoMulticomponentThermo.H"

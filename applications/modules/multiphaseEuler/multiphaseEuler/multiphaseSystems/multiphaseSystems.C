@@ -26,7 +26,7 @@ License
 #include "phaseSystem.H"
 #include "MomentumTransferPhaseSystem.H"
 #include "OneResistanceHeatTransferPhaseSystem.H"
-#include "TwoResistanceHeatTransferPhaseSystem.H"
+#include "TwoResistanceHeatTransferPhaseSystemPascal.H"
 #include "PhaseTransferPhaseSystem.H"
 #include "InterfaceCompositionPhaseChangePhaseSystem.H"
 #include "ThermalPhaseChangePhaseSystem.H"

@@ -39,7 +39,7 @@ SourceFiles
 #ifndef OneResistanceHeatTransferPhaseSystem_H
 #define OneResistanceHeatTransferPhaseSystem_H
 
-#include "HeatTransferPhaseSystem.H"
+#include "HeatTransferPhaseSystemPascal.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

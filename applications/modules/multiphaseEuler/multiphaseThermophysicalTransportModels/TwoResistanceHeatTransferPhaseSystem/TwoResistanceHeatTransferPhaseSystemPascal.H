@@ -43,7 +43,7 @@ SourceFiles
 #define TwoResistanceHeatTransferPhaseSystem_H
 
 #include "twoResistanceHeatTransferPhaseSystem.H"
-#include "HeatTransferPhaseSystem.H"
+#include "HeatTransferPhaseSystemPascal.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

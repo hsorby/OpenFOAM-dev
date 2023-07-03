@@ -56,7 +56,7 @@ SourceFiles
 #ifndef ReactingMultiphaseLookupTableInjection_H
 #define ReactingMultiphaseLookupTableInjection_H
 
-#include "InjectionModel.H"
+#include "InjectionModelPascal.H"
 #include "reactingMultiphaseParcelInjectionDataIOList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
