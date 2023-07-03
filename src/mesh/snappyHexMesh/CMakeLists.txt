@@ -25,4 +25,4 @@ set(_FILES
 )
 add_library(snappyHexMesh ${_FILES})
 target_compile_features(snappyHexMesh PUBLIC cxx_std_11)
-target_include_directories(snappyHexMesh PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/mesh/snappyHexMesh/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/mesh/snappyHexMesh/includePrivate)
+target_include_directories(snappyHexMesh PUBLIC include PRIVATE includePrivate)

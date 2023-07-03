@@ -23,4 +23,4 @@ set(_FILES
 )
 add_library(conversion ${_FILES})
 target_compile_features(conversion PUBLIC cxx_std_11)
-target_include_directories(conversion PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/conversion/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/conversion/includePrivate)
+target_include_directories(conversion PUBLIC include PRIVATE includePrivate)

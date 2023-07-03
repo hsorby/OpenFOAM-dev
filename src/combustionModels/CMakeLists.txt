@@ -22,4 +22,4 @@ set(_FILES
 )
 add_library(combustionModels ${_FILES})
 target_compile_features(combustionModels PUBLIC cxx_std_11)
-target_include_directories(combustionModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/combustionModels/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/combustionModels/includePrivate)
+target_include_directories(combustionModels PUBLIC include PRIVATE includePrivate)

@@ -8,4 +8,4 @@ set(_FILES
 )
 add_library(laminarFlameSpeedModels ${_FILES})
 target_compile_features(laminarFlameSpeedModels PUBLIC cxx_std_11)
-target_include_directories(laminarFlameSpeedModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/laminarFlameSpeed/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/laminarFlameSpeed/includePrivate)
+target_include_directories(laminarFlameSpeedModels PUBLIC include PRIVATE includePrivate)

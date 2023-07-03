@@ -17,4 +17,4 @@ set(_FILES
 )
 add_library(specie ${_FILES})
 target_compile_features(specie PUBLIC cxx_std_11)
-target_include_directories(specie PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/specie/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/specie/includePrivate)
+target_include_directories(specie PUBLIC include PRIVATE includePrivate)

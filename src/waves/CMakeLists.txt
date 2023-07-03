@@ -18,4 +18,4 @@ set(_FILES
 )
 add_library(waves ${_FILES})
 target_compile_features(waves PUBLIC cxx_std_11)
-target_include_directories(waves PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/waves/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/waves/includePrivate)
+target_include_directories(waves PUBLIC include PRIVATE includePrivate)

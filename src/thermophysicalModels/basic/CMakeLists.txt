@@ -16,4 +16,4 @@ set(_FILES
 )
 add_library(fluidThermophysicalModels ${_FILES})
 target_compile_features(fluidThermophysicalModels PUBLIC cxx_std_11)
-target_include_directories(fluidThermophysicalModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/basic/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/basic/includePrivate)
+target_include_directories(fluidThermophysicalModels PUBLIC include PRIVATE includePrivate)

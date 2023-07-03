@@ -3,4 +3,4 @@ set(_FILES
 )
 add_library(pairPatchAgglomeration ${_FILES})
 target_compile_features(pairPatchAgglomeration PUBLIC cxx_std_11)
-target_include_directories(pairPatchAgglomeration PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/fvAgglomerationMethods/pairPatchAgglomeration/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/fvAgglomerationMethods/pairPatchAgglomeration/includePrivate)
+target_include_directories(pairPatchAgglomeration PUBLIC include PRIVATE includePrivate)

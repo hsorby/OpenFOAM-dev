@@ -42,4 +42,4 @@ set(_FILES
 )
 add_library(momentumTransportModels ${_FILES})
 target_compile_features(momentumTransportModels PUBLIC cxx_std_11)
-target_include_directories(momentumTransportModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/MomentumTransportModels/momentumTransportModels/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/MomentumTransportModels/momentumTransportModels/includePrivate)
+target_include_directories(momentumTransportModels PUBLIC include PRIVATE includePrivate)

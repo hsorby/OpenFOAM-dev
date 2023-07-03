@@ -4,4 +4,4 @@ set(_FILES
 )
 add_library(MGridGenGAMGAgglomeration ${_FILES})
 target_compile_features(MGridGenGAMGAgglomeration PUBLIC cxx_std_11)
-target_include_directories(MGridGenGAMGAgglomeration PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/fvAgglomerationMethods/MGridGenGamgAgglomeration/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/fvAgglomerationMethods/MGridGenGamgAgglomeration/includePrivate)
+target_include_directories(MGridGenGAMGAgglomeration PUBLIC include PRIVATE includePrivate)

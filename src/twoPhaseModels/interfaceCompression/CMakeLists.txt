@@ -11,4 +11,4 @@ set(_FILES
 )
 add_library(interfaceCompression ${_FILES})
 target_compile_features(interfaceCompression PUBLIC cxx_std_11)
-target_include_directories(interfaceCompression PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/twoPhaseModels/interfaceCompression/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/twoPhaseModels/interfaceCompression/includePrivate)
+target_include_directories(interfaceCompression PUBLIC include PRIVATE includePrivate)

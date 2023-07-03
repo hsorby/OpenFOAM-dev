@@ -8,4 +8,4 @@ set(_FILES
 )
 add_library(DSMC ${_FILES})
 target_compile_features(DSMC PUBLIC cxx_std_11)
-target_include_directories(DSMC PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/lagrangian/DSMC/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/lagrangian/DSMC/includePrivate)
+target_include_directories(DSMC PUBLIC include PRIVATE includePrivate)

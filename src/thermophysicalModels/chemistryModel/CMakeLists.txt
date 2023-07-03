@@ -26,4 +26,4 @@ set(_FILES
 )
 add_library(chemistryModel ${_FILES})
 target_compile_features(chemistryModel PUBLIC cxx_std_11)
-target_include_directories(chemistryModel PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/chemistryModel/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/chemistryModel/includePrivate)
+target_include_directories(chemistryModel PUBLIC include PRIVATE includePrivate)

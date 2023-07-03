@@ -13,4 +13,4 @@ set(_FILES
 )
 add_library(extrudeModel ${_FILES})
 target_compile_features(extrudeModel PUBLIC cxx_std_11)
-target_include_directories(extrudeModel PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/mesh/extrudeModel/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/mesh/extrudeModel/includePrivate)
+target_include_directories(extrudeModel PUBLIC include PRIVATE includePrivate)

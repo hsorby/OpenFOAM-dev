@@ -5,4 +5,4 @@ set(_FILES
 )
 add_library(phaseCompressibleMomentumTransportModels ${_FILES})
 target_compile_features(phaseCompressibleMomentumTransportModels PUBLIC cxx_std_11)
-target_include_directories(phaseCompressibleMomentumTransportModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/MomentumTransportModels/phaseCompressible/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/MomentumTransportModels/phaseCompressible/includePrivate)
+target_include_directories(phaseCompressibleMomentumTransportModels PUBLIC include PRIVATE includePrivate)

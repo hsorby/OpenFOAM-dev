@@ -14,4 +14,4 @@ set(_FILES
 )
 add_library(interfaceProperties ${_FILES})
 target_compile_features(interfaceProperties PUBLIC cxx_std_11)
-target_include_directories(interfaceProperties PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/twoPhaseModels/interfaceProperties/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/twoPhaseModels/interfaceProperties/includePrivate)
+target_include_directories(interfaceProperties PUBLIC include PRIVATE includePrivate)

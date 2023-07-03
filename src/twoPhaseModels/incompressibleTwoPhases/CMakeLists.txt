@@ -3,4 +3,4 @@ set(_FILES
 )
 add_library(incompressibleTwoPhases ${_FILES})
 target_compile_features(incompressibleTwoPhases PUBLIC cxx_std_11)
-target_include_directories(incompressibleTwoPhases PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/twoPhaseModels/incompressibleTwoPhases/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/twoPhaseModels/incompressibleTwoPhases/includePrivate)
+target_include_directories(incompressibleTwoPhases PUBLIC include PRIVATE includePrivate)

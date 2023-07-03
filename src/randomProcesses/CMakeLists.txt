@@ -10,4 +10,4 @@ set(_FILES
 )
 add_library(randomProcesses ${_FILES})
 target_compile_features(randomProcesses PUBLIC cxx_std_11)
-target_include_directories(randomProcesses PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/randomProcesses/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/randomProcesses/includePrivate)
+target_include_directories(randomProcesses PUBLIC include PRIVATE includePrivate)

@@ -39,4 +39,4 @@ set(_FILES
 )
 add_library(fvModels ${_FILES})
 target_compile_features(fvModels PUBLIC cxx_std_11)
-target_include_directories(fvModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/fvModels/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/fvModels/includePrivate)
+target_include_directories(fvModels PUBLIC include PRIVATE includePrivate)

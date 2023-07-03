@@ -28,4 +28,4 @@ set(_FILES
 )
 add_library(potential ${_FILES})
 target_compile_features(potential PUBLIC cxx_std_11)
-target_include_directories(potential PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/lagrangian/molecularDynamics/potential/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/lagrangian/molecularDynamics/potential/includePrivate)
+target_include_directories(potential PUBLIC include PRIVATE includePrivate)

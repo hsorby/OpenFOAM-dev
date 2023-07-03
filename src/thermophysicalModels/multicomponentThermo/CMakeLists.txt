@@ -16,4 +16,4 @@ set(_FILES
 )
 add_library(multicomponentThermophysicalModels ${_FILES})
 target_compile_features(multicomponentThermophysicalModels PUBLIC cxx_std_11)
-target_include_directories(multicomponentThermophysicalModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/multicomponentThermo/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/multicomponentThermo/includePrivate)
+target_include_directories(multicomponentThermophysicalModels PUBLIC include PRIVATE includePrivate)

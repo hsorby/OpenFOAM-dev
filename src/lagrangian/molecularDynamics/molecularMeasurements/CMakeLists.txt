@@ -3,4 +3,4 @@ set(_FILES
 )
 add_library(molecularMeasurements ${_FILES})
 target_compile_features(molecularMeasurements PUBLIC cxx_std_11)
-target_include_directories(molecularMeasurements PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/lagrangian/molecularDynamics/molecularMeasurements/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/lagrangian/molecularDynamics/molecularMeasurements/includePrivate)
+target_include_directories(molecularMeasurements PUBLIC include PRIVATE includePrivate)

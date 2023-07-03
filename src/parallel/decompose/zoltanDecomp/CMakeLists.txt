@@ -3,4 +3,4 @@ set(_FILES
 )
 add_library(zoltanDecomp ${_FILES})
 target_compile_features(zoltanDecomp PUBLIC cxx_std_11)
-target_include_directories(zoltanDecomp PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/parallel/decompose/zoltanDecomp/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/parallel/decompose/zoltanDecomp/includePrivate)
+target_include_directories(zoltanDecomp PUBLIC include PRIVATE includePrivate)

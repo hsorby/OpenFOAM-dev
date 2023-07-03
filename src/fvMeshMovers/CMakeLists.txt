@@ -9,4 +9,4 @@ set(_FILES
 )
 add_library(fvMeshMovers ${_FILES})
 target_compile_features(fvMeshMovers PUBLIC cxx_std_11)
-target_include_directories(fvMeshMovers PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/fvMeshMovers/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/fvMeshMovers/includePrivate)
+target_include_directories(fvMeshMovers PUBLIC include PRIVATE includePrivate)

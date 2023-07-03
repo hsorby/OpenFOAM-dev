@@ -12,4 +12,4 @@ set(_FILES
 )
 add_library(saturationModels ${_FILES})
 target_compile_features(saturationModels PUBLIC cxx_std_11)
-target_include_directories(saturationModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/saturationModels/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/saturationModels/includePrivate)
+target_include_directories(saturationModels PUBLIC include PRIVATE includePrivate)

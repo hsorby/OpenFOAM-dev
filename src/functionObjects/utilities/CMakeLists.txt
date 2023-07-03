@@ -18,4 +18,4 @@ set(_FILES
 )
 add_library(utilityFunctionObjects ${_FILES})
 target_compile_features(utilityFunctionObjects PUBLIC cxx_std_11)
-target_include_directories(utilityFunctionObjects PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/functionObjects/utilities/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/functionObjects/utilities/includePrivate)
+target_include_directories(utilityFunctionObjects PUBLIC include PRIVATE includePrivate)

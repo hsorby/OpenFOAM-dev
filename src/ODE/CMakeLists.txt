@@ -21,4 +21,4 @@ set(_FILES
 )
 add_library(ODE ${_FILES})
 target_compile_features(ODE PUBLIC cxx_std_11)
-target_include_directories(ODE PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/ODE/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/ODE/includePrivate)
+target_include_directories(ODE PUBLIC include PRIVATE includePrivate)

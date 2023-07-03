@@ -7,4 +7,4 @@ set(_FILES
 )
 add_library(barotropicCompressibilityModel ${_FILES})
 target_compile_features(barotropicCompressibilityModel PUBLIC cxx_std_11)
-target_include_directories(barotropicCompressibilityModel PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/barotropicCompressibilityModel/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/barotropicCompressibilityModel/includePrivate)
+target_include_directories(barotropicCompressibilityModel PUBLIC include PRIVATE includePrivate)

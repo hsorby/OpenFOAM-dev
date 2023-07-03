@@ -12,4 +12,4 @@ set(_FILES
 )
 add_library(fvConstraints ${_FILES})
 target_compile_features(fvConstraints PUBLIC cxx_std_11)
-target_include_directories(fvConstraints PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/fvConstraints/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/fvConstraints/includePrivate)
+target_include_directories(fvConstraints PUBLIC include PRIVATE includePrivate)

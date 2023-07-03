@@ -38,4 +38,4 @@ set(_FILES
 )
 add_library(surfMesh ${_FILES})
 target_compile_features(surfMesh PUBLIC cxx_std_11)
-target_include_directories(surfMesh PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/surfMesh/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/surfMesh/includePrivate)
+target_include_directories(surfMesh PUBLIC include PRIVATE includePrivate)

@@ -28,4 +28,4 @@ set(_FILES
 )
 add_library(triSurface ${_FILES})
 target_compile_features(triSurface PUBLIC cxx_std_11)
-target_include_directories(triSurface PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/triSurface/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/triSurface/includePrivate)
+target_include_directories(triSurface PUBLIC include PRIVATE includePrivate)

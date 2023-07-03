@@ -74,4 +74,4 @@ set(_FILES
 )
 add_library(lagrangianParcel ${_FILES})
 target_compile_features(lagrangianParcel PUBLIC cxx_std_11)
-target_include_directories(lagrangianParcel PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/lagrangian/parcel/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/lagrangian/parcel/includePrivate)
+target_include_directories(lagrangianParcel PUBLIC include PRIVATE includePrivate)

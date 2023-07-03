@@ -27,4 +27,4 @@ set(_FILES
 )
 add_library(sixDoFRigidBodyMotion ${_FILES})
 target_compile_features(sixDoFRigidBodyMotion PUBLIC cxx_std_11)
-target_include_directories(sixDoFRigidBodyMotion PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/sixDoFRigidBodyMotion/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/sixDoFRigidBodyMotion/includePrivate)
+target_include_directories(sixDoFRigidBodyMotion PUBLIC include PRIVATE includePrivate)

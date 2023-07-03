@@ -34,4 +34,4 @@ set(_FILES
 )
 add_library(radiationModels ${_FILES})
 target_compile_features(radiationModels PUBLIC cxx_std_11)
-target_include_directories(radiationModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/radiationModels/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/radiationModels/includePrivate)
+target_include_directories(radiationModels PUBLIC include PRIVATE includePrivate)

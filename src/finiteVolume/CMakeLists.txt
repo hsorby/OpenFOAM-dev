@@ -406,4 +406,4 @@ set(_FILES
 )
 add_library(finiteVolume ${_FILES})
 target_compile_features(finiteVolume PUBLIC cxx_std_11)
-target_include_directories(finiteVolume PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/finiteVolume/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/finiteVolume/includePrivate)
+target_include_directories(finiteVolume PUBLIC include PRIVATE includePrivate)

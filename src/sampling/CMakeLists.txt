@@ -50,4 +50,4 @@ set(_FILES
 )
 add_library(sampling ${_FILES})
 target_compile_features(sampling PUBLIC cxx_std_11)
-target_include_directories(sampling PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/sampling/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/sampling/includePrivate)
+target_include_directories(sampling PUBLIC include PRIVATE includePrivate)

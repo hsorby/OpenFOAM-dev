@@ -17,4 +17,4 @@ set(_FILES
 )
 add_library(decompositionMethods ${_FILES})
 target_compile_features(decompositionMethods PUBLIC cxx_std_11)
-target_include_directories(decompositionMethods PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/parallel/decompose/decompositionMethods/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/parallel/decompose/decompositionMethods/includePrivate)
+target_include_directories(decompositionMethods PUBLIC include PRIVATE includePrivate)

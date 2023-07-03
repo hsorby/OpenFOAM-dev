@@ -69,4 +69,4 @@ set(_FILES
 )
 add_library(fieldFunctionObjects ${_FILES})
 target_compile_features(fieldFunctionObjects PUBLIC cxx_std_11)
-target_include_directories(fieldFunctionObjects PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/functionObjects/field/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/functionObjects/field/includePrivate)
+target_include_directories(fieldFunctionObjects PUBLIC include PRIVATE includePrivate)

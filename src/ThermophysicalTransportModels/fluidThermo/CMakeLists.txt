@@ -3,4 +3,4 @@ set(_FILES
 )
 add_library(fluidThermoThermophysicalTransportModels ${_FILES})
 target_compile_features(fluidThermoThermophysicalTransportModels PUBLIC cxx_std_11)
-target_include_directories(fluidThermoThermophysicalTransportModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/ThermophysicalTransportModels/fluidThermo/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/ThermophysicalTransportModels/fluidThermo/includePrivate)
+target_include_directories(fluidThermoThermophysicalTransportModels PUBLIC include PRIVATE includePrivate)

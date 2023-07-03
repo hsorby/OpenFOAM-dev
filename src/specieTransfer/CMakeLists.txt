@@ -7,4 +7,4 @@ set(_FILES
 )
 add_library(specieTransfer ${_FILES})
 target_compile_features(specieTransfer PUBLIC cxx_std_11)
-target_include_directories(specieTransfer PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/specieTransfer/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/specieTransfer/includePrivate)
+target_include_directories(specieTransfer PUBLIC include PRIVATE includePrivate)

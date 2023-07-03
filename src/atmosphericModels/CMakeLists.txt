@@ -9,4 +9,4 @@ set(_FILES
 )
 add_library(atmosphericModels ${_FILES})
 target_compile_features(atmosphericModels PUBLIC cxx_std_11)
-target_include_directories(atmosphericModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/atmosphericModels/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/atmosphericModels/includePrivate)
+target_include_directories(atmosphericModels PUBLIC include PRIVATE includePrivate)

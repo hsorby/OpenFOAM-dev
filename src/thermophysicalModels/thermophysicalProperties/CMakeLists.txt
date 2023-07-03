@@ -43,4 +43,4 @@ set(_FILES
 )
 add_library(thermophysicalProperties ${_FILES})
 target_compile_features(thermophysicalProperties PUBLIC cxx_std_11)
-target_include_directories(thermophysicalProperties PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/thermophysicalProperties/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/thermophysicalProperties/includePrivate)
+target_include_directories(thermophysicalProperties PUBLIC include PRIVATE includePrivate)
