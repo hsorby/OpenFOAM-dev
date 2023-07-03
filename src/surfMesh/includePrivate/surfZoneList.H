@@ -32,7 +32,7 @@ Description
 #define surfZoneList_H
 
 #include "surfZone.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "surfZoneIdentifierList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

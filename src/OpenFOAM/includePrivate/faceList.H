@@ -32,7 +32,7 @@ Description
 #define faceList_H
 
 #include "face.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "SubList.H"
 #include "faceListFwd.H"
 

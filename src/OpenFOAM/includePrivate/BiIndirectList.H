@@ -35,7 +35,7 @@ SourceFiles
 #ifndef BiIndirectList_H
 #define BiIndirectList_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

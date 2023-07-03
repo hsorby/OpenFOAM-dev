@@ -39,7 +39,7 @@ Description
 #define labelPair_H
 
 #include "Pair.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

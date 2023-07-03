@@ -50,7 +50,7 @@ SourceFiles
 #ifndef RBD_joint_H
 #define RBD_joint_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "spatialVector.H"
 #include "compactSpatialTensor.H"
 #include "CompactSpatialTensorT.H"

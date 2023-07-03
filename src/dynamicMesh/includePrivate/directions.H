@@ -41,7 +41,7 @@ SourceFiles
 #ifndef directions_H
 #define directions_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "vectorField.H"
 #include "NamedEnum.H"
 #include "point.H"

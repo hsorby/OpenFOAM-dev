@@ -39,7 +39,7 @@ Description
 #define stringList_H
 
 #include "stringOpenFOAM.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

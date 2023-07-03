@@ -27,7 +27,7 @@ License
 #define ListHashTable_C
 
 #include "ListHashTable.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "IOstreams.H"
 
 // * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * * //

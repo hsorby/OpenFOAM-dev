@@ -33,7 +33,7 @@ Description
 #define pointIndexHitList_H
 
 #include "pointIndexHit.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

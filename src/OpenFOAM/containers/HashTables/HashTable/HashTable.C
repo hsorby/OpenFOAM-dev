@@ -27,7 +27,7 @@ License
 #define HashTable_C
 
 #include "HashTable.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "Tuple2.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //

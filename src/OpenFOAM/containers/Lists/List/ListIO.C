@@ -23,7 +23,7 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "Istream.H"
 #include "token.H"
 #include "SLList.H"

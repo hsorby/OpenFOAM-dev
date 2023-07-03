@@ -39,7 +39,7 @@ SourceFiles
 #include "typeInfo.H"
 #include "runTimeSelectionTables.H"
 #include "autoPtr.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "Pair.H"
 #include "Switch.H"
 

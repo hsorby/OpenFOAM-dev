@@ -39,7 +39,7 @@ Description
 #define tensorList_H
 
 #include "tensor.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

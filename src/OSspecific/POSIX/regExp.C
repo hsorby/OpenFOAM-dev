@@ -25,7 +25,7 @@ License
 
 #include "regExp.H"
 #include "stringOpenFOAM.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

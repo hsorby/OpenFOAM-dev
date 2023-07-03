@@ -50,7 +50,7 @@ SourceFiles
 #ifndef bladeModel_H
 #define bladeModel_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "dictionary.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

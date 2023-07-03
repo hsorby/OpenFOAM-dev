@@ -31,7 +31,7 @@ Description
 #ifndef faceListFwd_H
 #define faceListFwd_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "SubList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

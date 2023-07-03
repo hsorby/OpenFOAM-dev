@@ -35,7 +35,7 @@ SourceFiles
 #ifndef MeshZones_H
 #define MeshZones_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "regIOobject.H"
 #include "pointField.H"
 #include "Map.H"

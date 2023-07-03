@@ -33,7 +33,7 @@ Description
 #define cellShapeList_H
 
 #include "cellShape.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "PtrList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

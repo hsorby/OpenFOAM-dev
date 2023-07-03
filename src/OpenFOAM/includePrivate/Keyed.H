@@ -37,7 +37,7 @@ SourceFiles
 #ifndef Keyed_H
 #define Keyed_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

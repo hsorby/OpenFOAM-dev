@@ -41,7 +41,7 @@ SourceFiles
 
 #include "IOdictionary.H"
 #include "TimeOpenFOAM.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "autoPtr.H"
 #include "scalarField.H"
 #include "polyMeshFilterSettings.H"

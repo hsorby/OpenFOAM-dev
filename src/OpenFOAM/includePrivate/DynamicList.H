@@ -43,7 +43,7 @@ SourceFiles
 #ifndef DynamicList_H
 #define DynamicList_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "DynamicListFwd.H"
 #include <type_traits>
 

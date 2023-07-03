@@ -39,7 +39,7 @@ Description
 #define wordReList_H
 
 #include "wordRe.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

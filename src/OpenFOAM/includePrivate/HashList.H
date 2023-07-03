@@ -36,7 +36,7 @@ SourceFiles
 
 \*---------------------------------------------------------------------------*/
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "Tuple2.H"
 #include "word.H"
 

@@ -34,7 +34,7 @@ Description
 
 #include "PrimitivePatch.H"
 #include "face.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "pointField.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

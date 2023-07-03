@@ -39,7 +39,7 @@ SourceFiles
 #ifndef SubList_H
 #define SubList_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

@@ -38,7 +38,7 @@ SourceFiles
 #ifndef Distribution_H
 #define Distribution_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "Pair.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

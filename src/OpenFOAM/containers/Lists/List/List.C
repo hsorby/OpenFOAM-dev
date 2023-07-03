@@ -23,7 +23,7 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "ListLoopM.H"
 #include "FixedList.H"
 #include "PtrList.H"

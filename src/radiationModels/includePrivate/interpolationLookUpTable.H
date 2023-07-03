@@ -40,7 +40,7 @@ SourceFiles
 #ifndef interpolationLookUpTable_H
 #define interpolationLookUpTable_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "ListOps.H"
 #include "scalarField.H"
 #include "HashTable.H"

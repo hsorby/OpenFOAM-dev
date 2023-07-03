@@ -36,7 +36,7 @@ SourceFiles
 #define IOList_H
 
 #include "regIOobject.H"
-#include "List.H"
+#include "ListOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

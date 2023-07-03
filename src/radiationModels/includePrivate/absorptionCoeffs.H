@@ -36,7 +36,7 @@ SourceFiles
 #ifndef absorptionCoeffs_H
 #define absorptionCoeffs_H
 
-#include "List.H"
+#include "ListOpenFOAM.H"
 #include "IOstreams.H"
 #include "IOdictionary.H"
 
