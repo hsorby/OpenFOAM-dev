@@ -38,7 +38,7 @@ Description
 #ifndef stringList_H
 #define stringList_H
 
-#include "string.H"
+#include "stringOpenFOAM.H"
 #include "List.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

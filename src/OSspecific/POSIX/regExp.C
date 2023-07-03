@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "regExp.H"
-#include "string.H"
+#include "stringOpenFOAM.H"
 #include "List.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //

@@ -36,7 +36,7 @@ SourceFiles
 #ifndef stringOps_H
 #define stringOps_H
 
-#include "string.H"
+#include "stringOpenFOAM.H"
 #include "dictionary.H"
 #include "HashTable.H"
 
