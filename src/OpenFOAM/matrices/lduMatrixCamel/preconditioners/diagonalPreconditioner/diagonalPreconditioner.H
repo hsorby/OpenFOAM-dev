@@ -22,20 +22,23 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Class
-    Foam::DiagonalSolver
+    Foam::diagonalPreconditioner
 
 Description
-    Foam::DiagonalSolver
+    Diagonal preconditioner for both symmetric and asymmetric matrices.
+
+    The reciprocal of the diagonal is calculated and stored for reuse
+    because on most systems '*' is faster than '/'.
 
 SourceFiles
-    DiagonalSolver.C
+    diagonalPreconditioner.C
 
 \*---------------------------------------------------------------------------*/
 
-#ifndef DiagonalSolver_H
-#define DiagonalSolver_H
+#ifndef diagonalPreconditioner_H
+#define diagonalPreconditioner_H
 
-#include "LduMatrix.H"
+#include "lduMatrix.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -43,14 +46,18 @@ namespace Foam
 {
 
 /*---------------------------------------------------------------------------*\
-                       Class DiagonalSolver Declaration
+                   Class diagonalPreconditioner Declaration
 \*---------------------------------------------------------------------------*/
 
-template<class Type, class DType, class LUType>
-class DiagonalSolver
+class diagonalPreconditioner
 :
-    public LduMatrix<Type, DType, LUType>::solver
+    public lduMatrix::preconditioner
 {
+    // Private Data
+
+        //- The reciprocal diagonal
+        scalarField rD;
+
 
 public:
 
@@ -60,43 +67,54 @@ public:
 
     // Constructors
 
-        //- Construct from matrix
-        DiagonalSolver
+        //- Construct from matrix components and preconditioner solver controls
+        diagonalPreconditioner
         (
-            const word& fieldName,
-            const LduMatrix<Type, DType, LUType>& matrix,
-            const dictionary& solverDict
+            const lduMatrix::solver&,
+            const dictionary& solverControlsUnused
         );
 
         //- Disallow default bitwise copy construction
-        DiagonalSolver(const DiagonalSolver&) = delete;
+        diagonalPreconditioner(const diagonalPreconditioner&) = delete;
+
+
+    //- Destructor
+    virtual ~diagonalPreconditioner()
+    {}
 
 
     // Member Functions
 
-        //- Read and reset the solver parameters from the given dictionary
-        void read(const dictionary& solverDict);
+        //- Return wA the preconditioned form of residual rA
+        virtual void precondition
+        (
+            scalarField& wA,
+            const scalarField& rA,
+            const direction cmpt=0
+        ) const;
 
-        //- Solve the matrix with this solver
-        virtual SolverPerformance<Type> solve(Field<Type>& psi) const;
+        //- Return wT the transpose-matrix preconditioned form of residual rT.
+        virtual void preconditionT
+        (
+            scalarField& wT,
+            const scalarField& rT,
+            const direction cmpt=0
+        ) const
+        {
+            return precondition(wT, rT, cmpt);
+        }
 
 
     // Member Operators
 
         //- Disallow default bitwise assignment
-        void operator=(const DiagonalSolver&) = delete;
+        void operator=(const diagonalPreconditioner&) = delete;
 };
 
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 } // End namespace Foam
-
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
-#ifdef NoRepository
-    #include "DiagonalSolver.C"
-#endif
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Copyright (C) 2020-2023 OpenFOAM Foundation
+    \\  /    A nd           | Copyright (C) 2011-2020 OpenFOAM Foundation
      \\/     M anipulation  |
 -------------------------------------------------------------------------------
 License
@@ -22,17 +22,20 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Class
-    Foam::twoResistanceHeatTransferPhaseSystem
+    Foam::noPreconditioner
+
+Description
+    Null preconditioner for both symmetric and asymmetric matrices.
 
 SourceFiles
-    twoResistanceHeatTransferPhaseSystem.C
+    noPreconditioner.C
 
 \*---------------------------------------------------------------------------*/
 
-#ifndef twoResistanceHeatTransferPhaseSystem_H
-#define twoResistanceHeatTransferPhaseSystem_H
+#ifndef noPreconditioner_H
+#define noPreconditioner_H
 
-#include "NamedEnum.H"
+#include "lduMatrix.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -40,22 +43,64 @@ namespace Foam
 {
 
 /*---------------------------------------------------------------------------*\
-         Class twoResistanceHeatTransferPhaseSystem Declaration
+                      Class noPreconditioner Declaration
 \*---------------------------------------------------------------------------*/
 
-class twoResistanceHeatTransferPhaseSystem
+class noPreconditioner
+:
+    public lduMatrix::preconditioner
 {
+
 public:
 
-    //- Enumeration for the form of the latent heat transfer
-    enum class latentHeatTransfer
-    {
-        heat,
-        mass
-    };
+    //- Runtime type information
+    TypeName("none");
 
-    //- Names of the forms of the latent heat transfer
-    static const NamedEnum<latentHeatTransfer, 2> latentHeatTransferNames_;
+
+    // Constructors
+
+        //- Construct from matrix components and preconditioner solver controls
+        noPreconditioner
+        (
+            const lduMatrix::solver&,
+            const dictionary& solverControlsUnused
+        );
+
+        //- Disallow default bitwise copy construction
+        noPreconditioner(const noPreconditioner&) = delete;
+
+
+    //- Destructor
+    virtual ~noPreconditioner()
+    {}
+
+
+    // Member Functions
+
+        //- Return wA the preconditioned form of residual rA
+        virtual void precondition
+        (
+            scalarField& wA,
+            const scalarField& rA,
+            const direction cmpt=0
+        ) const;
+
+        //- Return wT the transpose-matrix preconditioned form of residual rT.
+        virtual void preconditionT
+        (
+            scalarField& wT,
+            const scalarField& rT,
+            const direction cmpt=0
+        ) const
+        {
+            return precondition(wT, rT, cmpt);
+        }
+
+
+    // Member Operators
+
+        //- Disallow default bitwise assignment
+        void operator=(const noPreconditioner&) = delete;
 };
 
 

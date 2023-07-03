@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Copyright (C) 2020-2023 OpenFOAM Foundation
+    \\  /    A nd           | Copyright (C) 2011-2018 OpenFOAM Foundation
      \\/     M anipulation  |
 -------------------------------------------------------------------------------
 License
@@ -23,45 +23,62 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "heatTransferPhaseSystem.H"
+#include "diagonalSolver.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
 namespace Foam
 {
-    template<>
-    const char* NamedEnum
-    <
-        Foam::heatTransferPhaseSystem::latentHeatScheme,
-        2
-    >::names[] = {"symmetric", "upwind"};
-}
-
-
-const Foam::NamedEnum
-<
-    Foam::heatTransferPhaseSystem::latentHeatScheme,
-    2
->
-Foam::heatTransferPhaseSystem::latentHeatSchemeNames_;
-
-
-namespace Foam
-{
-    defineTypeNameAndDebug(heatTransferPhaseSystem, 0);
+defineTypeNameAndDebug(diagonalSolver, 0);
 }
 
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 
-Foam::heatTransferPhaseSystem::heatTransferPhaseSystem()
+Foam::diagonalSolver::diagonalSolver
+(
+    const word& fieldName,
+    const lduMatrix& matrix,
+    const FieldField<Field, scalar>& interfaceBouCoeffs,
+    const FieldField<Field, scalar>& interfaceIntCoeffs,
+    const lduInterfaceFieldPtrsList& interfaces,
+    const dictionary& solverControls
+)
+:
+    lduMatrix::solver
+    (
+        fieldName,
+        matrix,
+        interfaceBouCoeffs,
+        interfaceIntCoeffs,
+        interfaces,
+        solverControls
+    )
 {}
 
 
-// * * * * * * * * * * * * * * * * Destructor  * * * * * * * * * * * * * * * //
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-Foam::heatTransferPhaseSystem::~heatTransferPhaseSystem()
-{}
+Foam::solverPerformance Foam::diagonalSolver::solve
+(
+    scalarField& psi,
+    const scalarField& source,
+    const direction cmpt
+) const
+{
+    psi = source/matrix_.diag();
+
+    return solverPerformance
+    (
+        typeName,
+        fieldName_,
+        0,
+        0,
+        0,
+        true,
+        false
+    );
+}
 
 
 // ************************************************************************* //

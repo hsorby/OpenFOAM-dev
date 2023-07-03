@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Copyright (C) 2011-2020 OpenFOAM Foundation
+    \\  /    A nd           | Copyright (C) 2011-2022 OpenFOAM Foundation
      \\/     M anipulation  |
 -------------------------------------------------------------------------------
 License
@@ -22,71 +22,86 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Class
-    Foam::DiagonalSolver
+    Foam::fv::leastSquaresGrad
 
 Description
-    Foam::DiagonalSolver
+    Second-order gradient scheme using least-squares.
 
 SourceFiles
-    DiagonalSolver.C
+    leastSquaresGrad.C
 
 \*---------------------------------------------------------------------------*/
 
-#ifndef DiagonalSolver_H
-#define DiagonalSolver_H
+#ifndef leastSquaresGrad_H
+#define leastSquaresGrad_H
 
-#include "LduMatrix.H"
+#include "gradScheme.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 namespace Foam
 {
 
-/*---------------------------------------------------------------------------*\
-                       Class DiagonalSolver Declaration
-\*---------------------------------------------------------------------------*/
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-template<class Type, class DType, class LUType>
-class DiagonalSolver
-:
-    public LduMatrix<Type, DType, LUType>::solver
+namespace fv
 {
 
+/*---------------------------------------------------------------------------*\
+                      Class leastSquaresGrad Declaration
+\*---------------------------------------------------------------------------*/
+
+template<class Type>
+class leastSquaresGrad
+:
+    public fv::gradScheme<Type>
+{
 public:
 
     //- Runtime type information
-    TypeName("diagonal");
+    TypeName("leastSquares");
 
 
     // Constructors
 
-        //- Construct from matrix
-        DiagonalSolver
-        (
-            const word& fieldName,
-            const LduMatrix<Type, DType, LUType>& matrix,
-            const dictionary& solverDict
-        );
+        //- Construct from mesh
+        leastSquaresGrad(const fvMesh& mesh)
+        :
+            gradScheme<Type>(mesh)
+        {}
+
+        //- Construct from Istream
+        leastSquaresGrad(const fvMesh& mesh, Istream&)
+        :
+            gradScheme<Type>(mesh)
+        {}
 
         //- Disallow default bitwise copy construction
-        DiagonalSolver(const DiagonalSolver&) = delete;
+        leastSquaresGrad(const leastSquaresGrad&) = delete;
 
 
     // Member Functions
 
-        //- Read and reset the solver parameters from the given dictionary
-        void read(const dictionary& solverDict);
-
-        //- Solve the matrix with this solver
-        virtual SolverPerformance<Type> solve(Field<Type>& psi) const;
+        //- Return the gradient of the given field to the gradScheme::grad
+        //  for optional caching
+        virtual tmp<VolField<typename outerProduct<vector, Type>::type>>
+        calcGrad
+        (
+            const VolField<Type>& vsf,
+            const word& name
+        ) const;
 
 
     // Member Operators
 
         //- Disallow default bitwise assignment
-        void operator=(const DiagonalSolver&) = delete;
+        void operator=(const leastSquaresGrad&) = delete;
 };
 
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+} // End namespace fv
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -95,7 +110,7 @@ public:
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 #ifdef NoRepository
-    #include "DiagonalSolver.C"
+    #include "leastSquaresGrad.C"
 #endif
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

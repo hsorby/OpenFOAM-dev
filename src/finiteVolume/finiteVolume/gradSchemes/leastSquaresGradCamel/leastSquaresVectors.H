@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Copyright (C) 2011-2020 OpenFOAM Foundation
+    \\  /    A nd           | Copyright (C) 2011-2022 OpenFOAM Foundation
      \\/     M anipulation  |
 -------------------------------------------------------------------------------
 License
@@ -22,20 +22,22 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Class
-    Foam::DiagonalSolver
+    Foam::leastSquaresVectors
 
 Description
-    Foam::DiagonalSolver
+    Least-squares gradient scheme vectors
 
 SourceFiles
-    DiagonalSolver.C
+    leastSquaresVectors.C
 
 \*---------------------------------------------------------------------------*/
 
-#ifndef DiagonalSolver_H
-#define DiagonalSolver_H
+#ifndef leastSquaresVectors_H
+#define leastSquaresVectors_H
 
-#include "LduMatrix.H"
+#include "DemandDrivenMeshObject.H"
+#include "fvMesh.H"
+#include "surfaceFields.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -43,60 +45,78 @@ namespace Foam
 {
 
 /*---------------------------------------------------------------------------*\
-                       Class DiagonalSolver Declaration
+                     Class leastSquaresVectors Declaration
 \*---------------------------------------------------------------------------*/
 
-template<class Type, class DType, class LUType>
-class DiagonalSolver
+class leastSquaresVectors
 :
-    public LduMatrix<Type, DType, LUType>::solver
+    public DemandDrivenMeshObject
+    <
+        fvMesh,
+        MoveableMeshObject,
+        leastSquaresVectors
+    >
 {
+    // Private Data
+
+        //- Least-squares gradient vectors
+        surfaceVectorField pVectors_;
+        surfaceVectorField nVectors_;
+
+
+    // Private Member Functions
+
+        //- Construct Least-squares gradient vectors
+        void calcLeastSquaresVectors();
+
+
+protected:
+
+    friend class DemandDrivenMeshObject
+    <
+        fvMesh,
+        MoveableMeshObject,
+        leastSquaresVectors
+    >;
+
+    // Protected Constructors
+
+        //- Construct given an fvMesh
+        explicit leastSquaresVectors(const fvMesh&);
+
 
 public:
 
-    //- Runtime type information
-    TypeName("diagonal");
+    // Declare name of the class and its debug switch
+    TypeName("leastSquaresVectors");
 
 
-    // Constructors
-
-        //- Construct from matrix
-        DiagonalSolver
-        (
-            const word& fieldName,
-            const LduMatrix<Type, DType, LUType>& matrix,
-            const dictionary& solverDict
-        );
-
-        //- Disallow default bitwise copy construction
-        DiagonalSolver(const DiagonalSolver&) = delete;
+    //- Destructor
+    virtual ~leastSquaresVectors();
 
 
     // Member Functions
 
-        //- Read and reset the solver parameters from the given dictionary
-        void read(const dictionary& solverDict);
+        //- Return reference to owner least square vectors
+        const surfaceVectorField& pVectors() const
+        {
+            return pVectors_;
+        }
 
-        //- Solve the matrix with this solver
-        virtual SolverPerformance<Type> solve(Field<Type>& psi) const;
+        //- Return reference to neighbour least square vectors
+        const surfaceVectorField& nVectors() const
+        {
+            return nVectors_;
+        }
 
-
-    // Member Operators
-
-        //- Disallow default bitwise assignment
-        void operator=(const DiagonalSolver&) = delete;
+        //- Delete the least square vectors when the mesh moves
+        virtual bool movePoints();
 };
 
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 } // End namespace Foam
-
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
-#ifdef NoRepository
-    #include "DiagonalSolver.C"
-#endif
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

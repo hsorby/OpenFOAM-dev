@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Copyright (C) 2012-2018 OpenFOAM Foundation
+    \\  /    A nd           | Copyright (C) 2011-2022 OpenFOAM Foundation
      \\/     M anipulation  |
 -------------------------------------------------------------------------------
 License
@@ -23,24 +23,62 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "solverPerformance.H"
-#include "fieldTypes.H"
+#include "cloud.H"
+#include "Time.H"
+
+// * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
 namespace Foam
 {
-    makeSolverPerformance(scalar);
-    makeSolverPerformance(vector);
-    makeSolverPerformance(sphericalTensor);
-    makeSolverPerformance(symmTensor);
-    makeSolverPerformance(tensor);
-};
+    defineTypeNameAndDebug(cloud, 0);
+
+    const word cloud::prefix("lagrangian");
+    word cloud::defaultName("defaultCloud");
+}
 
 
-template<>
-Foam::SolverPerformance<Foam::scalar>
-Foam::SolverPerformance<Foam::scalar>::max()
+// * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
+
+Foam::cloud::cloud(const objectRegistry& obr, const word& cloudName)
+:
+    objectRegistry
+    (
+        IOobject
+        (
+            cloudName,
+            obr.time().name(),
+            prefix,
+            obr,
+            IOobject::NO_READ,
+            IOobject::AUTO_WRITE
+        )
+    )
+{}
+
+
+// * * * * * * * * * * * * * * * * Destructor  * * * * * * * * * * * * * * * //
+
+Foam::cloud::~cloud()
+{}
+
+
+// * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
+
+void Foam::cloud::topoChange(const polyTopoChangeMap&)
 {
-    return *this;
+    NotImplemented;
+}
+
+
+void Foam::cloud::mapMesh(const polyMeshMap&)
+{
+    NotImplemented;
+}
+
+
+void Foam::cloud::distribute(const polyDistributionMap&)
+{
+    NotImplemented;
 }
 
 

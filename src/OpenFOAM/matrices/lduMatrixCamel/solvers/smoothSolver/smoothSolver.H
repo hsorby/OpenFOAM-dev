@@ -22,20 +22,25 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Class
-    Foam::DiagonalSolver
+    Foam::smoothSolver
 
 Description
-    Foam::DiagonalSolver
+    Iterative solver for symmetric and asymmetric matrices which uses a
+    run-time selected smoother e.g. GaussSeidel to converge the solution to
+    the required tolerance.
+
+    To improve efficiency, the residual is evaluated after every nSweeps
+    smoothing iterations.
 
 SourceFiles
-    DiagonalSolver.C
+    smoothSolver.C
 
 \*---------------------------------------------------------------------------*/
 
-#ifndef DiagonalSolver_H
-#define DiagonalSolver_H
+#ifndef smoothSolver_H
+#define smoothSolver_H
 
-#include "LduMatrix.H"
+#include "lduMatrix.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -43,60 +48,62 @@ namespace Foam
 {
 
 /*---------------------------------------------------------------------------*\
-                       Class DiagonalSolver Declaration
+                        Class smoothSolver Declaration
 \*---------------------------------------------------------------------------*/
 
-template<class Type, class DType, class LUType>
-class DiagonalSolver
+class smoothSolver
 :
-    public LduMatrix<Type, DType, LUType>::solver
+    public lduMatrix::solver
 {
+protected:
+
+    // Protected data
+
+        //- Number of sweeps before the evaluation of residual
+        label nSweeps_;
+
+        //- Read the control parameters from the controlDict_
+        virtual void readControls();
 
 public:
 
     //- Runtime type information
-    TypeName("diagonal");
+    TypeName("smoothSolver");
 
 
     // Constructors
 
-        //- Construct from matrix
-        DiagonalSolver
+        //- Construct from matrix components and solver controls
+        smoothSolver
         (
             const word& fieldName,
-            const LduMatrix<Type, DType, LUType>& matrix,
-            const dictionary& solverDict
+            const lduMatrix& matrix,
+            const FieldField<Field, scalar>& interfaceBouCoeffs,
+            const FieldField<Field, scalar>& interfaceIntCoeffs,
+            const lduInterfaceFieldPtrsList& interfaces,
+            const dictionary& solverControls
         );
 
-        //- Disallow default bitwise copy construction
-        DiagonalSolver(const DiagonalSolver&) = delete;
 
+    //- Destructor
+    virtual ~smoothSolver()
+    {}
 
     // Member Functions
 
-        //- Read and reset the solver parameters from the given dictionary
-        void read(const dictionary& solverDict);
-
         //- Solve the matrix with this solver
-        virtual SolverPerformance<Type> solve(Field<Type>& psi) const;
-
-
-    // Member Operators
-
-        //- Disallow default bitwise assignment
-        void operator=(const DiagonalSolver&) = delete;
+        virtual solverPerformance solve
+        (
+            scalarField& psi,
+            const scalarField& source,
+            const direction cmpt=0
+        ) const;
 };
 
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 } // End namespace Foam
-
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
-#ifdef NoRepository
-    #include "DiagonalSolver.C"
-#endif
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Copyright (C) 2023 OpenFOAM Foundation
+    \\  /    A nd           | Copyright (C) 2011-2018 OpenFOAM Foundation
      \\/     M anipulation  |
 -------------------------------------------------------------------------------
 License
@@ -21,56 +21,57 @@ License
     You should have received a copy of the GNU General Public License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
-Class
-    Foam::injectionModel
-
-Description
-    Non-templated base class for lagrangian injection models
-
-SourceFiles
-    injectionModel.C
-
 \*---------------------------------------------------------------------------*/
 
-#ifndef injectionModel_H
-#define injectionModel_H
+#include "noPreconditioner.H"
 
-#include "NamedEnum.H"
-
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+// * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
 namespace Foam
 {
+    defineTypeNameAndDebug(noPreconditioner, 0);
 
-/*---------------------------------------------------------------------------*\
-                          Class injectionModel Declaration
-\*---------------------------------------------------------------------------*/
+    lduMatrix::preconditioner::
+        addsymMatrixConstructorToTable<noPreconditioner>
+        addnoPreconditionerSymMatrixConstructorToTable_;
 
-class injectionModel
+    lduMatrix::preconditioner::
+        addasymMatrixConstructorToTable<noPreconditioner>
+        addnoPreconditionerAsymMatrixConstructorToTable_;
+}
+
+
+// * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
+
+Foam::noPreconditioner::noPreconditioner
+(
+    const lduMatrix::solver& sol,
+    const dictionary&
+)
+:
+    lduMatrix::preconditioner(sol)
+{}
+
+
+// * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
+
+void Foam::noPreconditioner::precondition
+(
+    scalarField& wA,
+    const scalarField& rA,
+    const direction
+) const
 {
-public:
+    scalar* __restrict__ wAPtr = wA.begin();
+    const scalar* __restrict__ rAPtr = rA.begin();
 
-    // Public Enumerations
+    label nCells = wA.size();
 
-        //- Enumeration for the parcels' uniform size
-        enum class uniformParcelSize
-        {
-            nParticle,
-            surfaceArea,
-            volume
-        };
+    for (label cell=0; cell<nCells; cell++)
+    {
+        wAPtr[cell] = rAPtr[cell];
+    }
+}
 
-        //- Names of the parcels' uniform size
-        static const NamedEnum<uniformParcelSize, 3> uniformParcelSizeNames_;
-};
-
-
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
-} // End namespace Foam
-
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
-#endif
 
 // ************************************************************************* //

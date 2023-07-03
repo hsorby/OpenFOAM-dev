@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Copyright (C) 2012-2021 OpenFOAM Foundation
+    \\  /    A nd           | Copyright (C) 2011-2019 OpenFOAM Foundation
      \\/     M anipulation  |
 -------------------------------------------------------------------------------
 License
@@ -22,32 +22,27 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Typedef
-    Foam::solverPerformance
+    Foam::primitivePatch
 
 Description
-    SolverPerformance instantiated for a scalar
-
-SourceFiles
-    solverPerformance.C
+    Addressing for a faceList slice.
 
 \*---------------------------------------------------------------------------*/
 
-#ifndef solverPerformance_H
-#define solverPerformance_H
+#ifndef primitivePatch_H
+#define primitivePatch_H
 
-#include "SolverPerformance.H"
+#include "PrimitivePatch.H"
+#include "face.H"
+#include "SubList.H"
+#include "pointField.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 namespace Foam
 {
-    typedef SolverPerformance<scalar> solverPerformance;
-
-    // Specialisation of the max function for scalar object
-    template<>
-    SolverPerformance<scalar> SolverPerformance<scalar>::max();
+    typedef PrimitivePatch<SubList<face>, const pointField&> primitivePatch;
 }
-
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

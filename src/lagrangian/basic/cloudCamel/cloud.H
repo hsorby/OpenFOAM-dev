@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Copyright (C) 2011-2020 OpenFOAM Foundation
+    \\  /    A nd           | Copyright (C) 2011-2022 OpenFOAM Foundation
      \\/     M anipulation  |
 -------------------------------------------------------------------------------
 License
@@ -22,81 +22,86 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Class
-    Foam::DiagonalSolver
+    Foam::cloud
 
 Description
-    Foam::DiagonalSolver
+    A cloud is a collection of lagrangian particles
 
 SourceFiles
-    DiagonalSolver.C
+    cloud.C
 
 \*---------------------------------------------------------------------------*/
 
-#ifndef DiagonalSolver_H
-#define DiagonalSolver_H
+#ifndef cloud_H
+#define cloud_H
 
-#include "LduMatrix.H"
+#include "objectRegistry.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 namespace Foam
 {
 
+class polyTopoChangeMap;
+class polyMeshMap;
+class polyDistributionMap;
+
 /*---------------------------------------------------------------------------*\
-                       Class DiagonalSolver Declaration
+                            Class cloud Declaration
 \*---------------------------------------------------------------------------*/
 
-template<class Type, class DType, class LUType>
-class DiagonalSolver
+class cloud
 :
-    public LduMatrix<Type, DType, LUType>::solver
+    public objectRegistry
 {
 
 public:
 
     //- Runtime type information
-    TypeName("diagonal");
+    TypeName("cloud");
+
+        //- The prefix to local: %lagrangian
+        static const word prefix;
+
+        //- The default cloud name: %defaultCloud
+        static word defaultName;
 
 
     // Constructors
 
-        //- Construct from matrix
-        DiagonalSolver
-        (
-            const word& fieldName,
-            const LduMatrix<Type, DType, LUType>& matrix,
-            const dictionary& solverDict
-        );
+        //- Construct for the given objectRegistry and named cloud instance
+        cloud(const objectRegistry&, const word& cloudName = defaultName);
 
         //- Disallow default bitwise copy construction
-        DiagonalSolver(const DiagonalSolver&) = delete;
+        cloud(const cloud&) = delete;
+
+
+    //- Destructor
+    virtual ~cloud();
 
 
     // Member Functions
 
-        //- Read and reset the solver parameters from the given dictionary
-        void read(const dictionary& solverDict);
+        //- Update topology using the given map
+        virtual void topoChange(const polyTopoChangeMap&);
 
-        //- Solve the matrix with this solver
-        virtual SolverPerformance<Type> solve(Field<Type>& psi) const;
+        //- Update from another mesh using the given map
+        virtual void mapMesh(const polyMeshMap&);
+
+        //- Redistribute or update using the given distribution map
+        virtual void distribute(const polyDistributionMap&);
 
 
     // Member Operators
 
         //- Disallow default bitwise assignment
-        void operator=(const DiagonalSolver&) = delete;
+        void operator=(const cloud&) = delete;
 };
 
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 } // End namespace Foam
-
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
-#ifdef NoRepository
-    #include "DiagonalSolver.C"
-#endif
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
