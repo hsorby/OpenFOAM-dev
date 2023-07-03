@@ -47,6 +47,7 @@ SourceFiles
 #ifndef ParSortableList_H
 #define ParSortableList_H
 
+#include "className.H"
 #include "labelList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
