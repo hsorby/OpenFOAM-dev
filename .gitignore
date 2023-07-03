@@ -87,3 +87,7 @@ doc/Doxygen/DTAGS
 
 # Ignore the tutorialsTest directory
 /tutorialsTest
+
+CMakeLists.txt.user
+.DS_Store
+
