@@ -144,12 +144,12 @@ inline Scalar atan2(const Scalar y, const Scalar x)
 
 inline Scalar jn(const int n, const Scalar s)
 {
-    return ::jnf(n, s);
+    return ::jn(n, s);
 }
 
 inline Scalar yn(const int n, const Scalar s)
 {
-    return ::ynf(n, s);
+    return ::yn(n, s);
 }
 
 #undef Scalar
