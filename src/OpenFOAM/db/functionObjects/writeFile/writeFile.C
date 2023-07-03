@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "writeFile.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "polyMesh.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //

@@ -25,7 +25,7 @@ License
 
 #include "waveSuperposition.H"
 #include "dimensionedTypes.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "uniformDimensionedFields.H"
 #include "addToRunTimeSelectionTable.H"
 

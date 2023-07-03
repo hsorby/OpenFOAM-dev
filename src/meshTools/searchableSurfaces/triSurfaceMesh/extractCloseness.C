@@ -26,7 +26,7 @@ License
 #include "triSurfaceMesh.H"
 #include "triSurfaceFields.H"
 #include "meshTools.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "unitConversion.H"
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //

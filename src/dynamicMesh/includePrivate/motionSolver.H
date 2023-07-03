@@ -36,7 +36,7 @@ SourceFiles
 #define motionSolver_H
 
 #include "pointField.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "dictionary.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

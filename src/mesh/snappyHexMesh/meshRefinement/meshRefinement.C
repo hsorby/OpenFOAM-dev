@@ -28,7 +28,7 @@ License
 #include "volFields.H"
 #include "surfaceMesh.H"
 #include "syncTools.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "refinementHistory.H"
 #include "refinementSurfaces.H"
 #include "refinementFeatures.H"

@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "uncollatedFileOperation.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "IFstream.H"
 #include "OFstream.H"
 #include "decomposedBlockData.H"

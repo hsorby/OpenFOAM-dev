@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "Cloud.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "IOPosition.H"
 #include "timeIOdictionary.H"
 

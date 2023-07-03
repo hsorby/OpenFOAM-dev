@@ -26,7 +26,7 @@ License
 #include "codeStream.H"
 #include "dynamicCode.H"
 #include "dynamicCodeContext.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "OSspecific.H"
 #include "addToMemberFunctionSelectionTable.H"
 

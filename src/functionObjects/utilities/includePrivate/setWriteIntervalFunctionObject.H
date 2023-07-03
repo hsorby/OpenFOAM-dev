@@ -62,7 +62,7 @@ SourceFiles
 
 #include "functionObject.H"
 #include "Function1.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

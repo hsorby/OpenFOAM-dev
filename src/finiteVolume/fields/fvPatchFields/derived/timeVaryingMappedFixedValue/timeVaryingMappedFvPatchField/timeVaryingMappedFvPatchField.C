@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "timeVaryingMappedFvPatchField.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "AverageField.H"
 #include "IFstream.H"
 #include "OSspecific.H"

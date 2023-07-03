@@ -25,7 +25,7 @@ License
 
 #include "systemDict.H"
 #include "IOdictionary.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * Global Functions  * * * * * * * * * * * * * * //
 

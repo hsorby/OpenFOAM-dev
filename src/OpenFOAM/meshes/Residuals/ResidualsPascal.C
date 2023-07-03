@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "Residuals.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 

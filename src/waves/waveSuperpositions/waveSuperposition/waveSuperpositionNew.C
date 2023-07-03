@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "waveSuperposition.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * Selectors * * * * * * * * * * * * * * * * //
 

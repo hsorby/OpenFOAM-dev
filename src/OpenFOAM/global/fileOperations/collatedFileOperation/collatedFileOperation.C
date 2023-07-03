@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "collatedFileOperation.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "threadedCollatedOFstream.H"
 #include "decomposedBlockData.H"
 #include "masterOFstream.H"

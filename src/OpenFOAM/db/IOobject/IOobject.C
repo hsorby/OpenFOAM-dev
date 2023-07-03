@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "IOobject.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "IFstream.H"
 #include "OSspecific.H"
 

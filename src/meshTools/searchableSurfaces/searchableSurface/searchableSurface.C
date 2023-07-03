@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "searchableSurface.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "triSurface.H"
 #include "OSspecific.H"
 

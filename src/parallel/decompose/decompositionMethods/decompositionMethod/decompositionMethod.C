@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "decompositionMethod.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "globalIndex.H"
 #include "syncTools.H"
 #include "Tuple2.H"

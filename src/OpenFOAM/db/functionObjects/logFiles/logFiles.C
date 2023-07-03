@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "logFiles.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "OSspecific.H"
 
 // * * * * * * * * * * * * Protected Member Functions  * * * * * * * * * * * //

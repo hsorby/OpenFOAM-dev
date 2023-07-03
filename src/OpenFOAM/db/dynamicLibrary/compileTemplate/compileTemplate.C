@@ -25,7 +25,7 @@ License
 
 #include "compileTemplate.H"
 #include "dynamicCodeContext.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "IFstream.H"
 #include "OSspecific.H"
 

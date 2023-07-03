@@ -28,7 +28,7 @@ License
 #include "addToRunTimeSelectionTable.H"
 #include "EdgeMap.H"
 #include "triSurfaceFields.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "PatchTools.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //

@@ -28,7 +28,7 @@ License
 #include "addToRunTimeSelectionTable.H"
 #include "treeBoundBox.H"
 #include "treeDataFace.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "meshTools.H"
 #include "RemoteData.H"
 

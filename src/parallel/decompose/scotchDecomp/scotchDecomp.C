@@ -26,7 +26,7 @@ License
 #include "scotchDecomp.H"
 #include "addToRunTimeSelectionTable.H"
 #include "floatScalar.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "OFstream.H"
 #include "globalIndex.H"
 #include "SubField.H"

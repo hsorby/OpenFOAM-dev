@@ -28,7 +28,7 @@ License
 #include "MeshedSurfaceProxy.H"
 #include "IFstream.H"
 #include "OFstream.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "polyBoundaryMesh.H"
 #include "polyMesh.H"
 

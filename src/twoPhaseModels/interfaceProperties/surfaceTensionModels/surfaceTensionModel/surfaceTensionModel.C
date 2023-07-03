@@ -25,7 +25,7 @@ License
 
 #include "surfaceTensionModel.H"
 #include "fvMesh.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

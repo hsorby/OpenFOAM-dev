@@ -25,7 +25,7 @@ License
 
 #include "chemistryTabulationMethod.H"
 #include "noChemistryTabulation.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * Selectors * * * * * * * * * * * * * * * * //
 

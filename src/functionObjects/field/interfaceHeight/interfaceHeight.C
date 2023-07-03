@@ -29,7 +29,7 @@ License
 #include "IOmanip.H"
 #include "meshSearch.H"
 #include "lineCellFace.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "uniformDimensionedFields.H"
 #include "volFields.H"
 #include "addToRunTimeSelectionTable.H"

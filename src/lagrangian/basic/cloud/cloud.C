@@ -31,7 +31,7 @@ License
 #include "polyTopoChangeMap.H"
 #include "polyMeshMap.H"
 #include "polyDistributionMap.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "OFstream.H"
 #include "wallPolyPatch.H"
 #include "nonConformalCyclicPolyPatch.H"

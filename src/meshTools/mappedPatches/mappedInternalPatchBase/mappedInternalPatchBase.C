@@ -25,7 +25,7 @@ License
 
 #include "mappedInternalPatchBase.H"
 #include "SubField.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "triPointRef.H"
 #include "treeDataCell.H"
 #include "indexedOctree.H"

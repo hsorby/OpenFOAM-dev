@@ -26,7 +26,7 @@ License
 #include "cellSet.H"
 #include "polyTopoChangeMap.H"
 #include "polyMesh.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "addToRunTimeSelectionTable.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

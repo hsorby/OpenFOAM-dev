@@ -26,7 +26,7 @@ License
 #include "timeSelector.H"
 #include "ListOps.H"
 #include "argList.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "IStringStream.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //

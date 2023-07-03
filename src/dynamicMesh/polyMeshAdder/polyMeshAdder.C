@@ -27,7 +27,7 @@ License
 #include "mapAddedPolyMesh.H"
 #include "faceCoupleInfo.H"
 #include "processorPolyPatch.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

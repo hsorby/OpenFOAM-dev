@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "fvSchemes.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "steadyStateDdtScheme.H"
 #include "steadyStateD2dt2Scheme.H"
 

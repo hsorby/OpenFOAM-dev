@@ -27,7 +27,7 @@ License
 #include "demandDrivenData.H"
 #include "IFstream.H"
 #include "OFstream.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "boundBox.H"
 #include "SortableList.H"
 #include "PackedBoolList.H"

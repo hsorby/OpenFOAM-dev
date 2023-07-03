@@ -36,7 +36,7 @@ SourceFiles
 #ifndef solutionControl_H
 #define solutionControl_H
 
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

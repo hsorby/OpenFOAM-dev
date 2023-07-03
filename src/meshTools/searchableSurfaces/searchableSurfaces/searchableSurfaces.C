@@ -26,7 +26,7 @@ License
 #include "searchableSurfaces.H"
 #include "searchableSurfacesQueries.H"
 #include "ListOps.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "DynamicField.H"
 #include "PatchTools.H"
 #include "triSurfaceMesh.H"

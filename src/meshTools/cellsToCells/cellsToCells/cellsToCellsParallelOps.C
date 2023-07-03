@@ -26,7 +26,7 @@ License
 #include "cellsToCells.H"
 #include "processorPolyPatch.H"
 #include "SubField.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

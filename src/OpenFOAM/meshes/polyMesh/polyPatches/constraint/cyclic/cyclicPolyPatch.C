@@ -31,7 +31,7 @@ License
 #include "OFstream.H"
 #include "matchPoints.H"
 #include "EdgeMap.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "transformField.H"
 #include "SubField.H"
 #include "unitConversion.H"

@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "systemCall.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "dynamicCode.H"
 #include "OSspecific.H"
 #include "addToRunTimeSelectionTable.H"

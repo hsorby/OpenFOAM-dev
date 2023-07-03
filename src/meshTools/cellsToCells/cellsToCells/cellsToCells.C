@@ -30,7 +30,7 @@ License
 #include "emptyPolyPatch.H"
 #include "wedgePolyPatch.H"
 #include "processorPolyPatch.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

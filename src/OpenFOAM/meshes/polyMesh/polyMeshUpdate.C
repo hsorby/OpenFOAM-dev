@@ -28,7 +28,7 @@ Description
 
 #include "polyMesh.H"
 #include "polyTopoChangeMap.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "globalMeshData.H"
 #include "pointMesh.H"
 #include "indexedOctree.H"

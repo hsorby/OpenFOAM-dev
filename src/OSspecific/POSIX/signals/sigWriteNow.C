@@ -27,7 +27,7 @@ License
 #include "error.H"
 #include "jobInfo.H"
 #include "IOstreams.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

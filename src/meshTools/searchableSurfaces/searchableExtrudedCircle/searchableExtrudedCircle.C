@@ -25,7 +25,7 @@ License
 
 #include "searchableExtrudedCircle.H"
 #include "addToRunTimeSelectionTable.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "edgeMesh.H"
 #include "indexedOctree.H"
 #include "treeDataEdge.H"

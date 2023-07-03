@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "tetIndices.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 

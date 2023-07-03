@@ -25,7 +25,7 @@ License
 
 #include "chemistryReductionMethod.H"
 #include "noChemistryReduction.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * Selectors * * * * * * * * * * * * * * * * //
 

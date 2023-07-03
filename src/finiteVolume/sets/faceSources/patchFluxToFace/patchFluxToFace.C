@@ -26,7 +26,7 @@ License
 #include "patchFluxToFace.H"
 #include "polyMesh.H"
 #include "faceSet.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "IFstream.H"
 #include "fieldDictionary.H"
 #include "surfaceFields.H"

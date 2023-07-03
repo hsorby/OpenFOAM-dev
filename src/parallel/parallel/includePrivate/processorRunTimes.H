@@ -34,7 +34,7 @@ SourceFiles
 #ifndef processorRunTimes_H
 #define processorRunTimes_H
 
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "PtrList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

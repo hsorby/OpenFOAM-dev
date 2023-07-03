@@ -25,7 +25,7 @@ License
 
 #include "metisDecomp.H"
 #include "addToRunTimeSelectionTable.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 extern "C"
 {

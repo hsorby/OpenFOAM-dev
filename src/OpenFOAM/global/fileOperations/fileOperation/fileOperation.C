@@ -26,7 +26,7 @@ License
 #include "fileOperation.H"
 #include "decomposedBlockData.H"
 #include "polyMesh.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "OSspecific.H"
 
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */

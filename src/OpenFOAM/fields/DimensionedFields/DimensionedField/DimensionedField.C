@@ -25,7 +25,7 @@ License
 
 #include "DimensionedField.H"
 #include "dimensionedType.H"
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
