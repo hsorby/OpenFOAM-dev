@@ -1,0 +1,19 @@
+set(_FILES
+  mixtures/basicSpecieMixture/basicSpecieMixture.C
+  mixtures/basicCombustionMixture/basicCombustionMixture.C
+  fluidMulticomponentThermo/fluidMulticomponentThermo.C
+  psiMulticomponentThermo/psiMulticomponentThermo.C
+  psiMulticomponentThermo/psiMulticomponentThermos.C
+  psiuMulticomponentThermo/psiuMulticomponentThermo.C
+  psiuMulticomponentThermo/psiuMulticomponentThermos.C
+  rhoMulticomponentThermo/rhoMulticomponentThermo.C
+  rhoMulticomponentThermo/rhoMulticomponentThermos.C
+  derivedFvPatchFields/fixedUnburntEnthalpy/fixedUnburntEnthalpyFvPatchScalarField.C
+  derivedFvPatchFields/gradientUnburntEnthalpy/gradientUnburntEnthalpyFvPatchScalarField.C
+  derivedFvPatchFields/mixedUnburntEnthalpy/mixedUnburntEnthalpyFvPatchScalarField.C
+  functionObjects/moleFractions/moleFractions.C
+  functionObjects/massFractions/massFractions.C
+)
+add_library(multicomponentThermophysicalModels ${_FILES})
+target_compile_features(multicomponentThermophysicalModels PUBLIC cxx_std_11)
+target_include_directories(multicomponentThermophysicalModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/multicomponentThermo/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/multicomponentThermo/includePrivate)

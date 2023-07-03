@@ -1,0 +1,6 @@
+set(_FILES
+  alphaFixedPressure/alphaFixedPressureFvPatchScalarField.C
+)
+add_library(twoPhaseProperties ${_FILES})
+target_compile_features(twoPhaseProperties PUBLIC cxx_std_11)
+target_include_directories(twoPhaseProperties PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/twoPhaseModels/twoPhaseProperties/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/twoPhaseModels/twoPhaseProperties/includePrivate)

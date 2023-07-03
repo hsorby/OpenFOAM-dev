@@ -1,0 +1,10 @@
+set(_FILES
+  derivedFvPatchFields/specieTransferMassFraction/specieTransferMassFractionFvPatchScalarField.C
+  derivedFvPatchFields/adsorptionMassFraction/adsorptionMassFractionFvPatchScalarField.C
+  derivedFvPatchFields/semiPermeableBaffleMassFraction/semiPermeableBaffleMassFractionFvPatchScalarField.C
+  derivedFvPatchFields/specieTransferVelocity/specieTransferVelocityFvPatchVectorField.C
+  derivedFvPatchFields/specieTransferTemperature/specieTransferTemperatureFvPatchScalarField.C
+)
+add_library(specieTransfer ${_FILES})
+target_compile_features(specieTransfer PUBLIC cxx_std_11)
+target_include_directories(specieTransfer PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/specieTransfer/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/specieTransfer/includePrivate)

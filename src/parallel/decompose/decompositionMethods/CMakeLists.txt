@@ -1,0 +1,20 @@
+set(_FILES
+  decompositionMethod/decompositionMethod.C
+  geomDecomp/geomDecomp.C
+  simpleGeomDecomp/simpleGeomDecomp.C
+  hierarchGeomDecomp/hierarchGeomDecomp.C
+  manualDecomp/manualDecomp.C
+  multiLevelDecomp/multiLevelDecomp.C
+  structuredDecomp/structuredDecomp.C
+  randomDecomp/randomDecomp.C
+  noDecomp/noDecomp.C
+  decompositionConstraints/decompositionConstraint/decompositionConstraint.C
+  decompositionConstraints/preserveBaffles/preserveBafflesConstraint.C
+  decompositionConstraints/preserveFaceZones/preserveFaceZonesConstraint.C
+  decompositionConstraints/preservePatches/preservePatchesConstraint.C
+  decompositionConstraints/singleProcessorFaceSets/singleProcessorFaceSetsConstraint.C
+  decompositionConstraints/refinementHistory/refinementHistoryConstraint.C
+)
+add_library(decompositionMethods ${_FILES})
+target_compile_features(decompositionMethods PUBLIC cxx_std_11)
+target_include_directories(decompositionMethods PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/parallel/decompose/decompositionMethods/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/parallel/decompose/decompositionMethods/includePrivate)

@@ -1,0 +1,6 @@
+set(_FILES
+  fluidMulticomponentThermophysicalTransportModels.C
+)
+add_library(fluidMulticomponentThermophysicalTransportModels ${_FILES})
+target_compile_features(fluidMulticomponentThermophysicalTransportModels PUBLIC cxx_std_11)
+target_include_directories(fluidMulticomponentThermophysicalTransportModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/ThermophysicalTransportModels/fluidMulticomponentThermo/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/ThermophysicalTransportModels/fluidMulticomponentThermo/includePrivate)

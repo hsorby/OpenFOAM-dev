@@ -1,0 +1,6 @@
+set(_FILES
+  surfaceTensionModels/liquidProperties/liquidPropertiesSurfaceTension.C
+)
+add_library(compressibleInterfaceProperties ${_FILES})
+target_compile_features(compressibleInterfaceProperties PUBLIC cxx_std_11)
+target_include_directories(compressibleInterfaceProperties PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/twoPhaseModels/compressibleInterfaceProperties/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/twoPhaseModels/compressibleInterfaceProperties/includePrivate)

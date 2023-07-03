@@ -1,0 +1,19 @@
+set(_FILES
+  basicThermo/basicThermo.C
+  fluidThermo/fluidThermo.C
+  fluidThermo/hydrostaticInitialisation.C
+  psiThermo/psiThermo.C
+  psiThermo/psiThermos.C
+  rhoThermo/rhoThermo.C
+  rhoThermo/rhoThermos.C
+  rhoThermo/liquidThermo.C
+  derivedFvPatchFields/energyJump/energyJumpFvPatchScalarField.C
+  derivedFvPatchFields/fixedEnergy/fixedEnergyFvPatchScalarField.C
+  derivedFvPatchFields/gradientEnergy/gradientEnergyFvPatchScalarField.C
+  derivedFvPatchFields/gradientEnergy/gradientEnergyCalculatedTemperatureFvPatchScalarField.C
+  derivedFvPatchFields/mixedEnergy/mixedEnergyFvPatchScalarField.C
+  derivedFvPatchFields/mixedEnergy/mixedEnergyCalculatedTemperatureFvPatchScalarField.C
+)
+add_library(fluidThermophysicalModels ${_FILES})
+target_compile_features(fluidThermophysicalModels PUBLIC cxx_std_11)
+target_include_directories(fluidThermophysicalModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/basic/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/thermophysicalModels/basic/includePrivate)

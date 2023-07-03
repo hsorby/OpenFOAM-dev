@@ -1,0 +1,53 @@
+set(_FILES
+  probes/probes.C
+  probes/patchProbes.C
+  probes/probesGrouping.C
+  coordSet/coordSet.C
+  sampledSet/sampledSet/sampledSet.C
+  sampledSet/sampledSet/sampledSetParticle.C
+  sampledSet/sampledSet/sampledSetCloud.C
+  sampledSet/sampledSets/sampledSets.C
+  sampledSet/arcUniform/arcUniform.C
+  sampledSet/boxUniform/boxUniform.C
+  sampledSet/circleRandom/circleRandom.C
+  sampledSet/lineCell/lineCell.C
+  sampledSet/lineCellFace/lineCellFace.C
+  sampledSet/lineFace/lineFace.C
+  sampledSet/lineUniform/lineUniform.C
+  sampledSet/boundaryPoints/boundaryPoints.C
+  sampledSet/boundaryRandom/boundaryRandom.C
+  sampledSet/points/points.C
+  sampledSet/sphereRandom/sphereRandom.C
+  sampledSet/triSurfaceMeshSampledSet/triSurfaceMeshSampledSet.C
+  sampledSet/cellSetSampledSet/cellSetSampledSet.C
+  sampledSet/faceSetSampledSet/faceSetSampledSet.C
+  sampledSet/writers/setWriter.C
+  sampledSet/writers/ensight/ensightSetWriter.C
+  sampledSet/writers/raw/rawSetWriter.C
+  sampledSet/writers/vtk/vtkSetWriter.C
+  sampledSet/writers/csv/csvSetWriter.C
+  sampledSet/writers/gnuplot/gnuplotSetWriter.C
+  sampledSet/writers/none/noSetWriter.C
+  sampledSurface/sampledPatch/sampledPatch.C
+  sampledSurface/sampledPatchInternalField/sampledPatchInternalField.C
+  sampledSurface/sampledIsoSurfaceSurface/sampledIsoSurfaceSurface.C
+  sampledSurface/sampledIsoSurface/sampledIsoSurface.C
+  sampledSurface/sampledDistanceSurface/sampledDistanceSurface.C
+  sampledSurface/sampledCutPlane/sampledCutPlane.C
+  sampledSurface/sampledSurface/sampledSurface.C
+  sampledSurface/sampledSurfaces/sampledSurfaces.C
+  sampledSurface/sampledTriSurfaceMesh/sampledTriSurfaceMesh.C
+  sampledSurface/sampledThresholdCellFaces/thresholdCellFaces.C
+  sampledSurface/sampledThresholdCellFaces/sampledThresholdCellFaces.C
+  sampledSurface/writers/surfaceWriter.C
+  sampledSurface/writers/none/noSurfaceWriter.C
+  sampledSurface/writers/ensight/ensightSurfaceWriter.C
+  sampledSurface/writers/ensight/ensightPTraits.C
+  sampledSurface/writers/foam/foamSurfaceWriter.C
+  sampledSurface/writers/proxy/proxySurfaceWriter.C
+  sampledSurface/writers/raw/rawSurfaceWriter.C
+  sampledSurface/writers/vtk/vtkSurfaceWriter.C
+)
+add_library(sampling ${_FILES})
+target_compile_features(sampling PUBLIC cxx_std_11)
+target_include_directories(sampling PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/sampling/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/sampling/includePrivate)

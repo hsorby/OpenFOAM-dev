@@ -1,0 +1,25 @@
+set(_FILES
+  combustionModel/combustionModel.C
+  combustionModel/combustionModelNew.C
+  singleStepCombustion/singleStepCombustion.C
+  diffusion/diffusion.C
+  infinitelyFastChemistry/infinitelyFastChemistry.C
+  PaSR/PaSR.C
+  EDC/EDC.C
+  laminar/laminar.C
+  FSD/reactionRateFlameAreaModels/consumptionSpeed/consumptionSpeed.C
+  FSD/reactionRateFlameAreaModels/reactionRateFlameArea/reactionRateFlameArea.C
+  FSD/reactionRateFlameAreaModels/reactionRateFlameArea/reactionRateFlameAreaNew.C
+  FSD/reactionRateFlameAreaModels/relaxation/relaxation.C
+  FSD/FSD.C
+  zoneCombustion/zoneCombustion.C
+  noCombustion/noCombustion.C
+  functionObjects/adjustTimeStepToCombustion/adjustTimeStepToCombustion.C
+  functionObjects/Qdot/Qdot.C
+  radiationModels/absorptionEmissionModels/greyMeanCombustion/greyMeanCombustion.C
+  radiationModels/absorptionEmissionModels/wideBandCombustion/wideBandCombustion.C
+  radiationModels/sootModels/mixtureFraction/mixtureFraction.C
+)
+add_library(combustionModels ${_FILES})
+target_compile_features(combustionModels PUBLIC cxx_std_11)
+target_include_directories(combustionModels PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/combustionModels/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/combustionModels/includePrivate)

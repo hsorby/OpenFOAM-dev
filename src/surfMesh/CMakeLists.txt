@@ -1,0 +1,41 @@
+set(_FILES
+  surfZone/surfZone/surfZone.C
+  surfZone/surfZone/surfZoneIOList.C
+  surfZone/surfZoneIdentifier/surfZoneIdentifier.C
+  MeshedSurfaceAllocator/MeshedSurfaceIOAllocator.C
+  MeshedSurface/MeshedSurfaceCore.C
+  MeshedSurface/MeshedSurfaces.C
+  UnsortedMeshedSurface/UnsortedMeshedSurfaces.C
+  MeshedSurfaceProxy/MeshedSurfaceProxyCore.C
+  surfaceRegistry/surfaceRegistry.C
+  surfMesh/surfMesh.C
+  surfMesh/surfMeshClear.C
+  surfMesh/surfMeshIO.C
+  surfFields/surfFields/surfFields.C
+  surfFields/surfPointFields/surfPointFields.C
+  surfaceFormats/surfaceFormatsCore.C
+  surfaceFormats/ac3d/AC3DsurfaceFormatCore.C
+  surfaceFormats/ac3d/AC3DsurfaceFormatRunTime.C
+  surfaceFormats/gts/GTSsurfaceFormatRunTime.C
+  surfaceFormats/nas/NASsurfaceFormatRunTime.C
+  surfaceFormats/obj/OBJsurfaceFormatRunTime.C
+  surfaceFormats/off/OFFsurfaceFormatRunTime.C
+  surfaceFormats/ofs/OFSsurfaceFormatCore.C
+  surfaceFormats/ofs/OFSsurfaceFormatRunTime.C
+  surfaceFormats/smesh/SMESHsurfaceFormatRunTime.C
+  surfaceFormats/starcd/STARCDsurfaceFormatCore.C
+  surfaceFormats/starcd/STARCDsurfaceFormatRunTime.C
+  surfaceFormats/stl/STLsurfaceFormatCore.C
+  surfaceFormats/stl/STLsurfaceFormatRunTime.C
+  surfaceFormats/tri/TRIsurfaceFormatCore.C
+  surfaceFormats/tri/TRIsurfaceFormatRunTime.C
+  surfaceFormats/vtk/VTKsurfaceFormatCore.C
+  surfaceFormats/vtk/VTKsurfaceFormatRunTime.C
+  surfaceFormats/wrl/WRLsurfaceFormatCore.C
+  surfaceFormats/wrl/WRLsurfaceFormatRunTime.C
+  surfaceFormats/x3d/X3DsurfaceFormatCore.C
+  surfaceFormats/x3d/X3DsurfaceFormatRunTime.C
+)
+add_library(surfMesh ${_FILES})
+target_compile_features(surfMesh PUBLIC cxx_std_11)
+target_include_directories(surfMesh PUBLIC /Users/hsor001/Projects/opensource/openfoam/src/surfMesh/include PRIVATE /Users/hsor001/Projects/opensource/openfoam/src/surfMesh/includePrivate)
