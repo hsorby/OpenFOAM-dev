@@ -53,6 +53,7 @@ SourceFiles
 #include "DynamicList.H"
 #include "labelPair.H"
 #include "labelList.H"
+#include "className.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
