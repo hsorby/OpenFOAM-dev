@@ -112,7 +112,7 @@ Foam::patchToPatchTools::constructDistributionMap
             (
                 index,
                 labelListList(procSendIndices),
-                move(constructMap)
+                std::move(constructMap)
             )
         );
 }

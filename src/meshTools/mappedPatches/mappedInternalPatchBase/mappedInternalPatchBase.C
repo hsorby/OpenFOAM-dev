@@ -230,8 +230,8 @@ void Foam::mappedInternalPatchBase::calcMapping() const
             compactMap
         )
     );
-    const labelList oldToNew(move(sampleGlobalPatchFaces));
-    const labelList oldSampleIndices(move(sampleIndices));
+    const labelList oldToNew(std::move(sampleGlobalPatchFaces));
+    const labelList oldSampleIndices(std::move(sampleIndices));
 
     // Construct input mapping for data to be distributed
     cellIndices_ = labelList(mapPtr_->constructSize(), -1);
@@ -244,8 +244,8 @@ void Foam::mappedInternalPatchBase::calcMapping() const
         new distributionMap
         (
             patch_.size(),
-            move(mapPtr_->constructMap()),
-            move(mapPtr_->subMap())
+            std::move(mapPtr_->constructMap()),
+            std::move(mapPtr_->subMap())
         )
     );
 

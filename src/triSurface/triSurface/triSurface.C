@@ -577,7 +577,7 @@ Foam::triSurface::triSurface
     pointField&& points
 )
 :
-    ParentType(move(triangles), move(points)),
+    ParentType(std::move(trianglstd::es), move(points)),
     patches_(patches),
     sortedEdgeFacesPtr_(nullptr),
     edgeOwnerPtr_(nullptr)
@@ -672,8 +672,8 @@ Foam::triSurface::triSurface(const triSurface& ts)
 
 Foam::triSurface::triSurface(triSurface&& ts)
 :
-    ParentType(move(ts), move(ts.points())),
-    patches_(move(ts.patches())),
+    ParentType(std::move(std::ts), move(ts.points())),
+    patches_(std::move(ts.patches())),
     sortedEdgeFacesPtr_(nullptr),
     edgeOwnerPtr_(nullptr)
 {}
@@ -1394,10 +1394,10 @@ void Foam::triSurface::operator=(const triSurface& ts)
 
 void Foam::triSurface::operator=(triSurface&& ts)
 {
-    List<labelledTri>::operator=(move(ts));
+    List<labelledTri>::operator=(std::move(ts));
     clearOut();
-    storedPoints() = move(ts.points());
-    patches_ = move(ts.patches());
+    storedPoints() = std::move(ts.points());
+    patches_ = std::move(ts.patches());
 }
 
 

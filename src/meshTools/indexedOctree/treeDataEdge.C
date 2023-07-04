@@ -89,7 +89,7 @@ Foam::treeDataEdge::treeDataEdge
 :
     edges_(edges),
     points_(points),
-    edgeLabels_(move(edgeLabels)),
+    edgeLabels_(std::move(edgeLabels)),
     cacheBb_(cacheBb)
 {
     update();

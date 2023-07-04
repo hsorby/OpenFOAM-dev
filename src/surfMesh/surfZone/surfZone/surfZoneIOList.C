@@ -121,7 +121,7 @@ Foam::surfZoneIOList::surfZoneIOList
     surfZoneList&& zones
 )
 :
-    surfZoneList(move(zones)),
+    surfZoneList(std::move(zones)),
     regIOobject(io)
 {}
 

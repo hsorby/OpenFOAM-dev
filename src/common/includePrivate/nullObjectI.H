@@ -32,7 +32,7 @@ inline const T& Foam::NullObjectRef()
 template<class T>
 inline T&& Foam::NullObjectMove()
 {
-    return move(const_cast<T&>(*reinterpret_cast<const T*>(nullObjectPtr)));
+    return std::move(const_cast<T&>(*reinterpret_cast<const T*>(nullObjectPtr)));
 }
 
 template<class T>

@@ -154,7 +154,7 @@ Foam::surfMesh::surfMesh
             IOobject::NO_READ,
             IOobject::AUTO_WRITE
         ),
-        move(pointLst),
+        std::move(pointLst),
         IOobject
         (
             "faces",
@@ -164,7 +164,7 @@ Foam::surfMesh::surfMesh
             IOobject::NO_READ,
             IOobject::AUTO_WRITE
         ),
-        move(faceLst),
+        std::move(faceLst),
         IOobject
         (
             "surfZones",
@@ -264,7 +264,7 @@ void Foam::surfMesh::resetPrimitives
     // Clear addressing.
     MeshReference::clearGeom();
 
-    Allocator::reset(move(points), move(faces), move(zones));
+    Allocator::reset(std::move(poinstd::ts), movstd::e(faces), move(zones));
     this->updateRefs();
 
     if (validate)

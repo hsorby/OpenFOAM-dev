@@ -95,9 +95,9 @@ bool Foam::triSurface::readVTK(const fileName& fName)
     // Create triSurface
     *this = triSurface
     (
-        move(tris),
+        std::move(tris),
         patches,
-        move(surf.points())
+        std::move(surf.points())
     );
 
     return true;

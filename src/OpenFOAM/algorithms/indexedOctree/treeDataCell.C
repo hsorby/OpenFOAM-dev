@@ -87,7 +87,7 @@ Foam::treeDataCell::treeDataCell
 )
 :
     mesh_(mesh),
-    cellLabels_(move(cellLabels)),
+    cellLabels_(std::move(cellLabels)),
     cacheBb_(cacheBb),
     decompMode_(decompMode)
 {

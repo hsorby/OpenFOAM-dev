@@ -754,7 +754,7 @@ bool Foam::polyMeshZipUpCells(polyMesh& mesh)
         mesh.resetPrimitives
         (
             NullObjectMove<pointField>(),
-            move(newFaces),
+            std::move(newFaces),
             NullObjectMove<labelList>(),
             NullObjectMove<labelList>(),
             patchSizes,

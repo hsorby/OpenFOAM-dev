@@ -66,9 +66,9 @@ Foam::MeshedSurfaceIOAllocator::MeshedSurfaceIOAllocator
     surfZoneList&& zones
 )
 :
-    points_(ioPoints, move(points)),
-    faces_(ioFaces, move(faces)),
-    zones_(ioZones, move(zones))
+    points_(ioPoints, std::move(points)),
+    faces_(ioFaces, std::move(faces)),
+    zones_(ioZones, std::move(zones))
 {}
 
 
@@ -114,7 +114,7 @@ void Foam::MeshedSurfaceIOAllocator::reset
         points_.transfer(points);
     }
 
-    resetFaces(move(faces), move(zones));
+    resetFaces(std::move(facstd::es), move(zones));
 }
 
 
@@ -132,7 +132,7 @@ void Foam::MeshedSurfaceIOAllocator::reset
         points_.transfer(points);
     }
 
-    resetFaces(move(faces), move(zones));
+    resetFaces(std::move(facstd::es), move(zones));
 }
 
 

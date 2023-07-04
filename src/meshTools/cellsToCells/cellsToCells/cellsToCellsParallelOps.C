@@ -610,10 +610,10 @@ Foam::List<Foam::remote> Foam::cellsToCells::distributeMesh
                 mesh.time(),
                 IOobject::NO_READ
             ),
-            move(localPoints),
-            move(localFaces),
-            move(localFaceOwners),
-            move(localFaceNeighbours),
+            std::move(localPoints),
+            std::move(localFaces),
+            std::move(localFaceOwners),
+            std::move(localFaceNeighbours),
             false
         )
     );
@@ -867,10 +867,10 @@ void Foam::cellsToCells::trimLocalTgt()
                 oldLocalTgtMesh.time(),
                 IOobject::NO_READ
             ),
-            move(newLocalTgtPoints),
-            move(newLocalTgtFaces),
-            move(newLocalTgtFaceOwner),
-            move(newLocalTgtFaceNeighbour),
+            std::move(newLocalTgtPoints),
+            std::move(newLocalTgtFaces),
+            std::move(newLocalTgtFaceOwner),
+            std::move(newLocalTgtFaceNeighbour),
             false
         )
     );

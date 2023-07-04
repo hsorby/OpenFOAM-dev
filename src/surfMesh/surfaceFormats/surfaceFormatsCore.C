@@ -168,7 +168,7 @@ bool Foam::fileFormats::surfaceFormatsCore::checkSupport
     else if (verbose)
     {
         wordList toc = available.toc();
-        SortableList<word> known(move(toc));
+        SortableList<word> known(std::move(toc));
 
         Info<<"Unknown file extension for " << functionName
             << " : " << ext << nl

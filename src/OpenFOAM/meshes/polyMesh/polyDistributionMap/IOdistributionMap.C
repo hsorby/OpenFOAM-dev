@@ -108,7 +108,7 @@ Foam::IOdistributionMap::IOdistributionMap
 )
 :
     regIOobject(io),
-    distributionMap(move(map))
+    distributionMap(std::move(map))
 {
     // Temporary warning
     if (io.readOpt() == IOobject::MUST_READ_IF_MODIFIED)

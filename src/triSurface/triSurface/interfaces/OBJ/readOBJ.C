@@ -183,7 +183,7 @@ bool Foam::triSurface::readOBJ(const fileName& OBJfileName)
 
 
     // Transfer DynamicLists to straight ones.
-    pointField allPoints(move(points));
+    pointField allPoints(std::move(points));
 
     // Create triSurface
     *this = triSurface(faces, patches, allPoints, true);

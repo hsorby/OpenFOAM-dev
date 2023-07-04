@@ -263,8 +263,8 @@ void Foam::mappedPatchBase::calcMapping() const
                 compactMap
             )
         );
-        const labelList oldToNew(move(sampleGlobalPatchFaces));
-        const labelList oldSampleIndices(move(sampleIndices));
+        const labelList oldToNew(std::move(sampleGlobalPatchFaces));
+        const labelList oldSampleIndices(std::move(sampleIndices));
 
         // Construct input mapping for data to be distributed
         treeNbrPatchFaceIndices_ = labelList(treeMapPtr_->constructSize(), -1);
@@ -278,8 +278,8 @@ void Foam::mappedPatchBase::calcMapping() const
             new distributionMap
             (
                 patch_.size(),
-                move(treeMapPtr_->constructMap()),
-                move(treeMapPtr_->subMap())
+                std::move(treeMapPtr_->constructMap()),
+                std::move(treeMapPtr_->subMap())
             )
         );
     }
