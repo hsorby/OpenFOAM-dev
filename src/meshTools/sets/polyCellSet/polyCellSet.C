@@ -25,6 +25,7 @@ License
 
 #include "polyCellSet.H"
 #include "polyMesh.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

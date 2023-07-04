@@ -31,6 +31,9 @@ License
 #include "indexedOctree.H"
 #include "treeDataPrimitivePatch.H"
 #include "vtkWritePolyData.H"
+#include "IndirectList.H"
+#include "PstreamReduceOps.H"
+#include "OSspecific.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

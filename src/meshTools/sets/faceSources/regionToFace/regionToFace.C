@@ -33,6 +33,7 @@ License
 #include "PatchEdgeFaceWave.H"
 #include "patchEdgeFaceRegion.H"
 #include "PstreamReduceOps.H"
+#include "PstreamCombineReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

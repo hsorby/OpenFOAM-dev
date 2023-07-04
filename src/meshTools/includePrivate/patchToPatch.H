@@ -43,6 +43,8 @@ SourceFiles
 #include "primitiveOldTimePatch.H"
 #include "runTimeSelectionTables.H"
 #include "treeBoundBox.H"
+#include "tmpNrc.H"
+#include "PackedBoolList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

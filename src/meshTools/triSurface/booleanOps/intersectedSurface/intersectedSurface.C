@@ -34,6 +34,7 @@ License
 #include "edgeSurface.H"
 #include "DynamicList.H"
 #include "transform.H"
+#include "UIndirectList.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

@@ -24,6 +24,10 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "patchToPatchTools.H"
+#include "PstreamBuffers.H"
+#include "UOPstream.H"
+#include "UIPstream.H"
+#include "UIndirectList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

@@ -27,6 +27,7 @@ License
 #include "indexedOctree.H"
 #include "triSurface.H"
 #include "PatchTools.H"
+#include "Map.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 

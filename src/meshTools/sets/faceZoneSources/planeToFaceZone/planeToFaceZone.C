@@ -30,6 +30,9 @@ License
 #include "PatchTools.H"
 #include "syncTools.H"
 #include "addToRunTimeSelectionTable.H"
+#include "globalMeshData.H"
+#include "PstreamReduceOps.H"
+
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

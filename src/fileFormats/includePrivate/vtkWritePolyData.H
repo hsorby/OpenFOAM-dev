@@ -39,6 +39,7 @@ SourceFiles
 #include "boolList.H"
 #include "fileName.H"
 #include "Field.H"
+#include "UPtrList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

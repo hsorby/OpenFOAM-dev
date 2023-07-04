@@ -29,6 +29,7 @@ License
 #include "emptyPolyPatch.H"
 #include "SubField.H"
 #include "meshTools.H"
+#include "demandDrivenData.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
