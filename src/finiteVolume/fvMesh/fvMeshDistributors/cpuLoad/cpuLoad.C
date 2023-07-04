@@ -24,6 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "cpuLoad.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

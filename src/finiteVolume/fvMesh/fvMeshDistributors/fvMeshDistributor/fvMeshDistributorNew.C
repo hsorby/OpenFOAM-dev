@@ -24,6 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "fvMeshDistributorsNone.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * Selectors * * * * * * * * * * * * * * * * //
 

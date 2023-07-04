@@ -44,6 +44,7 @@ SourceFiles
 #define cpuLoad_H
 
 #include "volFields.H"
+#include "cpuTime.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

@@ -25,6 +25,7 @@ License
 
 #include "fvMeshDistributor.H"
 #include "volFields.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

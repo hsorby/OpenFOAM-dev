@@ -30,6 +30,7 @@ Description
 #include "fvMesh.H"
 #include "polyTopoChangeMap.H"
 #include "faceMapper.H"
+#include "demandDrivenData.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

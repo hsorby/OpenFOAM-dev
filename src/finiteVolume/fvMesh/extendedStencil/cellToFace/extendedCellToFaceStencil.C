@@ -27,6 +27,7 @@ License
 #include "globalIndex.H"
 #include "syncTools.H"
 #include "SortableList.H"
+#include "PstreamReduceOps.H"
 
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */
 

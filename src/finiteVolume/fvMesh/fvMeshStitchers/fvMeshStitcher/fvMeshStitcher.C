@@ -30,6 +30,12 @@ License
 #include "polyTopoChangeMap.H"
 #include "syncTools.H"
 #include "surfaceToVolVelocity.H"
+#include "nonConformalCyclicFvPatch.H"
+#include "nonConformalProcessorCyclicFvPatch.H"
+#include "TimeOpenFOAM.H"
+#include "PstreamReduceOps.H"
+#include "nonConformalBoundary.H"
+#include "fileOperation.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
