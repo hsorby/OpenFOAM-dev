@@ -39,6 +39,8 @@ SourceFiles
 #define regIOobject_H
 
 #include "IOobject.H"
+#include "ISstream.H"
+#include "labelList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

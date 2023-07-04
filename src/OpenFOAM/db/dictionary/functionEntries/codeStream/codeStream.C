@@ -26,9 +26,13 @@ License
 #include "codeStream.H"
 #include "dynamicCode.H"
 #include "dynamicCodeContext.H"
+#include "addToMemberFunctionSelectionTable.H"
+#include "labelList.H"
 #include "TimeOpenFOAM.H"
 #include "OSspecific.H"
-#include "addToMemberFunctionSelectionTable.H"
+#include "IOstreams.H"
+#include "Pstream.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

@@ -23,6 +23,7 @@ License
 
 \*---------------------------------------------------------------------------*/
 
+#include "ISstream.H"
 #include "IOdictionary.H"
 #include "objectRegistry.H"
 #include "Pstream.H"

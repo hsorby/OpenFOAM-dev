@@ -40,6 +40,7 @@ SourceFiles
 #define IOdictionary_H
 
 #include "dictionary.H"
+#include "labelList.H"
 #include "regIOobject.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

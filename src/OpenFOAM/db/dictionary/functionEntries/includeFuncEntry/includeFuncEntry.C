@@ -25,6 +25,7 @@ License
 
 #include "includeFuncEntry.H"
 #include "addToMemberFunctionSelectionTable.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

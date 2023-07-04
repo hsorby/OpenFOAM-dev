@@ -24,6 +24,8 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "IOdictionary.H"
+#include "Pstream.H"
+#include "IOstreams.H"
 
 // * * * * * * * * * * * * * * * Members Functions * * * * * * * * * * * * * //
 

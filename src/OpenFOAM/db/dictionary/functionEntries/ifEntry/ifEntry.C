@@ -26,6 +26,9 @@ License
 #include "ifEntry.H"
 #include "Switch.H"
 #include "addToMemberFunctionSelectionTable.H"
+#include "Tuple2.H"
+#include "ISstream.H"
+#include "IStringStream.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

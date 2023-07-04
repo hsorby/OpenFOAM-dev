@@ -35,6 +35,9 @@ License
 #include "SubList.H"
 #include "labelPair.H"
 #include "masterUncollatedFileOperation.H"
+#include "IOstreams.H"
+#include "PtrList.H"
+#include "fileOperation.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
@@ -750,7 +753,7 @@ bool Foam::decomposedBlockData::writeBlocks
         Pout<< "decomposedBlockData::writeBlocks:"
             << " stream:" << (osPtr.valid() ? osPtr().name() : "invalid")
             << " data:" << data.size()
-            << " (master only) slaveData:" << slaveData.size()
+            << " (master only) slaveData:" << (label)slaveData.size()
             << " commsType:" << Pstream::commsTypeNames[commsType] << endl;
     }
 

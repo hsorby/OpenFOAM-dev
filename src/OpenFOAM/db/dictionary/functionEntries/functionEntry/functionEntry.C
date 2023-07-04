@@ -27,6 +27,8 @@ License
 #include "IOstreams.H"
 #include "ISstream.H"
 #include "Pstream.H"
+#include "IStringStream.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
