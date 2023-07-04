@@ -656,7 +656,7 @@ void Foam::argList::parse
         if (Pstream::master() && writeInfoHeader)
         {
             IOobject::writeBanner(Info, true)
-                << "Build  : " << Foam::FOAMbuild << nl
+                << "Build  : " << FOAMbuild << nl
                 << "Exec   : " << argListStr_.c_str() << nl
                 << "Date   : " << dateString.c_str() << nl
                 << "Time   : " << timeString.c_str() << nl
@@ -676,7 +676,7 @@ void Foam::argList::parse
 
         // Add build information - only use the first word
         {
-            std::string build(Foam::FOAMbuild);
+            std::string build(FOAMbuild);
             std::string::size_type found = build.find(' ');
             if (found != std::string::npos)
             {
@@ -714,7 +714,7 @@ void Foam::argList::parse
                 writeInfoHeader
             )
         );
-        Foam::fileHandler(handler);
+        fileHandler(handler);
     }
 
 
@@ -747,10 +747,10 @@ void Foam::argList::parse
 
                 // Check build string to make sure all processors are running
                 // the same build
-                if (slaveBuild != Foam::FOAMbuild)
+                if (slaveBuild != FOAMbuild)
                 {
                     FatalErrorIn(executable())
-                        << "Master is running version " << Foam::FOAMbuild
+                        << "Master is running version " << FOAMbuild
                         << "; slave " << proci << " is running version "
                         << slaveBuild
                         << exit(FatalError);
@@ -764,7 +764,7 @@ void Foam::argList::parse
                 Pstream::commsTypes::scheduled,
                 Pstream::masterNo()
             );
-            toMaster << string(Foam::FOAMbuild) << hostName() << pid();
+            toMaster << string(FOAMbuild) << hostName() << pid();
         }
     }
 
@@ -1316,9 +1316,9 @@ void Foam::argList::printUsage() const
     printNotes();
 
     Info<< nl
-        <<"Using: OpenFOAM-" << Foam::FOAMversion
+        <<"Using: OpenFOAM-" << FOAMversion
         << " (see https://openfoam.org)" << nl
-        <<"Build: " << Foam::FOAMbuild << nl
+        <<"Build: " << FOAMbuild << nl
         << endl;
 }
 

@@ -51,7 +51,7 @@ inline Stream& Foam::IOobject::writeBanner(Stream& os, bool noHint)
     {
         memset(spaces, ' ', 40);
 
-        size_t len = strlen(Foam::FOAMversion);
+        size_t len = strlen(FOAMversion);
         if (len < 38)
         {
             spaces[38 - len] = '\0';

@@ -225,31 +225,7 @@ bool operator>=(const Pair<Type>& a, const Pair<Type>& b)
     return !(a < b);
 }
 
-
-template<class Type>
-inline Istream& operator>>(Istream& is, Pair<Type>& p)
-{
-    is.readBegin("Pair");
-    is >> p.first() >> p.second();
-    is.readEnd("Pair");
-
-    // Check state of Istream
-    is.check("operator>>(Istream&, Pair<Type>&)");
-
-    return is;
-}
-
-
-template<class Type>
-inline Ostream& operator<<(Ostream& os, const Pair<Type>& p)
-{
-    os  << token::BEGIN_LIST
-        << p.first() << token::SPACE << p.second()
-        << token::END_LIST;
-
-    return os;
-}
-
+#include "PairI.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
