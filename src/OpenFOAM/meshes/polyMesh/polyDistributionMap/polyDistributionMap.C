@@ -93,7 +93,7 @@ Foam::polyDistributionMap::polyDistributionMap
     oldPatchSizes_(oldPatchStarts.size()),
     oldPatchStarts_(std::move(oldPatchStarts)),
     oldPatchNMeshPoints_(std::move(oldPatchNMeshPoints)),
-    pointMap_(mesh.nPoints(), std::move(subPointMstd::ap), move(constructPointMap)),
+    pointMap_(mesh.nPoints(), std::move(subPointMap), std::move(constructPointMap)),
     faceMap_
     (
         mesh.nFaces(),
@@ -102,7 +102,7 @@ Foam::polyDistributionMap::polyDistributionMap
         std::move(subFaceHasFlip),
         constructFaceHasFlip
     ),
-    cellMap_(mesh.nCells(), std::move(subCellMstd::ap), move(constructCellMap)),
+    cellMap_(mesh.nCells(), std::move(subCellMap), std::move(constructCellMap)),
     patchMap_
     (
         mesh.boundaryMesh().size(),

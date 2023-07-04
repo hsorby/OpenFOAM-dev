@@ -114,7 +114,7 @@ void Foam::MeshedSurfaceIOAllocator::reset
         points_.transfer(points);
     }
 
-    resetFaces(std::move(facstd::es), move(zones));
+    resetFaces(std::move(faces), std::move(zones));
 }
 
 
@@ -132,7 +132,7 @@ void Foam::MeshedSurfaceIOAllocator::reset
         points_.transfer(points);
     }
 
-    resetFaces(std::move(facstd::es), move(zones));
+    resetFaces(std::move(faces), std::move(zones));
 }
 
 

@@ -264,7 +264,7 @@ void Foam::surfMesh::resetPrimitives
     // Clear addressing.
     MeshReference::clearGeom();
 
-    Allocator::reset(std::move(poinstd::ts), movstd::e(faces), move(zones));
+    Allocator::reset(std::move(points), std::move(faces), std::move(zones));
     this->updateRefs();
 
     if (validate)
