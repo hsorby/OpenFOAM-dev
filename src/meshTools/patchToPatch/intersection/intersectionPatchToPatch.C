@@ -27,6 +27,7 @@ License
 #include "triIntersect.H"
 #include "vtkWritePolyData.H"
 #include "addToRunTimeSelectionTable.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

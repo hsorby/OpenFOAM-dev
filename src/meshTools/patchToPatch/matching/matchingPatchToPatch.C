@@ -25,6 +25,7 @@ License
 
 #include "matchingPatchToPatch.H"
 #include "addToRunTimeSelectionTable.H"
+#include "flipOp.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

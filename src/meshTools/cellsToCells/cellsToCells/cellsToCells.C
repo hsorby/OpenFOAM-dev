@@ -31,6 +31,7 @@ License
 #include "wedgePolyPatch.H"
 #include "processorPolyPatch.H"
 #include "TimeOpenFOAM.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

@@ -27,6 +27,10 @@ License
 #include "processorPolyPatch.H"
 #include "SubField.H"
 #include "TimeOpenFOAM.H"
+#include "PstreamBuffers.H"
+#include "UOPstream.H"
+#include "UIPstream.H"
+#include "patchToPatchTools.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

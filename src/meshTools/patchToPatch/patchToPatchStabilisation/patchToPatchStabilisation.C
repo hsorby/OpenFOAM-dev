@@ -29,6 +29,7 @@ License
 #include "SubField.H"
 #include "globalIndex.H"
 #include "OBJstream.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

@@ -26,6 +26,7 @@ License
 #include "inverseDistancePatchToPatch.H"
 #include "mathematicalConstants.H"
 #include "addToRunTimeSelectionTable.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

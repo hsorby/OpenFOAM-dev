@@ -29,6 +29,7 @@ License
 #include "OBJstream.H"
 #include "vtkWritePolyData.H"
 #include "mathematicalConstants.H"
+#include "Tuple2.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

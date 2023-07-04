@@ -30,6 +30,7 @@ License
 #include "OBJstream.H"
 #include "vtkWritePolyData.H"
 #include "mathematicalConstants.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

@@ -33,6 +33,7 @@ License
 #include "RemoteData.H"
 #include "OBJstream.H"
 #include "addToRunTimeSelectionTable.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

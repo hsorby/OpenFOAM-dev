@@ -26,6 +26,9 @@ License
 #include "patchToPatch.H"
 #include "uindirectPrimitivePatch.H"
 #include "uindirectPrimitiveOldTimePatch.H"
+#include "PstreamBuffers.H"
+#include "UOPstream.H"
+#include "UIPstream.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

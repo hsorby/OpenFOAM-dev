@@ -31,6 +31,8 @@ License
 #include "FaceCellWave.H"
 #include "globalIndex.H"
 #include "OBJstream.H"
+#include "PstreamReduceOps.H"
+#include "globalMeshData.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

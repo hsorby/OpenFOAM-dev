@@ -28,6 +28,11 @@ License
 #include "PointEdgeLayerInfoData.H"
 #include "FaceCellWave.H"
 #include "PointEdgeWave.H"
+#include "globalMeshData.H"
+#include "pointFieldsFwd.H"
+#include "pointMesh.H"
+#include "pointPatchField.H"
+#include "GeometricField.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

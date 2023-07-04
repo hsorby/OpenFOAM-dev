@@ -38,6 +38,7 @@ SourceFiles
 #include "labelList.H"
 #include "vectorField.H"
 #include "pointField.H"
+#include "typeInfo.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

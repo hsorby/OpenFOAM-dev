@@ -39,7 +39,7 @@ SourceFiles
 #define GeometricField_H
 
 #include "lduInterfaceFieldPtrsList.H"
-#include "LduInterfaceFieldPtrsList.H"
+#include "LduInterfaceFieldPtrsListPascal.H"
 #include "GeometricBoundaryField.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
