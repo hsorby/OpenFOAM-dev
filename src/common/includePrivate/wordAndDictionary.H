@@ -58,6 +58,7 @@ SourceFiles
 #define wordAndDictionary_H
 
 #include "dictionary.H"
+#include "Tuple2.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

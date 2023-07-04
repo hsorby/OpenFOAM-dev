@@ -38,6 +38,7 @@ SourceFiles
 #include "HashTable.H"
 #include "regIOobject.H"
 #include "wordReList.H"
+#include "Hash.H"
 #include "HashSet.H"
 #include "Pair.H"
 

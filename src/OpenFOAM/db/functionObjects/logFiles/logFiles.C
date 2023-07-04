@@ -26,6 +26,7 @@ License
 #include "logFiles.H"
 #include "TimeOpenFOAM.H"
 #include "OSspecific.H"
+#include "Pstream.H"
 
 // * * * * * * * * * * * * Protected Member Functions  * * * * * * * * * * * //
 

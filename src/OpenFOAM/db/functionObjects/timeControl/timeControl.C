@@ -24,6 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "timeControl.H"
+#include "IOstreams.H"
 #include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * * //
