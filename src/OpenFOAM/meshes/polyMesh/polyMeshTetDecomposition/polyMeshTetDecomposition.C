@@ -24,6 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "polyMeshTetDecomposition.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

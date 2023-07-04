@@ -24,6 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "syncTools.H"
+#include "globalMeshData.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 
