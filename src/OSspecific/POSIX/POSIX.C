@@ -56,7 +56,12 @@ Description
 #include <sys/socket.h>
 #include <netdb.h>
 #include <dlfcn.h>
+#ifdef HAVE_LINK_H
 #include <link.h>
+#endif
+#ifdef HAVE_MACH0_DYLD_H
+#include <mach-o/dyld.h>
+#endif
 
 #include <netinet/in.h>
 
@@ -647,9 +652,15 @@ double Foam::highResLastModified
     fileStat fileStatus(name, checkVariants, followLink);
     if (fileStatus.isValid())
     {
+    #if defined(__APPLE__)
+        return
+            fileStatus.status().st_mtime
+          + 1e-9*fileStatus.status().st_atimespec.tv_nsec;
+    #else
         return
             fileStatus.status().st_mtime
           + 1e-9*fileStatus.status().st_atim.tv_nsec;
+    #endif
     }
     else
     {
@@ -1328,7 +1339,7 @@ bool Foam::dlSymFound(void* handle, const std::string& symbol)
     }
 }
 
-
+#ifdef HAVE_DL_ITERATE_PHDR
 static int collectLibsCallback
 (
     struct dl_phdr_info *info,
@@ -1341,12 +1352,21 @@ static int collectLibsCallback
     ptr->append(info->dlpi_name);
     return 0;
 }
-
+#endif
 
 Foam::fileNameList Foam::dlLoaded()
 {
     DynamicList<fileName> libs;
+#ifdef HAVE_DL_ITERATE_PHDR
     dl_iterate_phdr(collectLibsCallback, &libs);
+#endif
+#ifdef HAVE_MACH0_DYLD_H
+    uint32_t count = _dyld_image_count();
+    for (uint32_t index = 0; index < count; ++index)
+    {
+        libs.append(_dyld_get_image_name(index));
+    }
+#endif
     if (POSIX::debug)
     {
         std::cout
@@ -1354,7 +1374,7 @@ Foam::fileNameList Foam::dlLoaded()
             << " : determined loaded libraries :" << libs.size() << std::endl;
     }
 
-    return libs;
+    return std::move(libs);
 }
 
 

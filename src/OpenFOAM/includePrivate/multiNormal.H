@@ -60,6 +60,7 @@ See also
 #define multiNormal_H
 
 #include "normal.H"
+#include "PtrList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

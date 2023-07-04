@@ -62,6 +62,7 @@ SourceFiles
 #include "dictionary.H"
 #include "Random.H"
 #include "scalarField.H"
+#include "autoPtr.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

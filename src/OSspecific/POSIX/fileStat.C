@@ -26,10 +26,13 @@ License
 #include "fileStat.H"
 #include "IOstreams.H"
 #include "timer.H"
+#include "FixedList.H"
 
 #include <signal.h>
 #include <unistd.h>
+#ifdef HAVE_SYS_SYSMACROS_H
 #include <sys/sysmacros.h>
+#endif
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

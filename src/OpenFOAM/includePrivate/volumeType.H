@@ -35,6 +35,7 @@ SourceFiles
 #define volumeType_H
 
 #include "NamedEnum.H"
+#include "contiguous.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

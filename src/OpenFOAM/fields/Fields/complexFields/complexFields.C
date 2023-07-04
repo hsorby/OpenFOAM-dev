@@ -28,6 +28,7 @@ Description
 
 #include "complexFields.H"
 #include "addToRunTimeSelectionTable.H"
+#include "token.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
