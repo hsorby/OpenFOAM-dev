@@ -225,13 +225,13 @@ bool operator>=(const Pair<Type>& a, const Pair<Type>& b)
     return !(a < b);
 }
 
-#include "PairI.H"
-
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 } // End namespace Foam
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#include "PairI.H"
 
 #endif
 
