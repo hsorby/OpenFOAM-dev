@@ -43,7 +43,7 @@ See also
 #define Tensor_H
 
 #include "MatrixSpace.H"
-#include "Vector.H"
+#include "VectorPascal.H"
 #include "SphericalTensor.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

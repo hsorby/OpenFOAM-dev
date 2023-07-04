@@ -36,7 +36,7 @@ SourceFiles
 #define vector_H
 
 #include "scalar.H"
-#include "Vector.H"
+#include "VectorPascal.H"
 #include "contiguous.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

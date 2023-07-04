@@ -25,9 +25,12 @@ License
 
 #include "fileOperation.H"
 #include "decomposedBlockData.H"
+#include "FixedList.H"
 #include "polyMesh.H"
 #include "TimeOpenFOAM.H"
 #include "OSspecific.H"
+#include "Tuple2.H"
+#include "Pstream.H"
 
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */
 

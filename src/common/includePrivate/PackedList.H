@@ -100,8 +100,10 @@ SourceFiles
 #ifndef PackedList_H
 #define PackedList_H
 
+#include "className.H"
 #include "labelList.H"
 #include "UIndirectList.H"
+
 #include <type_traits>
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

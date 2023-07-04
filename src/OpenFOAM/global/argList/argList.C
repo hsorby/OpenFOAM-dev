@@ -27,6 +27,7 @@ License
 #include "OSspecific.H"
 #include "clock.H"
 #include "IFstream.H"
+#include "FixedList.H"
 #include "dictionary.H"
 #include "IOobject.H"
 #include "jobInfo.H"
@@ -37,6 +38,8 @@ License
 #include "fileOperationInitialise.H"
 #include "stringListOps.H"
 #include "dlLibraryTable.H"
+#include "IPstream.H"
+#include "OPstream.H"
 
 #include <cctype>
 

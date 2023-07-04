@@ -35,7 +35,7 @@ SourceFiles
 #ifndef floatVector_H
 #define floatVector_H
 
-#include "Vector.H"
+#include "VectorPascal.H"
 #include "contiguous.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
