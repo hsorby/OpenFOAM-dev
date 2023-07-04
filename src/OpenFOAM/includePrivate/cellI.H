@@ -45,7 +45,7 @@ inline Foam::cell::cell(const labelUList& lst)
 
 inline Foam::cell::cell(labelList&& lst)
 :
-    labelList(move(lst))
+    labelList(std::move(lst))
 {}
 
 
@@ -73,7 +73,7 @@ inline bool Foam::operator!=(const cell& a, const cell& b)
 
 inline void Foam::cell::operator=(labelList&& l)
 {
-    labelList::operator=(move(l));
+    labelList::operator=(std::move(l));
 }
 
 

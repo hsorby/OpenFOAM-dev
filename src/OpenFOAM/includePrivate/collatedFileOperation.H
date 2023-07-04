@@ -42,6 +42,7 @@ SourceFiles
 #define fileOperations_collatedFileOperation_H
 
 #include "masterUncollatedFileOperation.H"
+#include "PtrList.H"
 #include "OFstreamCollator.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

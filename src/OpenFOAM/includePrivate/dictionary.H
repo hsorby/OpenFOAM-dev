@@ -51,9 +51,10 @@ SourceFiles
 #define dictionary_H
 
 #include "entry.H"
+#include "FixedList.H"
+#include "HashSet.H"
 #include "IDLList.H"
 #include "DLList.H"
-#include "HashSet.H"
 #include "ITstream.H"
 #include "wordReList.H"
 #include "Pair.H"
@@ -100,7 +101,7 @@ public:
         //- Move constructor
         dictionaryName(dictionaryName&& name)
         :
-            name_(move(name.name_))
+            name_(std::move(name.name_))
         {}
 
 
@@ -145,7 +146,7 @@ public:
 
         void operator=(dictionaryName&& name)
         {
-            name_ = move(name.name_);
+            name_ = std::move(name.name_);
         }
 };
 

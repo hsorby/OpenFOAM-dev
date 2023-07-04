@@ -29,6 +29,8 @@ License
 #include "PstreamBuffers.H"
 #include "masterUncollatedFileOperation.H"
 #include "boolList.H"
+#include "UOPstream.H"
+#include "UIPstream.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

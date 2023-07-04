@@ -24,7 +24,6 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "masterUncollatedFileOperation.H"
-#include "TimeOpenFOAM.H"
 #include "masterOFstream.H"
 #include "decomposedBlockData.H"
 #include "dummyISstream.H"
@@ -32,6 +31,16 @@ License
 #include "PackedBoolList.H"
 #include "gzstream.h"
 #include "addToRunTimeSelectionTable.H"
+#include "Tuple2.H"
+#include "Pstream.H"
+#include "IOstreams.H"
+#include "IFstream.H"
+#include "UOPstream.H"
+#include "labelList.H"
+#include "TimeOpenFOAM.H"
+#include "UIPstream.H"
+#include "IPstream.H"
+#include "OPstream.H"
 
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */
 
@@ -680,7 +689,7 @@ Foam::fileOperations::masterUncollatedFileOperation::read
             if (debug)
             {
                 Pout<< "masterUncollatedFileOperation::readStream :"
-                    << " Done reading " << buf.size() << " bytes" << endl;
+                    << " Done reading " << (label)buf.size() << " bytes" << endl;
             }
             const fileName& fName = filePaths[Pstream::myProcNo(comm)];
             isPtr.reset(new IStringStream(fName, buf, IOstream::BINARY));
@@ -2310,7 +2319,7 @@ Foam::instantList Foam::fileOperations::masterUncollatedFileOperation::findTimes
         // Note: do we also cache if no times have been found since it might
         //       indicate a directory that is being filled later on ...
 
-        instantList* tPtr = new instantList(move(times));
+        instantList* tPtr = new instantList(std::move(times));
 
         times_.insert(directory, tPtr);
 
@@ -2479,7 +2488,7 @@ Foam::fileOperations::masterUncollatedFileOperation::NewIFstream
             if (debug)
             {
                 Pout<< "masterUncollatedFileOperation::NewIFstream :"
-                    << " Done reading " << buf.size() << " bytes" << endl;
+                    << " Done reading " << (label)buf.size() << " bytes" << endl;
             }
 
             // Note: IPstream is not an IStream so use a IStringStream to

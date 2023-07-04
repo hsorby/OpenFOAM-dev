@@ -94,7 +94,7 @@ public:
         )
         :
             Istream(format, version),
-            tokenList(move(tokens)),
+            tokenList(std::move(tokens)),
             name_(name),
             tokenIndex_(0)
         {

@@ -24,12 +24,17 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "collatedFileOperation.H"
-#include "TimeOpenFOAM.H"
 #include "threadedCollatedOFstream.H"
 #include "decomposedBlockData.H"
+#include "addToRunTimeSelectionTable.H"
+#include "Hash.H"
+#include "TimeOpenFOAM.H"
 #include "masterOFstream.H"
 #include "OFstream.H"
-#include "addToRunTimeSelectionTable.H"
+#include "Pstream.H"
+#include "OStringStream.H"
+#include "IStringStream.H"
+#include "IOstreams.H"
 
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */
 

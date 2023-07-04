@@ -28,6 +28,8 @@ License
 #include "regExp.H"
 #include "OSHA1stream.H"
 #include "inputSyntaxEntry.H"
+#include "IStringStream.H"
+#include "Tuple2.H"
 
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */
 

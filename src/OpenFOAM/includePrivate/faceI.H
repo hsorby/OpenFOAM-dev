@@ -49,7 +49,7 @@ inline Foam::face::face(const labelList& lst)
 
 inline Foam::face::face(labelList&& lst)
 :
-    labelList(move(lst))
+    labelList(std::move(lst))
 {}
 
 
@@ -119,7 +119,7 @@ inline Foam::label Foam::face::nTriangles() const
 
 inline void Foam::face::operator=(labelList&& l)
 {
-    labelList::operator=(move(l));
+    labelList::operator=(std::move(l));
 }
 
 

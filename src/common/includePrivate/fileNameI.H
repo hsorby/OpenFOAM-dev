@@ -63,7 +63,7 @@ inline Foam::fileName::fileName(const fileName& fn)
 
 inline Foam::fileName::fileName(fileName&& fn)
 :
-    string(move(fn))
+    string(std::move(fn))
 {}
 
 

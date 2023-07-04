@@ -25,6 +25,7 @@ License
 
 #include "UPstream.H"
 #include "boolList.H"
+#include "token.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 

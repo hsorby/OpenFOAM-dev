@@ -24,7 +24,10 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "threadedCollatedOFstream.H"
+#include "labelList.H"
+#include "ISstream.H"
 #include "decomposedBlockData.H"
+#include "PtrList.H"
 #include "OFstreamCollator.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //

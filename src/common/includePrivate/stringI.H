@@ -45,7 +45,7 @@ inline Foam::string::string(const string& str)
 
 inline Foam::string::string(string&& str)
 :
-    std::string(move(str))
+    std::string(std::move(str))
 {}
 
 
@@ -234,7 +234,7 @@ void Foam::string::operator=(const string& str)
 
 void Foam::string::operator=(string&& str)
 {
-    std::string::operator=(move(str));
+    std::string::operator=(std::move(str));
 }
 
 

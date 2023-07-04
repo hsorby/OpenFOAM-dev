@@ -26,6 +26,10 @@ License
 #include "hostCollatedFileOperation.H"
 #include "PackedBoolList.H"
 #include "addToRunTimeSelectionTable.H"
+#include "IOstreams.H"
+#include "Pstream.H"
+#include "UPstream.H"
+#include "IStringStream.H"
 
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */
 

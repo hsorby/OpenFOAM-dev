@@ -39,7 +39,6 @@ SourceFiles
 #define Time_H
 
 #include "TimePaths.H"
-#include "objectRegistry.H"
 #include "IOdictionary.H"
 #include "FIFOStack.H"
 #include "clock.H"
@@ -54,6 +53,7 @@ SourceFiles
 #include "functionObjectList.H"
 #include "sigWriteNow.H"
 #include "sigStopAtWriteNow.H"
+#include "objectRegistry.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

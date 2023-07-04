@@ -53,10 +53,12 @@ SourceFiles
 
 #include <thread>
 #include <mutex>
-#include "IOstream.H"
+
+#include "IOstreams.H"
 #include "labelList.H"
 #include "FIFOStack.H"
 #include "SubList.H"
+#include "PtrList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

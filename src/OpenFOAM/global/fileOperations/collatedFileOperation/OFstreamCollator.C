@@ -28,6 +28,10 @@ License
 #include "decomposedBlockData.H"
 #include "masterUncollatedFileOperation.H"
 #include "OSspecific.H"
+#include "Pstream.H"
+#include "UPstream.H"
+#include "UIPstream.H"
+#include "UOPstream.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
@@ -55,7 +59,7 @@ bool Foam::OFstreamCollator::writeFile
 {
     if (debug)
     {
-        Pout<< "OFstreamCollator : Writing master " << masterData.size()
+        Pout<< "OFstreamCollator : Writing master " << (label)masterData.size()
             << " bytes to " << fName
             << " using comm " << comm << endl;
         if (slaveData.size())
@@ -144,7 +148,7 @@ bool Foam::OFstreamCollator::writeFile
 
     if (debug)
     {
-        Pout<< "OFstreamCollator : Finished writing " << masterData.size()
+        Pout<< "OFstreamCollator : Finished writing " << (label)masterData.size()
             << " bytes";
         if (UPstream::master(comm))
         {
