@@ -28,6 +28,11 @@ License
 #include "HashSet.H"
 #include "globalIndex.H"
 #include "ListOps.H"
+#include "IPstream.H"
+#include "OPstream.H"
+#include "IOstreams.H"
+#include "PstreamReduceOps.H"
+#include "cutTriTet.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

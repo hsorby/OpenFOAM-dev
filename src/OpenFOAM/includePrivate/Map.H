@@ -36,6 +36,7 @@ See also
 #define Map_H
 
 #include "HashTable.H"
+#include "Hash.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
