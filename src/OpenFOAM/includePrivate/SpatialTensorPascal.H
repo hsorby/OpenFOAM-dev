@@ -49,7 +49,7 @@ See also
 #ifndef SpatialTensor_H
 #define SpatialTensor_H
 
-#include "Tensor.H"
+#include "TensorPascal.H"
 #include "SpatialVector.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
