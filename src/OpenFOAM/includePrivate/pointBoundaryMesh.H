@@ -36,6 +36,7 @@ SourceFiles
 #define pointBoundaryMesh_H
 
 #include "pointPatchList.H"
+#include "wordRe.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

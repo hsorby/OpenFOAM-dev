@@ -33,6 +33,8 @@ License
 #include "IOstreams.H"
 #include "PstreamReduceOps.H"
 #include "cutTriTet.H"
+#include "UIndirectList.H"
+#include "flipOp.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

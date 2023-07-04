@@ -393,5 +393,5 @@ set(_FILES
 )
 add_library(OpenFOAM ${_FILES})
 target_compile_features(OpenFOAM PUBLIC cxx_std_11)
-target_include_directories(OpenFOAM PUBLIC include PUBLIC includePrivate)
+target_include_directories(OpenFOAM PUBLIC include PUBLIC includePrivate PRIVATE fields/Fields/Field/)
 target_link_libraries(OpenFOAM PUBLIC OSspecific common meshTools)

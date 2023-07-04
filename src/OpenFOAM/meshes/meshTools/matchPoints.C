@@ -26,6 +26,7 @@ License
 #include "matchPoints.H"
 #include "SortableList.H"
 #include "ListOps.H"
+#include "IOstreams.H"
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 
