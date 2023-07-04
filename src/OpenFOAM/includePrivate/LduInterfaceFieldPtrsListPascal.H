@@ -32,7 +32,7 @@ Description
 #ifndef LduInterfaceFieldPtrsList_H
 #define LduInterfaceFieldPtrsList_H
 
-#include "LduInterfaceField.H"
+#include "LduInterfaceFieldPascal.H"
 #include "UPtrList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

@@ -29,6 +29,7 @@ License
 #include "lduMatrix.H"
 #include "procLduMatrix.H"
 #include "procLduInterface.H"
+#include "tensor.H"
 #include "cyclicLduInterface.H"
 #include "IPstream.H"
 #include "OPstream.H"

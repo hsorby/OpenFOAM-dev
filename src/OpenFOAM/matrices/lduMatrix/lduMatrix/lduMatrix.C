@@ -25,6 +25,7 @@ License
 
 #include "lduMatrix.H"
 #include "IOstreams.H"
+#include "LduMatrixPascal.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 

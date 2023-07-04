@@ -59,6 +59,7 @@ SourceFiles
 #include "runTimeSelectionTables.H"
 #include "solverPerformance.H"
 #include "InfoProxy.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

@@ -50,7 +50,7 @@ See also
 #define SpatialTensor_H
 
 #include "TensorPascal.H"
-#include "SpatialVector.H"
+#include "SpatialVectorPascal.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

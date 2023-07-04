@@ -34,6 +34,7 @@ Description
 #define lduSchedule_H
 
 #include "ListOpenFOAM.H"
+#include "token.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
