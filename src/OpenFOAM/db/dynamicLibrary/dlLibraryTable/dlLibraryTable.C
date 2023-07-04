@@ -25,6 +25,7 @@ License
 
 #include "dlLibraryTable.H"
 #include "OSspecific.H"
+#include "defineDebugSwitch.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

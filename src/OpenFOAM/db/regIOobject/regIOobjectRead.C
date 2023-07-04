@@ -26,6 +26,9 @@ License
 #include "regIOobject.H"
 #include "IFstream.H"
 #include "dictionary.H"
+#include "Pstream.H"
+#include "fileOperation.H"
+#include "IOstreams.H"
 
 // * * * * * * * * * * * * Protected Member Functions  * * * * * * * * * * * //
 

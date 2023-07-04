@@ -30,6 +30,9 @@ Description
 #include "TimeOpenFOAM.H"
 #include "OSspecific.H"
 #include "OFstream.H"
+#include "Pstream.H"
+#include "fileOperation.H"
+#include "IOstreams.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

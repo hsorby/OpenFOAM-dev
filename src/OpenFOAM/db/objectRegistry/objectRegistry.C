@@ -23,8 +23,10 @@ License
 
 \*---------------------------------------------------------------------------*/
 
+#include "Hash.H"
 #include "objectRegistry.H"
 #include "TimeOpenFOAM.H"
+#include "IOstreams.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

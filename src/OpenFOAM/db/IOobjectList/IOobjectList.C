@@ -26,6 +26,8 @@ License
 #include "IOobjectList.H"
 #include "TimeOpenFOAM.H"
 #include "OSspecific.H"
+#include "fileOperation.H"
+#include "wordReListMatcher.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 
