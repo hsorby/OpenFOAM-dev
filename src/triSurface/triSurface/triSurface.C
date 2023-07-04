@@ -577,7 +577,7 @@ Foam::triSurface::triSurface
     pointField&& points
 )
 :
-    ParentType(std::move(trianglstd::es), move(points)),
+    ParentType(std::move(trianglstd::es), std::move(points)),
     patches_(patches),
     sortedEdgeFacesPtr_(nullptr),
     edgeOwnerPtr_(nullptr)
@@ -672,7 +672,7 @@ Foam::triSurface::triSurface(const triSurface& ts)
 
 Foam::triSurface::triSurface(triSurface&& ts)
 :
-    ParentType(std::move(std::ts), move(ts.points())),
+    ParentType(std::move(std::ts), std::move(ts.points())),
     patches_(std::move(ts.patches())),
     sortedEdgeFacesPtr_(nullptr),
     edgeOwnerPtr_(nullptr)
