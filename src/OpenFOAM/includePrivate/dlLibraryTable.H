@@ -38,6 +38,7 @@ SourceFiles
 #include "label.H"
 #include "DynamicList.H"
 #include "fileNameList.H"
+#include "className.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

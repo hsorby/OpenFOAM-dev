@@ -25,7 +25,7 @@ License
 
 #include "dlLibraryTable.H"
 #include "OSspecific.H"
-#include "defineDebugSwitch.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
@@ -65,12 +65,12 @@ Foam::dlLibraryTable::~dlLibraryTable()
             {
                 InfoInFunction
                     << "Closing " << libNames_[i]
-                    << " with handle " << uintptr_t(libPtrs_[i]) << endl;
+                    << " with handle " << (label)uintptr_t(libPtrs_[i]) << endl;
             }
             if (!dlClose(libPtrs_[i]))
             {
                 WarningInFunction<< "Failed closing " << libNames_[i]
-                    << " with handle " << uintptr_t(libPtrs_[i]) << endl;
+                    << " with handle " << (label)uintptr_t(libPtrs_[i]) << endl;
             }
         }
     }
@@ -97,7 +97,7 @@ bool Foam::dlLibraryTable::open
         {
             InfoInFunction
                 << "Opened " << libName
-                << " resulting in handle " << uintptr_t(libPtr) << endl;
+                << " resulting in handle " << (label)uintptr_t(libPtr) << endl;
         }
 
         if (!libPtr)
@@ -190,7 +190,7 @@ bool Foam::dlLibraryTable::close
         {
             InfoInFunction
                 << "Closing " << libName
-                << " with handle " << uintptr_t(libPtrs_[index]) << endl;
+                << " with handle " << (label)uintptr_t(libPtrs_[index]) << endl;
         }
 
         bool ok = dlClose(libPtrs_[index]);

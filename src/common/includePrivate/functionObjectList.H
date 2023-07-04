@@ -43,6 +43,7 @@ SourceFiles
 #include "PtrList.H"
 #include "functionObject.H"
 #include "SHA1Digest.H"
+#include "Hash.H"
 #include "HashSet.H"
 #include "includeFuncEntry.H"
 
