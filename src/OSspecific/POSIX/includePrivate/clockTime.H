@@ -37,6 +37,9 @@ SourceFiles
 #define clockTime_H
 
 #include <sys/types.h>
+#ifdef __APPLE__
+#include <sys/time.h>
+#endif
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

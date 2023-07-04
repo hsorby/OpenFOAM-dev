@@ -84,7 +84,7 @@ string pOpen(const string &cmd, label line=0)
 inline word addressToWord(const uintptr_t addr)
 {
     OStringStream nStream;
-    nStream << "0x" << hex << addr;
+    nStream << "0x" << hex << (label)addr;
     return nStream.str();
 }
 
