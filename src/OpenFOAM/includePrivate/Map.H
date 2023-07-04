@@ -82,7 +82,7 @@ public:
         //- Move constructor
         Map(Map<T>&& map)
         :
-            HashTable<T, label, Hash<label>>(move(map))
+            HashTable<T, label, Hash<label>>(std::move(map))
         {}
 
         //- Move constructor

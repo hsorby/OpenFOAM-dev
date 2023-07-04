@@ -269,7 +269,7 @@ Foam::face Foam::face::reverseFace() const
         newList[pointi] = f[size() - pointi];
     }
 
-    return face(move(newList));
+    return face(std::move(newList));
 }
 
 

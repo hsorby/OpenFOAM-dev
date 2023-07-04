@@ -33,7 +33,7 @@ Foam::globalIndex::globalIndex()
 
 Foam::globalIndex::globalIndex(labelList&& offsets)
 :
-    offsets_(move(offsets))
+    offsets_(std::move(offsets))
 {}
 
 

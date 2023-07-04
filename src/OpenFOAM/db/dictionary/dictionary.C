@@ -504,12 +504,12 @@ Foam::dictionary::dictionary
     dictionary&& dict
 )
 :
-    dictionaryName(move(dict.name())),
-    IDLList<entry>(move(dict)),
-    hashedEntries_(move(dict.hashedEntries_)),
+    dictionaryName(std::move(dict.name())),
+    IDLList<entry>(std::move(dict)),
+    hashedEntries_(std::move(dict.hashedEntries_)),
     parent_(dict.parent_),
-    patternEntries_(move(dict.patternEntries_)),
-    patternRegexps_(move(dict.patternRegexps_))
+    patternEntries_(std::move(dict.patternEntries_)),
+    patternRegexps_(std::move(dict.patternRegexps_))
 {}
 
 
@@ -533,12 +533,12 @@ Foam::dictionary::dictionary
     dictionary&& dict
 )
 :
-    dictionaryName(move(dict.name())),
-    IDLList<entry>(move(dict)),
-    hashedEntries_(move(dict.hashedEntries_)),
+    dictionaryName(std::move(dict.name())),
+    IDLList<entry>(std::move(dict)),
+    hashedEntries_(std::move(dict.hashedEntries_)),
     parent_(parentDict),
-    patternEntries_(move(dict.patternEntries_)),
-    patternRegexps_(move(dict.patternRegexps_))
+    patternEntries_(std::move(dict.patternEntries_)),
+    patternRegexps_(std::move(dict.patternRegexps_))
 {
     if (parentDict.name() != fileName::null)
     {
@@ -653,7 +653,7 @@ Foam::tokenList Foam::dictionary::tokens() const
         tokens.append(t);
     }
 
-    return tokenList(move(tokens));
+    return tokenList(std::move(tokens));
 }
 
 
@@ -1561,11 +1561,11 @@ void Foam::dictionary::operator=(dictionary&& rhs)
             << abort(FatalIOError);
     }
 
-    dictionaryName::operator=(move(rhs));
-    IDLList<entry>::operator=(move(rhs));
-    hashedEntries_ = move(rhs.hashedEntries_);
-    patternEntries_ = move(rhs.patternEntries_);
-    patternRegexps_ = move(rhs.patternRegexps_);
+    dictionaryName::operator=(std::move(rhs));
+    IDLList<entry>::operator=(std::move(rhs));
+    hashedEntries_ = std::move(rhs.hashedEntries_);
+    patternEntries_ = std::move(rhs.patternEntries_);
+    patternRegexps_ = std::move(rhs.patternRegexps_);
 }
 
 

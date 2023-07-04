@@ -131,7 +131,7 @@ Foam::decomposedBlockData::decomposedBlockData
 )
 :
     regIOobject(io),
-    List<char>(move(list)),
+    List<char>(std::move(list)),
     commsType_(commsType),
     comm_(comm)
 {

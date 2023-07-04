@@ -122,8 +122,8 @@ Foam::IOdictionary::IOdictionary(const IOdictionary& dict)
 
 Foam::IOdictionary::IOdictionary(IOdictionary&& dict)
 :
-    regIOobject(move(dict)),
-    dictionary(move(dict))
+    regIOobject(std::move(dict)),
+    dictionary(std::move(dict))
 {}
 
 
@@ -143,7 +143,7 @@ void Foam::IOdictionary::operator=(const IOdictionary& rhs)
 
 void Foam::IOdictionary::operator=(IOdictionary&& rhs)
 {
-    dictionary::operator=(move(rhs));
+    dictionary::operator=(std::move(rhs));
 }
 
 

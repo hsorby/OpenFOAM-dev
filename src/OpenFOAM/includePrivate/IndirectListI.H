@@ -40,7 +40,7 @@ inline Foam::IndirectListAddressing::IndirectListAddressing
     List<label>&& addr
 )
 :
-    addressing_(move(addr))
+    addressing_(std::move(addr))
 {}
 
 
@@ -67,7 +67,7 @@ inline Foam::IndirectList<T>::IndirectList
     List<label>&& addr
 )
 :
-    IndirectListAddressing(move(addr)),
+    IndirectListAddressing(std::move(addr)),
     UIndirectList<T>
     (
         completeList,

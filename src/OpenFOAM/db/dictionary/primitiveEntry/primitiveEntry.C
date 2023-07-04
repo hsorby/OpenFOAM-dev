@@ -142,7 +142,7 @@ Foam::primitiveEntry::primitiveEntry
 )
 :
     entry(key),
-    ITstream(key, move(tokens))
+    ITstream(key, std::move(tokens))
 {}
 
 

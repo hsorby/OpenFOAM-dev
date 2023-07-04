@@ -537,14 +537,14 @@ void Foam::globalMeshData::calcGlobalPointSlaves() const
     (
         new labelListList
         (
-            move(globalData.pointPoints())
+            std::move(globalData.pointPoints())
         )
     );
     globalPointTransformedSlavesPtr_.reset
     (
         new labelListList
         (
-            move(globalData.transformedPointPoints())
+            std::move(globalData.transformedPointPoints())
         )
     );
 
@@ -552,7 +552,7 @@ void Foam::globalMeshData::calcGlobalPointSlaves() const
     (
         new distributionMap
         (
-            move(globalData.map())
+            std::move(globalData.map())
         )
     );
 }
@@ -1668,14 +1668,14 @@ void Foam::globalMeshData::calcGlobalCoPointSlaves() const
     (
         new labelListList
         (
-            move(globalData.pointPoints())
+            std::move(globalData.pointPoints())
         )
     );
     globalCoPointSlavesMapPtr_.reset
     (
         new distributionMap
         (
-            move(globalData.map())
+            std::move(globalData.map())
         )
     );
 

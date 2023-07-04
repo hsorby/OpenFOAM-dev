@@ -75,7 +75,7 @@ inline Foam::DynamicList<T, SizeInc, SizeMult, SizeDiv>::DynamicList
     DynamicList<T, SizeInc, SizeMult, SizeDiv>&& lst
 )
 :
-    List<T>(move(lst)),
+    List<T>(std::move(lst)),
     capacity_(lst.capacity_)
 {
     lst.capacity_ = 0;
@@ -452,7 +452,7 @@ inline void Foam::DynamicList<T, SizeInc, SizeMult, SizeDiv>::operator=
             << "Attempted assignment to self" << abort(FatalError);
     }
 
-    List<T>::operator=(move(lst));
+    List<T>::operator=(std::move(lst));
     capacity_ = List<T>::size();
 }
 
