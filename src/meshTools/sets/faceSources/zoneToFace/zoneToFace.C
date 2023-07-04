@@ -26,6 +26,7 @@ License
 #include "zoneToFace.H"
 #include "polyMesh.H"
 #include "addToRunTimeSelectionTable.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

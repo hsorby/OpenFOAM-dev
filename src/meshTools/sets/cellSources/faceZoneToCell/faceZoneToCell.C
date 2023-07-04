@@ -26,6 +26,7 @@ License
 #include "faceZoneToCell.H"
 #include "polyMesh.H"
 #include "addToRunTimeSelectionTable.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

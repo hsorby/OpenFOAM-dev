@@ -32,6 +32,7 @@ License
 #include "cpuTime.H"
 #include "demandDrivenData.H"
 #include "addToRunTimeSelectionTable.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

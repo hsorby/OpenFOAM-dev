@@ -32,6 +32,7 @@ License
 #include "addToRunTimeSelectionTable.H"
 #include "PatchEdgeFaceWave.H"
 #include "patchEdgeFaceRegion.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

@@ -29,6 +29,7 @@ License
 #include "plane.H"
 #include "cellSet.H"
 #include "addToRunTimeSelectionTable.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

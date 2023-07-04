@@ -29,6 +29,7 @@ License
 #include "cellSet.H"
 #include "syncTools.H"
 #include "addToRunTimeSelectionTable.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
