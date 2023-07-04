@@ -28,6 +28,7 @@ Description
 
 #include "primitiveEntry.H"
 #include "functionEntry.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

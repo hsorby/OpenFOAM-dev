@@ -25,6 +25,7 @@ License
 
 #include "negEntry.H"
 #include "addToMemberFunctionSelectionTable.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

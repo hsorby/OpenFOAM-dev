@@ -30,8 +30,12 @@ License
 #include "calcIncludeEntry.H"
 #include "stringOps.H"
 #include "etcFiles.H"
+#include "Tuple2.H"
 #include "wordAndDictionary.H"
 #include "OSspecific.H"
+#include "ISstream.H"
+#include "IStringStream.H"
+#include "fileOperation.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 
