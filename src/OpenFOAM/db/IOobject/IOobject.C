@@ -27,6 +27,7 @@ License
 #include "TimeOpenFOAM.H"
 #include "IFstream.H"
 #include "OSspecific.H"
+#include "fileOperation.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

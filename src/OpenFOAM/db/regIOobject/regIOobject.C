@@ -27,6 +27,7 @@ License
 #include "TimeOpenFOAM.H"
 #include "polyMesh.H"
 #include "fileOperation.H"
+#include "Pstream.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
