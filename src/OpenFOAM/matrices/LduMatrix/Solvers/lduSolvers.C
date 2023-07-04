@@ -26,8 +26,9 @@ License
 #include "PCICG.H"
 #include "PBiCCCG.H"
 #include "PBiCICG.H"
-#include "SmoothSolver.H"
+#include "SmoothSolverPascal.H"
 #include "fieldTypes.H"
+#include "DiagonalSolverPascal.H"
 
 #define makeLduSolvers(Type, DType, LUType)                                    \
                                                                                \

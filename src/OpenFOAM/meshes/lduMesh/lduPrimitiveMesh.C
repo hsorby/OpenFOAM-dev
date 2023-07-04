@@ -29,6 +29,8 @@ License
 #include "labelPair.H"
 #include "processorGAMGInterface.H"
 #include "UIndirectList.H"
+#include "IPstream.H"
+#include "OPstream.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

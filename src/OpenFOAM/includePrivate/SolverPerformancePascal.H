@@ -38,6 +38,7 @@ SourceFiles
 
 #include "word.H"
 #include "FixedList.H"
+#include "className.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
