@@ -215,8 +215,8 @@ Foam::faceZone::faceZone
     const meshFaceZones& mz
 )
 :
-    zone(name, move(addr), index),
-    flipMap_(move(fm)),
+    zone(name, std::move(addr), index),
+    flipMap_(std::move(fm)),
     meshZones_(mz),
     patchPtr_(nullptr),
     masterCellsPtr_(nullptr),
@@ -277,8 +277,8 @@ Foam::faceZone::faceZone
     const meshFaceZones& mz
 )
 :
-    zone(fz, move(addr), index),
-    flipMap_(move(fm)),
+    zone(fz, std::move(addr), index),
+    flipMap_(std::move(fm)),
     meshZones_(mz),
     patchPtr_(nullptr),
     masterCellsPtr_(nullptr),
@@ -560,8 +560,8 @@ void Foam::faceZone::operator=(const faceZone& zn)
 void Foam::faceZone::operator=(faceZone&& zn)
 {
     clearAddressing();
-    zone::operator=(move(zn));
-    flipMap_ = move(zn.flipMap_);
+    zone::operator=(std::move(zn));
+    flipMap_ = std::move(zn.flipMap_);
 }
 
 

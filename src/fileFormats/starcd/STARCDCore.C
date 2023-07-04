@@ -110,8 +110,8 @@ bool Foam::fileFormats::STARCDCore::readPoints
 
 
     // reuse memory if possible
-    DynamicList<point> dynPoints(move(points));
-    DynamicList<label> dynPointId(move(ids));    // STAR-CD index of points
+    DynamicList<point> dynPoints(std::move(points));
+    DynamicList<label> dynPointId(std::move(ids));    // STAR-CD index of points
 
     dynPoints.clear();
     dynPointId.clear();

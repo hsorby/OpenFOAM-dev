@@ -165,8 +165,8 @@ Foam::distributionMap::distributionMap
     distributionMapBase
     (
         constructSize,
-        move(subMap),
-        move(constructMap),
+        std::move(subMap),
+        std::move(constructMap),
         subHasFlip,
         constructHasFlip
     )
@@ -187,13 +187,13 @@ Foam::distributionMap::distributionMap
     distributionMapBase
     (
         constructSize,
-        move(subMap),
-        move(constructMap),
+        std::move(subMap),
+        std::move(constructMap),
         subHasFlip,
         constructHasFlip
     ),
-    transformElements_(move(transformElements)),
-    transformStart_(move(transformStart))
+    transformElements_(std::move(transformElements)),
+    transformStart_(std::move(transformStart))
 {}
 
 
@@ -476,9 +476,9 @@ Foam::distributionMap::distributionMap(const distributionMap& map)
 
 Foam::distributionMap::distributionMap(distributionMap&& map)
 :
-    distributionMapBase(move(map)),
-    transformElements_(move(map.transformElements_)),
-    transformStart_(move(map.transformStart_))
+    distributionMapBase(std::move(map)),
+    transformElements_(std::move(map.transformElements_)),
+    transformStart_(std::move(map.transformStart_))
 {}
 
 

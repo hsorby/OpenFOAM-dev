@@ -298,7 +298,7 @@ void Foam::primitiveMesh::reset
         nCells
     );
 
-    cfPtr_ = new cellList(move(clst));
+    cfPtr_ = new cellList(std::move(clst));
 }
 
 

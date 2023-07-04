@@ -65,7 +65,7 @@ Foam::pointZone::pointZone
     const meshPointZones& mz
 )
 :
-    zone(name, move(addr), index),
+    zone(name, std::move(addr), index),
     meshZones_(mz)
 {}
 
@@ -104,7 +104,7 @@ Foam::pointZone::pointZone
     const meshPointZones& mz
 )
 :
-    zone(pz, move(addr), index),
+    zone(pz, std::move(addr), index),
     meshZones_(mz)
 {}
 
@@ -209,7 +209,7 @@ void Foam::pointZone::operator=(const pointZone& zn)
 void Foam::pointZone::operator=(pointZone&& zn)
 {
     clearAddressing();
-    zone::operator=(move(zn));
+    zone::operator=(std::move(zn));
 }
 
 
@@ -223,7 +223,7 @@ void Foam::pointZone::operator=(const labelUList& addr)
 void Foam::pointZone::operator=(labelList&& addr)
 {
     clearAddressing();
-    zone::operator=(move(addr));
+    zone::operator=(std::move(addr));
 }
 
 

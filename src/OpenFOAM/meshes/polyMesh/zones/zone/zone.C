@@ -103,7 +103,7 @@ Foam::zone::zone
     const label index
 )
 :
-    labelList(move(addr)),
+    labelList(std::move(addr)),
     name_(name),
     index_(index),
     lookupMapPtr_(nullptr)
@@ -146,7 +146,7 @@ Foam::zone::zone
     const label index
 )
 :
-    labelList(move(addr)),
+    labelList(std::move(addr)),
     name_(z.name()),
     index_(index),
     lookupMapPtr_(nullptr)
@@ -247,7 +247,7 @@ void Foam::zone::operator=(const zone& zn)
 
 void Foam::zone::operator=(zone&& zn)
 {
-    labelList::operator=(move(zn));
+    labelList::operator=(std::move(zn));
 }
 
 
@@ -259,7 +259,7 @@ void Foam::zone::operator=(const labelUList& addr)
 
 void Foam::zone::operator=(labelList&& addr)
 {
-    labelList::operator=(move(addr));
+    labelList::operator=(std::move(addr));
 }
 
 

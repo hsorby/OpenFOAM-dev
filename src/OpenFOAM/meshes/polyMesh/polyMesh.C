@@ -368,7 +368,7 @@ Foam::polyMesh::polyMesh
             io.readOpt(),
             IOobject::AUTO_WRITE
         ),
-        move(points)
+        std::move(points)
     ),
     faces_
     (
@@ -381,7 +381,7 @@ Foam::polyMesh::polyMesh
             io.readOpt(),
             IOobject::AUTO_WRITE
         ),
-        move(faces)
+        std::move(faces)
     ),
     owner_
     (
@@ -394,7 +394,7 @@ Foam::polyMesh::polyMesh
             io.readOpt(),
             IOobject::AUTO_WRITE
         ),
-        move(owner)
+        std::move(owner)
     ),
     neighbour_
     (
@@ -407,7 +407,7 @@ Foam::polyMesh::polyMesh
             io.readOpt(),
             IOobject::AUTO_WRITE
         ),
-        move(neighbour)
+        std::move(neighbour)
     ),
     clearedPrimitives_(false),
     boundary_
@@ -522,7 +522,7 @@ Foam::polyMesh::polyMesh
             IOobject::NO_READ,
             IOobject::AUTO_WRITE
         ),
-        move(points)
+        std::move(points)
     ),
     faces_
     (
@@ -535,7 +535,7 @@ Foam::polyMesh::polyMesh
             IOobject::NO_READ,
             IOobject::AUTO_WRITE
         ),
-        move(faces)
+        std::move(faces)
     ),
     owner_
     (
@@ -649,7 +649,7 @@ Foam::polyMesh::polyMesh
     }
 
     // transfer in cell list
-    cellList cLst(move(cells));
+    cellList cLst(std::move(cells));
 
     // Check if cells are valid
     forAll(cLst, celli)
@@ -672,27 +672,27 @@ Foam::polyMesh::polyMesh
 
 Foam::polyMesh::polyMesh(polyMesh&& mesh)
 :
-    objectRegistry(move(mesh)),
-    primitiveMesh(move(mesh)),
-    points_(move(mesh.points_)),
-    faces_(move(mesh.faces_)),
-    owner_(move(mesh.owner_)),
-    neighbour_(move(mesh.neighbour_)),
+    objectRegistry(std::move(mesh)),
+    primitiveMesh(std::move(mesh)),
+    points_(std::move(mesh.points_)),
+    faces_(std::move(mesh.faces_)),
+    owner_(std::move(mesh.owner_)),
+    neighbour_(std::move(mesh.neighbour_)),
     clearedPrimitives_(mesh.clearedPrimitives_),
-    boundary_(move(mesh.boundary_)),
-    bounds_(move(mesh.bounds_)),
+    boundary_(std::move(mesh.boundary_)),
+    bounds_(std::move(mesh.bounds_)),
     comm_(mesh.comm_),
     geometricD_(mesh.geometricD_),
     solutionD_(mesh.solutionD_),
-    tetBasePtIsPtr_(move(mesh.tetBasePtIsPtr_)),
-    cellTreePtr_(move(mesh.cellTreePtr_)),
-    pointZones_(move(mesh.pointZones_)),
-    faceZones_(move(mesh.faceZones_)),
-    cellZones_(move(mesh.cellZones_)),
-    globalMeshDataPtr_(move(mesh.globalMeshDataPtr_)),
+    tetBasePtIsPtr_(std::move(mesh.tetBasePtIsPtr_)),
+    cellTreePtr_(std::move(mesh.cellTreePtr_)),
+    pointZones_(std::move(mesh.pointZones_)),
+    faceZones_(std::move(mesh.faceZones_)),
+    cellZones_(std::move(mesh.cellZones_)),
+    globalMeshDataPtr_(std::move(mesh.globalMeshDataPtr_)),
     curMotionTimeIndex_(mesh.curMotionTimeIndex_),
-    oldPointsPtr_(move(mesh.oldPointsPtr_)),
-    oldCellCentresPtr_(move(mesh.oldCellCentresPtr_)),
+    oldPointsPtr_(std::move(mesh.oldPointsPtr_)),
+    oldCellCentresPtr_(std::move(mesh.oldCellCentresPtr_)),
     storeOldCellCentres_(mesh.storeOldCellCentres_),
     moving_(mesh.moving_),
     topoChanged_(mesh.topoChanged_)
@@ -717,23 +717,23 @@ void Foam::polyMesh::resetPrimitives
     // Optimised to avoid overwriting data at all
     if (notNull(points))
     {
-        points_ = move(points);
+        points_ = std::move(points);
         bounds_ = boundBox(points_, validBoundary);
     }
 
     if (notNull(faces))
     {
-        faces_ = move(faces);
+        faces_ = std::move(faces);
     }
 
     if (notNull(owner))
     {
-        owner_ = move(owner);
+        owner_ = std::move(owner);
     }
 
     if (notNull(neighbour))
     {
-        neighbour_ = move(neighbour);
+        neighbour_ = std::move(neighbour);
     }
 
 

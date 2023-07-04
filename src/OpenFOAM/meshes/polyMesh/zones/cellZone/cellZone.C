@@ -65,7 +65,7 @@ Foam::cellZone::cellZone
     const meshCellZones& mz
 )
 :
-    zone(name, move(addr), index),
+    zone(name, std::move(addr), index),
     meshZones_(mz)
 {}
 
@@ -104,7 +104,7 @@ Foam::cellZone::cellZone
     const meshCellZones& mz
 )
 :
-    zone(cz, move(addr), index),
+    zone(cz, std::move(addr), index),
     meshZones_(mz)
 {}
 
@@ -158,7 +158,7 @@ void Foam::cellZone::operator=(const cellZone& zn)
 void Foam::cellZone::operator=(cellZone&& zn)
 {
     clearAddressing();
-    zone::operator=(move(zn));
+    zone::operator=(std::move(zn));
 }
 
 
@@ -172,7 +172,7 @@ void Foam::cellZone::operator=(const labelUList& addr)
 void Foam::cellZone::operator=(labelList&& addr)
 {
     clearAddressing();
-    zone::operator=(move(addr));
+    zone::operator=(std::move(addr));
 }
 
 

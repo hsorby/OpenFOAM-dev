@@ -574,8 +574,8 @@ Foam::distributionMapBase::distributionMapBase
 )
 :
     constructSize_(constructSize),
-    subMap_(move(subMap)),
-    constructMap_(move(constructMap)),
+    subMap_(std::move(subMap)),
+    constructMap_(std::move(constructMap)),
     subHasFlip_(subHasFlip),
     constructHasFlip_(constructHasFlip),
     schedulePtr_()
@@ -790,8 +790,8 @@ Foam::distributionMapBase::distributionMapBase(const distributionMapBase& map)
 Foam::distributionMapBase::distributionMapBase(distributionMapBase&& map)
 :
     constructSize_(map.constructSize_),
-    subMap_(move(map.subMap_)),
-    constructMap_(move(map.constructMap_)),
+    subMap_(std::move(map.subMap_)),
+    constructMap_(std::move(map.constructMap_)),
     subHasFlip_(map.subHasFlip_),
     constructHasFlip_(map.constructHasFlip_),
     schedulePtr_()

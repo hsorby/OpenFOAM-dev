@@ -414,7 +414,7 @@ Foam::polyMesh::polyMesh
             IOobject::NO_READ,
             IOobject::AUTO_WRITE
         ),
-        move(points)
+        std::move(points)
     ),
     faces_
     (
@@ -695,7 +695,7 @@ Foam::polyMesh::polyMesh
             IOobject::NO_READ,
             IOobject::AUTO_WRITE
         ),
-        move(points)
+        std::move(points)
     ),
     faces_
     (

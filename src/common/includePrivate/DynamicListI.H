@@ -110,7 +110,7 @@ inline Foam::DynamicList<T, SizeInc, SizeMult, SizeDiv>::DynamicList
     List<T>&& lst
 )
 :
-    List<T>(move(lst)),
+    List<T>(std::move(lst)),
     capacity_(List<T>::size())
 {}
 
