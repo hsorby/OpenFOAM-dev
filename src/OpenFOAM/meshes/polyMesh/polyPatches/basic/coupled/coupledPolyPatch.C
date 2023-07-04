@@ -27,6 +27,8 @@ License
 #include "ListOps.H"
 #include "transform.H"
 #include "OFstream.H"
+#include "UIndirectList.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

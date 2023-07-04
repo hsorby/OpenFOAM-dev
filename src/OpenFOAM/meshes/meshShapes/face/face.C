@@ -29,6 +29,7 @@ License
 #include "mathematicalConstants.H"
 #include "Swap.H"
 #include "ConstCirculator.H"
+#include "UIndirectList.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

@@ -31,7 +31,9 @@ License
 #include "SubField.H"
 #include "entry.H"
 #include "dictionary.H"
+#include "Pstream.H"
 #include "pointPatchField.H"
+#include "demandDrivenData.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

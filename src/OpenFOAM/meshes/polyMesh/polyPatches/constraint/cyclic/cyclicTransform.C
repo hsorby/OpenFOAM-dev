@@ -27,6 +27,8 @@ License
 #include "unitConversion.H"
 #include "IOmanip.H"
 #include "stringOps.H"
+#include "IOstreams.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

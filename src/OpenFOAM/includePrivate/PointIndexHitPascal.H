@@ -40,6 +40,7 @@ SourceFiles
 
 #include "bool.H"
 #include "point.H"
+#include "token.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
