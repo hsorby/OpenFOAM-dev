@@ -27,6 +27,8 @@ License
 #include "addToRunTimeSelectionTable.H"
 #include "SubField.H"
 #include "transform.H"
+#include "IOstreams.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

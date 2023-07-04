@@ -43,6 +43,7 @@ SourceFiles
 #include "polyBoundaryMesh.H"
 #include "faceListFwd.H"
 #include "polyMesh.H"
+#include "Pstream.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

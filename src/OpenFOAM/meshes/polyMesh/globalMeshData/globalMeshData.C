@@ -32,6 +32,12 @@ License
 #include "distributionMap.H"
 #include "labelIOList.H"
 #include "globalIndexAndTransform.H"
+#include "PstreamBuffers.H"
+#include "UOPstream.H"
+#include "UIPstream.H"
+#include "IPstream.H"
+#include "OPstream.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

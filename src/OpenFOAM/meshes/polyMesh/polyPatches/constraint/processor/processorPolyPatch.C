@@ -34,6 +34,8 @@ License
 #include "TimeOpenFOAM.H"
 #include "PstreamBuffers.H"
 #include "ConstCirculator.H"
+#include "UOPstream.H"
+#include "UIPstream.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

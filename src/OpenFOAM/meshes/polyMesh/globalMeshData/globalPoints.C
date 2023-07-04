@@ -28,6 +28,9 @@ License
 #include "cyclicPolyPatch.H"
 #include "polyMesh.H"
 #include "distributionMap.H"
+#include "UOPstream.H"
+#include "UIPstream.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

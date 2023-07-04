@@ -26,6 +26,8 @@ License
 #include "symmetryPlanePolyPatch.H"
 #include "addToRunTimeSelectionTable.H"
 #include "symmetryPolyPatch.H"
+#include "IOstreams.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
