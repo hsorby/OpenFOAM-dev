@@ -48,6 +48,7 @@ SourceFiles
 #include "DimensionedField.H"
 #include "fileNameList.H"
 #include "fieldTypes.H"
+#include "Pstream.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

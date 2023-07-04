@@ -37,6 +37,7 @@ SourceFiles
 
 #include "lduAddressing.H"
 #include "fvMesh.H"
+#include "globalMeshData.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

@@ -25,6 +25,7 @@ License
 
 #include "fvCellSet.H"
 #include "volFields.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

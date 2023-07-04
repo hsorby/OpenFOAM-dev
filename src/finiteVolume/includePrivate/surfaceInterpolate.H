@@ -40,6 +40,7 @@ SourceFiles
 #include "surfaceFieldsFwd.H"
 #include "surfaceInterpolationScheme.H"
 #include "one.H"
+#include "FieldField.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

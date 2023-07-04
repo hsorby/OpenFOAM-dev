@@ -42,6 +42,7 @@ SourceFiles
 #include "fixedValueFvPatchFields.H"
 #include "zeroGradientFvPatchFields.H"
 #include "runTimeSelectionTables.H"
+#include "polyMeshMap.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

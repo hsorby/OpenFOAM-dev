@@ -53,6 +53,11 @@ License
 #include "fvcReconstruct.H"
 #include "surfaceInterpolate.H"
 
+#include "TimeOpenFOAM.H"
+#include "fileOperation.H"
+#include "processorPolyPatch.H"
+#include "processorFvPatch.H"
+
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
 namespace Foam

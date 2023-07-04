@@ -31,6 +31,7 @@ License
 #include "slicedSurfaceFields.H"
 #include "SubField.H"
 #include "cyclicFvPatchFields.H"
+#include "demandDrivenData.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

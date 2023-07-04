@@ -25,6 +25,7 @@ License
 
 #include "wallDist.H"
 #include "wallPolyPatch.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

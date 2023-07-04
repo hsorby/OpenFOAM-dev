@@ -25,6 +25,7 @@ License
 
 #include "zeroDimensionalFvMesh.H"
 #include "emptyPolyPatch.H"
+#include "TimeOpenFOAM.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

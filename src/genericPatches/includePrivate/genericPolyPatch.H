@@ -41,6 +41,7 @@ SourceFiles
 #define genericPolyPatch_H
 
 #include "polyPatch.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

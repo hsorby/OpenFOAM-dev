@@ -37,6 +37,7 @@ SourceFiles
 
 #include "volFieldsFwd.H"
 #include "zeroField.H"
+#include "fvMatrix.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
