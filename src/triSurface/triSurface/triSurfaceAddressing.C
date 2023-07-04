@@ -32,6 +32,7 @@ Description
 #include "SortableList.H"
 #include "transform.H"
 #include "PatchTools.H"
+#include "UIndirectList.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

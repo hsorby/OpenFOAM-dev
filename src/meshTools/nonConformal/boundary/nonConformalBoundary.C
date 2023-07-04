@@ -27,6 +27,7 @@ License
 #include "nonConformalCoupledPolyPatch.H"
 #include "nonConformalErrorPolyPatch.H"
 #include "syncTools.H"
+#include "processorPolyPatch.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

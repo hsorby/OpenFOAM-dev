@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "Vector2DPascal.H"
-#include "Tensor2D.H"
+#include "Tensor2DPascal.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 

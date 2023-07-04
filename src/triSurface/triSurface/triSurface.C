@@ -36,6 +36,7 @@ License
 #include "symmTensor2D.H"
 #include "transform.H"
 #include "OSspecific.H"
+#include "Map.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

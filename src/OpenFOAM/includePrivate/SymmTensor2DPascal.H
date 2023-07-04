@@ -39,7 +39,7 @@ SourceFiles
 #define SymmTensor2D_H
 
 #include "VectorSpace.H"
-#include "SphericalTensor2D.H"
+#include "SphericalTensor2DPascal.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
