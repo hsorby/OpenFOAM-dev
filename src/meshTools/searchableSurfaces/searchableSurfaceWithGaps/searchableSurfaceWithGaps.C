@@ -27,6 +27,7 @@ License
 #include "addToRunTimeSelectionTable.H"
 #include "TimeOpenFOAM.H"
 #include "ListOps.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

@@ -30,6 +30,7 @@ License
 #include "globalIndex.H"
 #include "syncTools.H"
 #include "minData.H"
+#include "globalMeshData.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

@@ -30,6 +30,7 @@ License
 #include "DynamicField.H"
 #include "pointConstraint.H"
 #include "plane.H"
+#include "PtrList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

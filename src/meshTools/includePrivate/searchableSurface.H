@@ -49,6 +49,7 @@ SourceFiles
 #include "linePointRef.H"
 #include "objectRegistry.H"
 #include "volumeType.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

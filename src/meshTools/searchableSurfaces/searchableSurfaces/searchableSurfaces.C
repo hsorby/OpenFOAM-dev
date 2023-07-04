@@ -31,6 +31,8 @@ License
 #include "PatchTools.H"
 #include "triSurfaceMesh.H"
 #include "vtkWritePolyData.H"
+#include "PstreamReduceOps.H"
+#include "Tuple2.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

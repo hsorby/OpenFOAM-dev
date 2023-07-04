@@ -32,6 +32,8 @@ License
 
 #include "addToRunTimeSelectionTable.H"
 
+#include "PstreamReduceOps.H"
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 namespace Foam

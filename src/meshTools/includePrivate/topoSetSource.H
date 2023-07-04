@@ -47,6 +47,7 @@ SourceFiles
 #include "autoPtr.H"
 #include "NamedEnum.H"
 #include "HashTable.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

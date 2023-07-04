@@ -30,6 +30,9 @@ License
 #include "triSurfaceFields.H"
 #include "TimeOpenFOAM.H"
 #include "PatchTools.H"
+#include "fileOperation.H"
+#include "OSspecific.H"
+#include "Tuple2.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

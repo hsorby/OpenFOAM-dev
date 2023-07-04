@@ -37,6 +37,7 @@ SourceFiles
 
 #include "searchableSurface.H"
 #include "labelPair.H"
+#include "PtrList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

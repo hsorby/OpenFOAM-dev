@@ -30,6 +30,8 @@ License
 #include "globalIndex.H"
 #include "indirectPrimitivePatch.H"
 #include "dummyTransform.H"
+#include "PstreamReduceOps.H"
+#include "processorPolyPatch.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
