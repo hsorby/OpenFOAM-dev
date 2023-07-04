@@ -28,6 +28,7 @@ Description
 
 #include "sphericalTensorList.H"
 #include "addToRunTimeSelectionTable.H"
+#include "token.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

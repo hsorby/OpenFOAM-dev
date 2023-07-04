@@ -28,6 +28,7 @@ Description
 
 #include "vectorList.H"
 #include "addToRunTimeSelectionTable.H"
+#include "token.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

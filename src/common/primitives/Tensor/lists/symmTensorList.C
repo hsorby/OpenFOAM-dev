@@ -28,6 +28,7 @@ Description
 
 #include "symmTensorList.H"
 #include "addToRunTimeSelectionTable.H"
+#include "token.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
