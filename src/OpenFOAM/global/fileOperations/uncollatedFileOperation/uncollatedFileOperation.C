@@ -24,7 +24,6 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "uncollatedFileOperation.H"
-#include "TimeOpenFOAM.H"
 #include "IFstream.H"
 #include "OFstream.H"
 #include "decomposedBlockData.H"
@@ -32,6 +31,12 @@ License
 #include "unthreadedInitialise.H"
 #include "OSspecific.H"
 #include "addToRunTimeSelectionTable.H"
+#include "Hash.H"
+#include "Tuple2.H"
+#include "TimeOpenFOAM.H"
+#include "IOstreams.H"
+#include "IPstream.H"
+#include "OPstream.H"
 
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */
 

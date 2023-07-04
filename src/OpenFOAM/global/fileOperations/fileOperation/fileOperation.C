@@ -31,6 +31,7 @@ License
 #include "OSspecific.H"
 #include "Tuple2.H"
 #include "Pstream.H"
+#include "PstreamReduceOps.H"
 
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */
 

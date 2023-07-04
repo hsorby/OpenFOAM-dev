@@ -25,6 +25,7 @@ License
 
 #include "fileOperationInitialise.H"
 #include "addToRunTimeSelectionTable.H"
+#include "wordList.H"
 
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */
 
