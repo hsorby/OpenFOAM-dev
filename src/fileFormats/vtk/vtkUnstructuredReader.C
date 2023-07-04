@@ -30,6 +30,7 @@ License
 #include "cellModeller.H"
 #include "vectorIOField.H"
 #include "stringOps.H"
+#include "IStringStream.H"
 
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */
 

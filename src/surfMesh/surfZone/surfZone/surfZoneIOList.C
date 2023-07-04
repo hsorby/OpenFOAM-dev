@@ -24,6 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "surfZoneIOList.H"
+#include "PtrList.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

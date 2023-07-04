@@ -29,4 +29,4 @@ set(_FILES
 add_library(triSurface ${_FILES})
 target_compile_features(triSurface PUBLIC cxx_std_11)
 target_include_directories(triSurface PUBLIC include PUBLIC includePrivate)
-target_link_libraries(triSurface PUBLIC OpenFOAM)
+target_link_libraries(triSurface PUBLIC OpenFOAM surfMesh)

@@ -36,6 +36,7 @@ Description
 #include "IFstream.H"
 #include "readHexLabel.H"
 #include "stringList.H"
+#include "IStringStream.H"
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 

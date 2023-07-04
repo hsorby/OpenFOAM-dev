@@ -24,6 +24,9 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "surfacePatchIOList.H"
+#include "entry.H"
+#include "PtrList.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

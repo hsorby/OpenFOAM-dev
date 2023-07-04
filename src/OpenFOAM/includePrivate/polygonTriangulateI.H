@@ -24,6 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "polygonTriangulate.H"
+#include "UIndirectList.H"
 
 // * * * * * * * * * * * Private Static Member Functions * * * * * * * * * * //
 

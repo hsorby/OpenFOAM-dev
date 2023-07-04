@@ -25,6 +25,7 @@ License
 
 #include "OFSsurfaceFormatCore.H"
 #include "clock.H"
+#include "IOobject.H"
 
 // * * * * * * * * * * * * Protected Member Functions  * * * * * * * * * * * //
 
