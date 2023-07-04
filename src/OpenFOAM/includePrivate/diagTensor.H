@@ -35,7 +35,7 @@ SourceFiles
 #ifndef diagTensor_H
 #define diagTensor_H
 
-#include "DiagTensor.H"
+#include "DiagTensorPascal.H"
 #include "contiguous.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

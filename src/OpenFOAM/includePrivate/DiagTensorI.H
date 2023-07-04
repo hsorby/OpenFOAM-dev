@@ -24,7 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "SphericalTensorPascal.H"
-#include "SymmTensor.H"
+#include "SymmTensorPascal.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 

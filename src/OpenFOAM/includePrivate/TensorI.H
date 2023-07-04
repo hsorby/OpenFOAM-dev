@@ -23,8 +23,8 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "SymmTensor.H"
-#include "DiagTensor.H"
+#include "SymmTensorPascal.H"
+#include "DiagTensorPascal.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 
