@@ -44,7 +44,7 @@ See also
 
 #include "MatrixSpace.H"
 #include "VectorPascal.H"
-#include "SphericalTensor.H"
+#include "SphericalTensorPascal.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
