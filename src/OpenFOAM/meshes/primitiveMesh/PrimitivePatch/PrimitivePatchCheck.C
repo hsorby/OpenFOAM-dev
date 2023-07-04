@@ -26,7 +26,7 @@ Description
 
 \*---------------------------------------------------------------------------*/
 
-#include "PrimitivePatch.H"
+#include "PrimitivePatchPascal.H"
 #include "Map.H"
 #include "ListOps.H"
 
