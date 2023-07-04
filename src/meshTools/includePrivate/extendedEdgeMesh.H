@@ -62,6 +62,7 @@ SourceFiles
 #include "treeDataPoint.H"
 #include "PrimitivePatchPascal.H"
 #include "pointIndexHitList.H"
+#include "PtrList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

@@ -51,8 +51,8 @@ inline Foam::edgeMesh::edgeMesh(const edgeMesh& em)
 inline Foam::edgeMesh::edgeMesh(edgeMesh&& em)
 :
     fileFormats::edgeMeshFormatsCore(),
-    points_(move(em.points_)),
-    edges_(move(em.edges_)),
+    points_(std::move(em.points_)),
+    edges_(std::move(em.edges_)),
     pointEdgesPtr_(nullptr)
 {}
 
@@ -93,8 +93,8 @@ void Foam::edgeMesh::operator=(const edgeMesh& rhs)
 
 void Foam::edgeMesh::operator=(edgeMesh&& rhs)
 {
-    points_ = move(rhs.points_);
-    edges_ = move(rhs.edges_);
+    points_ = std::move(rhs.points_);
+    edges_ = std::move(rhs.edges_);
     pointEdgesPtr_.clear();
 }
 

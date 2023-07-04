@@ -148,8 +148,8 @@ Foam::edgeMesh::edgeMesh
 )
 :
     fileFormats::edgeMeshFormatsCore(),
-    points_(move(pointLst)),
-    edges_(move(edgeLst)),
+    points_(std::move(pointLst)),
+    edges_(std::move(edgeLst)),
     pointEdgesPtr_(nullptr)
 {}
 

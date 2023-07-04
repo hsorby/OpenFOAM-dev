@@ -27,6 +27,7 @@ License
 #include "FaceCellWave.H"
 #include "wallPoint.H"
 #include "WallInfo.H"
+#include "globalMeshData.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

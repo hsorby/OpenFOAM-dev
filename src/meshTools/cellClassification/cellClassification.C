@@ -36,6 +36,7 @@ License
 #include "cpuTime.H"
 #include "triSurface.H"
 #include "globalMeshData.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

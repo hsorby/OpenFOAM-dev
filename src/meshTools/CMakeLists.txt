@@ -196,4 +196,4 @@ set(_FILES
 add_library(meshTools ${_FILES})
 target_compile_features(meshTools PUBLIC cxx_std_11)
 target_include_directories(meshTools PUBLIC include PUBLIC includePrivate)
-target_link_libraries(meshTools PUBLIC OpenFOAM)
+target_link_libraries(meshTools PUBLIC OpenFOAM fileFormats triSurface)

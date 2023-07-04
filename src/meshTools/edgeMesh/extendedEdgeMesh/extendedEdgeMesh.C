@@ -91,7 +91,7 @@ const Foam::NamedEnum<Foam::extendedEdgeMesh::sideVolumeType, 4>
     Foam::extendedEdgeMesh::sideVolumeTypeNames_;
 
 Foam::scalar Foam::extendedEdgeMesh::cosNormalAngleTol_ =
-    Foam::cos(degToRad(0.1));
+    Foam::cos(0.1*constant::mathematical::pi/180.0);
 
 
 Foam::label Foam::extendedEdgeMesh::convexStart_ = 0;
@@ -313,7 +313,7 @@ Foam::extendedEdgeMesh::extendedEdgeMesh(const extendedEdgeMesh& fem)
 
 Foam::extendedEdgeMesh::extendedEdgeMesh(extendedEdgeMesh&& fem)
 :
-    edgeMesh(move(fem)),
+    edgeMesh(std::move(fem)),
     concaveStart_(fem.concaveStart()),
     mixedStart_(fem.mixedStart()),
     nonFeatureStart_(fem.nonFeatureStart()),
@@ -321,14 +321,14 @@ Foam::extendedEdgeMesh::extendedEdgeMesh(extendedEdgeMesh&& fem)
     flatStart_(fem.flatStart()),
     openStart_(fem.openStart()),
     multipleStart_(fem.multipleStart()),
-    normals_(move(fem.normals())),
-    normalVolumeTypes_(move(fem.normalVolumeTypes())),
-    edgeDirections_(move(fem.edgeDirections())),
-    normalDirections_(move(fem.normalDirections())),
-    edgeNormals_(move(fem.edgeNormals())),
-    featurePointNormals_(move(fem.featurePointNormals())),
-    featurePointEdges_(move(fem.featurePointEdges())),
-    regionEdges_(move(fem.regionEdges())),
+    normals_(std::move(fem.normals())),
+    normalVolumeTypes_(std::move(fem.normalVolumeTypes())),
+    edgeDirections_(std::move(fem.edgeDirections())),
+    normalDirections_(std::move(fem.normalDirections())),
+    edgeNormals_(std::move(fem.edgeNormals())),
+    featurePointNormals_(std::move(fem.featurePointNormals())),
+    featurePointEdges_(std::move(fem.featurePointEdges())),
+    regionEdges_(std::move(fem.regionEdges())),
     pointTree_(),
     edgeTree_(),
     edgeTreesByType_()
@@ -347,7 +347,7 @@ Foam::extendedEdgeMesh::extendedEdgeMesh
     edgeList&& edgeLst
 )
 :
-    edgeMesh(move(pointLst), move(edgeLst)),
+    edgeMesh(std::move(pointLst), std::move(edgeLst)),
     concaveStart_(0),
     mixedStart_(0),
     nonFeatureStart_(0),
@@ -1244,7 +1244,7 @@ void Foam::extendedEdgeMesh::add(const extendedEdgeMesh& fem)
     nonFeatureStart_ = newNonFeatureStart;
 
     // Reset points and edges
-    reset(move(newPoints), move(newEdges));
+    reset(std::move(newPoints), std::move(newEdges));
 
     // Transfer
     internalStart_ = newInternalStart;
@@ -1357,7 +1357,7 @@ void Foam::extendedEdgeMesh::flipNormals()
     concaveStart_ = newConcaveStart;
 
     // Reset points and edges
-    reset(move(newPoints), move(newEdges));
+    reset(std::move(newPoints), std::move(newEdges));
 
     // Transfer
     internalStart_ = newInternalStart;

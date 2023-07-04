@@ -47,6 +47,7 @@ Description
 #include "HashTable.H"
 #include "nil.H"
 #include "Hash.H"
+#include "FixedList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

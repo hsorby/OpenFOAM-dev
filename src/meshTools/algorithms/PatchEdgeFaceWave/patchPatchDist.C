@@ -28,6 +28,7 @@ License
 #include "syncTools.H"
 #include "polyMesh.H"
 #include "patchEdgeFacePoint.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 
