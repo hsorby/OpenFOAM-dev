@@ -28,6 +28,7 @@ Description
 
 #include "scalarList.H"
 #include "addToRunTimeSelectionTable.H"
+#include "token.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
