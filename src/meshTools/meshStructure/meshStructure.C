@@ -28,6 +28,9 @@ License
 #include "topoDistanceData.H"
 #include "pointTopoDistanceData.H"
 #include "PointEdgeWave.H"
+#include "PstreamReduceOps.H"
+#include "globalMeshData.H"
+#include "EdgeMap.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

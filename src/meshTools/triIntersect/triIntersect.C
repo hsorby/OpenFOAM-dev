@@ -30,6 +30,7 @@ License
 #include "OFstream.H"
 #include "tensor2D.H"
 #include "vtkWritePolyData.H"
+#include "Tuple2.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
