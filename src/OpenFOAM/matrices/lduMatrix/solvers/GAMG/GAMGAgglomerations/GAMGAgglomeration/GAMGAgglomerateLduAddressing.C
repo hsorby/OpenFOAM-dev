@@ -26,6 +26,10 @@ License
 #include "GAMGAgglomeration.H"
 #include "GAMGInterface.H"
 #include "processorGAMGInterface.H"
+#include "IOstreams.H"
+#include "globalIndex.H"
+#include "SubList.H"
+#include "Map.H"
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 

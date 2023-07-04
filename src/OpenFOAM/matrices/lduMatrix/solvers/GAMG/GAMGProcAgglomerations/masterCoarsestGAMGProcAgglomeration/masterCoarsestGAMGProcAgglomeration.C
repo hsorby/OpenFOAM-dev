@@ -26,6 +26,7 @@ License
 #include "masterCoarsestGAMGProcAgglomeration.H"
 #include "addToRunTimeSelectionTable.H"
 #include "GAMGAgglomeration.H"
+#include "IOstreams.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

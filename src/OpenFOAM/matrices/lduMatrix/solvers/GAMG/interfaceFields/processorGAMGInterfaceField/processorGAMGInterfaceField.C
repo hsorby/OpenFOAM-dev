@@ -26,6 +26,10 @@ License
 #include "processorGAMGInterfaceField.H"
 #include "addToRunTimeSelectionTable.H"
 #include "lduMatrix.H"
+#include "Istream.H"
+#include "Ostream.H"
+#include "IPstream.H"
+#include "OPstream.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

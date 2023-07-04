@@ -31,6 +31,10 @@ License
 #include "processorLduInterface.H"
 #include "processorGAMGInterface.H"
 #include "pairGAMGAgglomeration.H"
+#include "Map.H"
+#include "dictionary.H"
+#include "IOstreams.H"
+#include "UIndirectList.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

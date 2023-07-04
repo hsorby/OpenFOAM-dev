@@ -25,6 +25,7 @@ License
 
 #include "GAMGSolver.H"
 #include "vector2D.H"
+#include "IOstreams.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

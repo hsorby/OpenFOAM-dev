@@ -26,6 +26,7 @@ License
 #include "GAMGProcAgglomeration.H"
 #include "GAMGAgglomeration.H"
 #include "lduMesh.H"
+#include "globalIndex.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

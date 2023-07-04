@@ -24,6 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "transform.H"
+#include "token.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

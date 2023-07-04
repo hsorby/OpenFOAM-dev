@@ -25,6 +25,9 @@ License
 
 #include "GAMGSolver.H"
 #include "GAMGInterface.H"
+#include "IStringStream.H"
+#include "OStringStream.H"
+#include "IOstreams.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

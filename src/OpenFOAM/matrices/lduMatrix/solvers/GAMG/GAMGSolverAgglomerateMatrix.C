@@ -27,6 +27,11 @@ License
 #include "GAMGInterfaceField.H"
 #include "processorLduInterfaceField.H"
 #include "processorGAMGInterfaceField.H"
+#include "IOstreams.H"
+#include "IPstream.H"
+#include "OPstream.H"
+#include "SubList.H"
+#include "UIndirectList.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

@@ -27,6 +27,8 @@ License
 #include "PCG.H"
 #include "PBiCGStab.H"
 #include "SubField.H"
+#include "IOstreams.H"
+#include "IStringStream.H"
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 

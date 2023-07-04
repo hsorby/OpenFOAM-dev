@@ -31,6 +31,8 @@ License
 #include "GAMGProcAgglomeration.H"
 #include "pairGAMGAgglomeration.H"
 #include "IOmanip.H"
+#include "IOstreams.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

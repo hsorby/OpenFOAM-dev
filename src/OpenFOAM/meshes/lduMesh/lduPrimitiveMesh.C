@@ -28,6 +28,7 @@ License
 #include "EdgeMap.H"
 #include "labelPair.H"
 #include "processorGAMGInterface.H"
+#include "UIndirectList.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

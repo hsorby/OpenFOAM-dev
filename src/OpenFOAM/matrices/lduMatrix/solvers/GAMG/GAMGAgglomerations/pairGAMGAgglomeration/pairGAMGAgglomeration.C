@@ -24,6 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "pairGAMGAgglomeration.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

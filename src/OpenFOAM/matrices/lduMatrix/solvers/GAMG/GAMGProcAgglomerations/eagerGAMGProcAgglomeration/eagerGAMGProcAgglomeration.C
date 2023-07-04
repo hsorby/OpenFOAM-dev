@@ -26,6 +26,8 @@ License
 #include "eagerGAMGProcAgglomeration.H"
 #include "addToRunTimeSelectionTable.H"
 #include "GAMGAgglomeration.H"
+#include "dictionary.H"
+#include "IOstreams.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
