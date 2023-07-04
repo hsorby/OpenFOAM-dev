@@ -41,7 +41,7 @@ SourceFiles
 
 #include "solidBodyMotionFunction.H"
 #include "Function1.H"
-#include "Vector2D.H"
+#include "Vector2DPascal.H"
 #include "primitiveFields.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

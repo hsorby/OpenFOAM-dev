@@ -38,7 +38,7 @@ SourceFiles
 #ifndef Tensor2D_H
 #define Tensor2D_H
 
-#include "Vector2D.H"
+#include "Vector2DPascal.H"
 #include "SphericalTensor2D.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
