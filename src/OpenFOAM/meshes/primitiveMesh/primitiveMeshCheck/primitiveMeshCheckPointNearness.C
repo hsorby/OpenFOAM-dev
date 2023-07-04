@@ -25,6 +25,7 @@ License
 
 #include "primitiveMesh.H"
 #include "SortableList.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

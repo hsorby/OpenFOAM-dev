@@ -30,6 +30,7 @@ License
 #include "indexedOctree.H"
 #include "treeDataCell.H"
 #include "globalMeshData.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 

@@ -26,6 +26,7 @@ License
 #include "triangle.H"
 #include "IOstreams.H"
 #include "plane.H"
+#include "Tuple2.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 

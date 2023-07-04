@@ -27,6 +27,7 @@ License
 #include "polyMeshTools.H"
 #include "unitConversion.H"
 #include "syncTools.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

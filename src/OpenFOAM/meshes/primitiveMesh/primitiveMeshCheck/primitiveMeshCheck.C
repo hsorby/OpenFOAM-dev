@@ -30,6 +30,7 @@ License
 #include "SortableList.H"
 #include "EdgeMap.H"
 #include "primitiveMeshTools.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 

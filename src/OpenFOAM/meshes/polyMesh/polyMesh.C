@@ -35,6 +35,9 @@ License
 #include "treeDataCell.H"
 #include "meshObjects.H"
 #include "pointMesh.H"
+#include "SubField.H"
+#include "PstreamReduceOps.H"
+#include "OSspecific.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

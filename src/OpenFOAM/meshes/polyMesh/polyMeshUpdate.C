@@ -33,6 +33,7 @@ Description
 #include "pointMesh.H"
 #include "indexedOctree.H"
 #include "treeDataCell.H"
+#include "meshObjects.H"
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 

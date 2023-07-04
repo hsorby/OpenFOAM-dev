@@ -27,6 +27,7 @@ License
 #include "TimeOpenFOAM.H"
 #include "cellIOList.H"
 #include "OSspecific.H"
+#include "Pstream.H"
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 
