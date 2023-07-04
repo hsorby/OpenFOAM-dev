@@ -24,6 +24,7 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "nonBlockingGaussSeidelSmoother.H"
+#include "IOstreams.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

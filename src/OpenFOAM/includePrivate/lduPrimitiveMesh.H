@@ -37,6 +37,7 @@ SourceFiles
 
 #include "lduMesh.H"
 #include "labelList.H"
+#include "PtrList.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
