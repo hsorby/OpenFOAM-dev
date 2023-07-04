@@ -25,6 +25,7 @@ License
 
 #include "scalarMatrices.H"
 #include "SVD.H"
+#include "token.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
