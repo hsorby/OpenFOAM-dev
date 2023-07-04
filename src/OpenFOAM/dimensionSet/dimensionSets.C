@@ -26,6 +26,7 @@ License
 #include "dimensionSet.H"
 #include "dimensionedScalar.H"
 #include "demandDrivenData.H"
+#include "dictionary.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

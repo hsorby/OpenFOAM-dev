@@ -26,6 +26,8 @@ License
 #include "TimeOpenFOAM.H"
 #include "timeIOdictionary.H"
 #include "argList.H"
+#include "fileOperation.H"
+#include "PstreamReduceOps.H"
 
 // * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * * //
 

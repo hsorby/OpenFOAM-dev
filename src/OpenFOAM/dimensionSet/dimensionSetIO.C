@@ -26,6 +26,10 @@ License
 #include "dimensionSet.H"
 #include "IOstreams.H"
 #include "dimensionedScalar.H"
+#include "OStringStream.H"
+#include "IStringStream.H"
+#include "dictionary.H"
+
 #include <limits>
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //

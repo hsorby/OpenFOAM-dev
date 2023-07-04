@@ -26,6 +26,9 @@ License
 #include "TimeOpenFOAM.H"
 #include "timeIOdictionary.H"
 #include "OSspecific.H"
+#include "IOstreams.H"
+#include "Pstream.H"
+#include "fileOperation.H"
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 

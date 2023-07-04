@@ -25,6 +25,8 @@ License
 
 #include "solution.H"
 #include "TimeOpenFOAM.H"
+#include "IStringStream.H"
+#include "Pstream.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
