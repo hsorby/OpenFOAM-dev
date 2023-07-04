@@ -24,10 +24,15 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "LUscalarMatrix.H"
+#include "token.H"
+#include "dictionary.H"
 #include "lduMatrix.H"
 #include "procLduMatrix.H"
 #include "procLduInterface.H"
 #include "cyclicLduInterface.H"
+#include "IPstream.H"
+#include "OPstream.H"
+#include "IOstreams.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 

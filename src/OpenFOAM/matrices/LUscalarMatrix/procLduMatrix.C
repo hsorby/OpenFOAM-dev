@@ -25,6 +25,8 @@ License
 
 #include "procLduMatrix.H"
 #include "procLduInterface.H"
+#include "token.H"
+#include "dictionary.H"
 #include "lduMatrix.H"
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //

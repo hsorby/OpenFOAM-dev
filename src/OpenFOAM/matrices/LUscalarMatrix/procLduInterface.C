@@ -25,6 +25,8 @@ License
 
 #include "procLduInterface.H"
 #include "lduInterfaceField.H"
+#include "token.H"
+#include "dictionary.H"
 #include "cyclicLduInterface.H"
 #include "processorLduInterface.H"
 
