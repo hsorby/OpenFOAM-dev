@@ -23,6 +23,7 @@ License
 
 \*---------------------------------------------------------------------------*/
 
+#include "nonConformalErrorFvPatch.H"
 #include "fvMeshStitcher.H"
 #include "globalIndex.H"
 #include "fvcSurfaceIntegrate.H"

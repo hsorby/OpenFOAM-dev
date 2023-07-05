@@ -55,7 +55,6 @@ Description
 
 #include "error.H"
 #include "className.H"
-#include "nonConformalErrorPolyPatch.H"
 
 #include <type_traits>
 #include <typeinfo>

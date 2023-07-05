@@ -60,5 +60,12 @@ set(_FILES
 )
 add_library(common ${_FILES})
 target_compile_features(common PUBLIC cxx_std_11)
-target_include_directories(common PUBLIC include PUBLIC includePrivate PRIVATE primitives/Scalar)
+target_include_directories(common
+  PUBLIC
+    include
+    includePrivate
+    containers/LinkedLists/accessTypes/LList
+    containers/HashTables/HashTable
+    containers/Lists/UList
+  PRIVATE primitives/Scalar)
 target_link_libraries(common PUBLIC OpenFOAM)

@@ -13,7 +13,7 @@ include(CheckIncludeFileCXX)
 check_include_file_cxx("mach-o/dyld.h" HAVE_MACH0_DYLD_H)
 
 set(CMAKE_CXX_STANDARD 17)
-add_compile_definitions(WM_LABEL_SIZE=64 WM_DP)
+add_compile_definitions(WM_LABEL_SIZE=64 WM_DP NoRepository)
 if (HAVE_MACH0_DYLD_H)
   add_compile_definitions(HAVE_MACH0_DYLD_H)
 endif()
