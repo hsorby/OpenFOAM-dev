@@ -119,6 +119,12 @@ public:
             // Read a string (including enclosing double-quotes)
             virtual Istream& read(string&) = 0;
 
+            //- Read a unsigned short
+            virtual Istream& read(unsigned short&) = 0;
+
+            //- Read a uint16
+//            virtual Istream& read(uint16_t&) = 0;
+
             //- Read a label
             virtual Istream& read(label&) = 0;
 

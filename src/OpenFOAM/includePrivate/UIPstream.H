@@ -150,6 +150,9 @@ public:
             // Read a string (including enclosing double-quotes)
             Istream& read(string&);
 
+            //- Read a uint16
+            Istream& read(uint16_t&);
+
             //- Read a label
             Istream& read(label&);
 

@@ -767,6 +767,14 @@ Foam::Istream& Foam::ISstream::readBlock(string& str)
 }
 
 
+Foam::Istream& Foam::ISstream::read(uint16_t& val)
+{
+    is_ >> val;
+    setState(is_.rdstate());
+    return *this;
+}
+
+
 Foam::Istream& Foam::ISstream::read(label& val)
 {
     is_ >> val;

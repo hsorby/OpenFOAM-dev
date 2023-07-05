@@ -333,6 +333,13 @@ Foam::Istream& Foam::UIPstream::read(string& str)
 }
 
 
+Foam::Istream& Foam::UIPstream::read(uint16_t& val)
+{
+    readFromBuffer(val);
+    return *this;
+}
+
+
 Foam::Istream& Foam::UIPstream::read(label& val)
 {
     readFromBuffer(val);

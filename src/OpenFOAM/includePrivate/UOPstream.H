@@ -156,6 +156,9 @@ public:
                 const bool quoted=true
             );
 
+            //- Write int16_t
+            virtual Ostream& write(const int16_t);
+
             //- Write int32_t
             virtual Ostream& write(const int32_t);
 

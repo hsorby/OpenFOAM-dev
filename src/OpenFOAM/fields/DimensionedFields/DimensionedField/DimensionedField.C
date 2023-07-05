@@ -148,10 +148,10 @@ DimensionedField<Type, GeoMesh>::DimensionedField
     DimensionedField<Type, GeoMesh>&& df
 )
 :
-    regIOobject(move(df)),
-    Field<Type>(move(df)),
+    regIOobject(std::move(df)),
+    Field<Type>(std::move(df)),
     mesh_(df.mesh_),
-    dimensions_(move(df.dimensions_))
+    dimensions_(std::move(df.dimensions_))
 {}
 
 
@@ -613,8 +613,8 @@ void DimensionedField<Type, GeoMesh>::operator=
 
     checkField(*this, df, "=");
 
-    dimensions_ = move(df.dimensions());
-    Field<Type>::operator=(move(df));
+    dimensions_ = std::move(df.dimensions());
+    Field<Type>::operator=(std::move(df));
 }
 
 

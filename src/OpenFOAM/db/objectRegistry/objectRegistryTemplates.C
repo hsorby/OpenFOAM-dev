@@ -278,7 +278,7 @@ bool Foam::objectRegistry::cacheTemporaryObject(Object& ob) const
 
             ob.release();
             ob.checkOut();
-            store(new Object(move(ob)));
+            store(new Object(std::move(ob)));
 
             return true;
         }

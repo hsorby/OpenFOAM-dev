@@ -231,7 +231,6 @@ public:
 
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
 } // End namespace Foam
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
@@ -239,6 +238,7 @@ public:
 // Include inline implementations
 #include "TensorI.H"
 
+template <> const Foam::Tensor<Foam::scalar> Foam::Tensor<Foam::scalar>::I;
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 #endif

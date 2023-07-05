@@ -126,6 +126,13 @@ Foam::Istream& Foam::ITstream::read(string&)
 }
 
 
+Foam::Istream& Foam::ITstream::read(uint16_t&)
+{
+    NotImplemented;
+    return *this;
+}
+
+
 Foam::Istream& Foam::ITstream::read(label&)
 {
     NotImplemented;

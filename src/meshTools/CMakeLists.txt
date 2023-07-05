@@ -195,5 +195,33 @@ set(_FILES
 )
 add_library(meshTools ${_FILES})
 target_compile_features(meshTools PUBLIC cxx_std_11)
-target_include_directories(meshTools PUBLIC include PUBLIC includePrivate)
+target_include_directories(meshTools
+  PUBLIC
+    include
+    includePrivate
+    patchToPatch/patchToPatchStabilisation
+    indexedOctree
+    cellsToCells/cellsToCellsStabilisation
+    meshTools
+    triSurface/triSurfaceTools
+    edgeMesh/extendedEdgeMesh
+    algorithms/FaceCellWave
+    patchToPatch/patchToPatch
+    nonConformal/pointPatchFields/nonConformalProcessorCyclic
+    triIntersect
+    nonConformal/pointPatchFields/nonConformalError
+    PrimitiveOldTimePatch
+    mappedPatches/mappedPatchBase
+    cutPoly
+    triSurface/booleanOps/surfaceIntersection
+    cutPoly
+    algorithms/PointEdgeWave
+    cellsToCells/cellsToCells
+    patchToPatchTools
+    cutTriTet
+    cutPoly
+    mappedPatches/mappedInternalPatchBase
+    nonConformal/pointPatchFields/nonConformalCyclic
+    algorithms/PatchEdgeFaceWave
+)
 target_link_libraries(meshTools PUBLIC OpenFOAM fileFormats triSurface)

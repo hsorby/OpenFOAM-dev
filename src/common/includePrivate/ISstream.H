@@ -174,6 +174,9 @@ public:
             virtual Istream& read(string&);
 
             //- Read a label
+            virtual Istream& read(uint16_t&);
+
+            //- Read a label
             virtual Istream& read(label&);
 
             //- Read a floatScalar

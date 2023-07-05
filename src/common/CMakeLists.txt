@@ -64,8 +64,35 @@ target_include_directories(common
   PUBLIC
     include
     includePrivate
+    containers/Lists/FixedList
+    containers/Lists/UPtrList
+    containers/Lists/PtrList
+    containers/LinkedLists/accessTypes/LPtrList
+    containers/LinkedLists/accessTypes/ULPtrList
     containers/LinkedLists/accessTypes/LList
+    containers/LinkedLists/accessTypes/UILList
+    containers/LinkedLists/accessTypes/ILList
+    containers/HashTables/ListHashTable
+    containers/Lists/ListListOps
     containers/HashTables/HashTable
+    containers/Lists/UIndirectList
+    containers/Lists/SortableList
     containers/Lists/UList
+    containers/Lists/ListOps
+    containers/HashTables/HashSet
+    containers/Lists/DynamicList
+    containers/Lists/PackedList
+    containers/HashTables/HashTable
+    containers/HashTables/HashPtrTable
+    containers/Lists/List
+    containers/HashTables/HashList
+    containers/Dictionaries/DictionaryBase
+    containers/Dictionaries/PtrDictionary
+    primitives/strings/lists
+    primitives/VectorSpace
+    primitives/transform/transformer
+    containers/NamedEnum
+    containers/Lists/UCompactListList
+    containers/Lists/CompactListList
   PRIVATE primitives/Scalar)
 target_link_libraries(common PUBLIC OpenFOAM)

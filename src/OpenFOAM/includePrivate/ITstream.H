@@ -176,6 +176,9 @@ public:
             // Read a string (including enclosing double-quotes)
             virtual Istream& read(string&);
 
+            //- Read a uint16
+            virtual Istream& read(uint16_t&);
+
             //- Read a label
             virtual Istream& read(label&);
 

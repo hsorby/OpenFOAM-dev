@@ -136,6 +136,14 @@ Foam::Ostream& Foam::OSstream::writeQuoted
 }
 
 
+Foam::Ostream& Foam::OSstream::write(const int16_t val)
+{
+    os_ << val;
+    setState(os_.rdstate());
+    return *this;
+}
+
+
 Foam::Ostream& Foam::OSstream::write(const int32_t val)
 {
     os_ << val;

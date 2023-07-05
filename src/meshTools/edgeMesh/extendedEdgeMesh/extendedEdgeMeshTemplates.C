@@ -361,7 +361,7 @@ void Foam::extendedEdgeMesh::sortPointsAndEdges
 
     // Reinitialise the edgeMesh with sorted feature points and
     // renumbered edges
-    reset(move(pts), move(eds));
+    reset(std::move(pts), std::move(eds));
 
     // Generate the featurePointNormals
 

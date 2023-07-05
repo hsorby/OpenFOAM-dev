@@ -47,7 +47,7 @@ void Foam::Pstream::exchange
     if (!contiguous<T>())
     {
         FatalErrorInFunction
-            << "Continuous data only." << sizeof(T) << Foam::abort(FatalError);
+            << "Continuous data only." << (label)sizeof(T) << Foam::abort(FatalError);
     }
 
     if (sendBufs.size() != UPstream::nProcs(comm))

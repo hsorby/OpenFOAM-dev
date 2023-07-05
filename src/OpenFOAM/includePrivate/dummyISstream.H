@@ -98,6 +98,13 @@ public:
                 return *this;
             }
 
+            //- Read a uint16
+            virtual Istream& read(uint16_t&)
+            {
+                NotImplemented;
+                return *this;
+            }
+
             //- Read a label
             virtual Istream& read(label&)
             {

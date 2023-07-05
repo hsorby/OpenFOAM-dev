@@ -74,7 +74,7 @@ Foam::Field<Type>::Field(const UList<Type>& list)
 template<class Type>
 Foam::Field<Type>::Field(List<Type>&& f)
 :
-    List<Type>(move(f))
+    List<Type>(std::move(f))
 {}
 
 
@@ -104,7 +104,7 @@ template<class Type>
 Foam::Field<Type>::Field(Field<Type>&& f)
 :
     tmp<Field<Type>>::refCount(),
-    List<Type>(move(f))
+    List<Type>(std::move(f))
 {}
 
 
@@ -546,7 +546,7 @@ void Foam::Field<Type>::operator=(Field<Type>&& rhs)
             << abort(FatalError);
     }
 
-    List<Type>::operator=(move(rhs));
+    List<Type>::operator=(std::move(rhs));
 }
 
 

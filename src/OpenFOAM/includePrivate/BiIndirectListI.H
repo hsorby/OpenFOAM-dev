@@ -49,7 +49,7 @@ inline Foam::BiIndirectList<T>::BiIndirectList
 :
     posList_(const_cast<UList<T>&>(posList)),
     negList_(const_cast<UList<T>&>(negList)),
-    addressing_(move(addr))
+    addressing_(std::move(addr))
 {}
 
 

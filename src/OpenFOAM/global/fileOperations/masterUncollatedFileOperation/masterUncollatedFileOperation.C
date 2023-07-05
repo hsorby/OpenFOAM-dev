@@ -42,6 +42,9 @@ License
 #include "IPstream.H"
 #include "OPstream.H"
 
+#include <time.h>
+#include <stdint.h>
+
 /* * * * * * * * * * * * * * * Static Member Data  * * * * * * * * * * * * * */
 
 namespace Foam
