@@ -114,15 +114,15 @@ set(_FILES
   matrices/LUscalarMatrix/LUscalarMatrix.C
   matrices/LUscalarMatrix/procLduMatrix.C
   matrices/LUscalarMatrix/procLduInterface.C
-  matrices/lduMatrix/lduMatrix/lduMatrix.C
-  matrices/lduMatrix/lduMatrix/lduMatrixOperations.C
-  matrices/lduMatrix/lduMatrix/lduMatrixATmul.C
-  matrices/lduMatrix/lduMatrix/lduMatrixUpdateMatrixInterfaces.C
-  matrices/lduMatrix/lduMatrix/lduMatrixSolver.C
-  matrices/lduMatrix/lduMatrix/lduMatrixSmoother.C
-  matrices/lduMatrix/lduMatrix/lduMatrixPreconditioner.C
-  matrices/lduMatrix/solvers/diagonalSolver/diagonalSolver.C
-  matrices/lduMatrix/solvers/smoothSolver/smoothSolver.C
+  matrices/lduMatrixCamel/lduMatrix/lduMatrix.C
+  matrices/lduMatrixCamel/lduMatrix/lduMatrixOperations.C
+  matrices/lduMatrixCamel/lduMatrix/lduMatrixATmul.C
+  matrices/lduMatrixCamel/lduMatrix/lduMatrixUpdateMatrixInterfaces.C
+  matrices/lduMatrixCamel/lduMatrix/lduMatrixSolver.C
+  matrices/lduMatrixCamel/lduMatrix/lduMatrixSmoother.C
+  matrices/lduMatrixCamel/lduMatrix/lduMatrixPreconditioner.C
+  matrices/lduMatrixCamel/solvers/diagonalSolver/diagonalSolver.C
+  matrices/lduMatrixCamel/solvers/smoothSolver/smoothSolver.C
   matrices/lduMatrix/solvers/PCG/PCG.C
   matrices/lduMatrix/solvers/PBiCG/PBiCG.C
   matrices/lduMatrix/solvers/PBiCGStab/PBiCGStab.C
@@ -134,8 +134,8 @@ set(_FILES
   matrices/lduMatrix/smoothers/DICGaussSeidel/DICGaussSeidelSmoother.C
   matrices/lduMatrix/smoothers/DILU/DILUSmoother.C
   matrices/lduMatrix/smoothers/DILUGaussSeidel/DILUGaussSeidelSmoother.C
-  matrices/lduMatrix/preconditioners/noPreconditioner/noPreconditioner.C
-  matrices/lduMatrix/preconditioners/diagonalPreconditioner/diagonalPreconditioner.C
+  matrices/lduMatrixCamel/preconditioners/noPreconditioner/noPreconditioner.C
+  matrices/lduMatrixCamel/preconditioners/diagonalPreconditioner/diagonalPreconditioner.C
   matrices/lduMatrix/preconditioners/DICPreconditioner/DICPreconditioner.C
   matrices/lduMatrix/preconditioners/FDICPreconditioner/FDICPreconditioner.C
   matrices/lduMatrix/preconditioners/DILUPreconditioner/DILUPreconditioner.C
@@ -520,5 +520,6 @@ target_include_directories(OpenFOAM
     matrices/scalarMatrices
     fields/Fields/DynamicField
     fields/FieldFields/scalarFieldField
+    fields/pointPatchFields/basic/zeroGradient/
   PRIVATE fields/Fields/Field/)
 target_link_libraries(OpenFOAM PUBLIC OSspecific common meshTools)

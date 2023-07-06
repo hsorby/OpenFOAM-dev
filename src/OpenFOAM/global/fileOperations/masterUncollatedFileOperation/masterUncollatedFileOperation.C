@@ -997,7 +997,7 @@ time_t Foam::fileOperations::masterUncollatedFileOperation::lastModified
     const bool followLink
 ) const
 {
-    return masterOp<time_t, lastModifiedOp>
+    return masterOp<int64_t, lastModifiedOp>
     (
         fName,
         lastModifiedOp(checkVariants, followLink),

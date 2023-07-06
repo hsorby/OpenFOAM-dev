@@ -324,9 +324,9 @@ set(_FILES
   finiteVolume/divSchemes/gaussDivScheme/gaussDivSchemes.C
   finiteVolume/gradSchemes/gradScheme/gradSchemes.C
   finiteVolume/gradSchemes/gaussGrad/gaussGrads.C
-  finiteVolume/gradSchemes/leastSquaresGrad/leastSquaresVectors.C
-  finiteVolume/gradSchemes/leastSquaresGrad/leastSquaresGrads.C
-  finiteVolume/gradSchemes/LeastSquaresGrad/LeastSquaresGrads.C
+  finiteVolume/gradSchemes/leastSquaresGradCamel/leastSquaresVectors.C
+  finiteVolume/gradSchemes/leastSquaresGradCamel/leastSquaresGrads.C
+  finiteVolume/gradSchemes/LeastSquaresGradCamel/LeastSquaresGrads.C
   finiteVolume/gradSchemes/fourthGrad/fourthGrads.C
   finiteVolume/gradSchemes/limitedGradSchemes/faceLimitedGrad/faceLimitedGrads.C
   finiteVolume/gradSchemes/limitedGradSchemes/cellLimitedGrad/cellLimitedGrads.C

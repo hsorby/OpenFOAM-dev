@@ -23,82 +23,27 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "int16.H"
-#include "IOstreams.H"
-
-#include <inttypes.h>
-#include <sstream>
-#include <cerrno>
+#include "uint16.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-Foam::word Foam::name(const int16_t val)
+const uint16_t Foam::pTraits<uint16_t>::zero = 0;
+const uint16_t Foam::pTraits<uint16_t>::one = 1;
+const uint16_t Foam::pTraits<uint16_t>::min = 0;
+const uint16_t Foam::pTraits<uint16_t>::max = UINT16_MAX;
+const uint16_t Foam::pTraits<uint16_t>::rootMin = 0;
+const uint16_t Foam::pTraits<uint16_t>::rootMax = pTraits<uint16_t>::max;
+
+const char* const Foam::pTraits<uint16_t>::componentNames[] = { "" };
+
+Foam::pTraits<uint16_t>::pTraits(const uint16_t& p)
+:
+    p_(p)
+{}
+
+Foam::pTraits<uint16_t>::pTraits(Istream& is)
 {
-    std::ostringstream buf;
-    buf << val;
-    return buf.str();
-}
-
-
-// * * * * * * * * * * * * * * * IOstream Operators  * * * * * * * * * * * * //
-
-Foam::Istream& Foam::operator>>(Istream& is, int16_t& i)
-{
-    token t(is);
-
-    if (!t.good())
-    {
-        is.setBad();
-        return is;
-    }
-
-    if (t.isLabel())
-    {
-        i = int16_t(t.labelToken());
-    }
-    else
-    {
-        is.setBad();
-        FatalIOErrorInFunction(is)
-            << "wrong token type - expected int32_t, found " << t.info()
-            << exit(FatalIOError);
-
-        return is;
-    }
-
-    // Check state of Istream
-    is.check("Istream& operator>>(Istream&, int32_t&)");
-
-    return is;
-}
-
-
-int16_t Foam::readInt16(Istream& is)
-{
-    int16_t val;
-    is >> val;
-
-    return val;
-}
-
-
-bool Foam::read(const char* buf, int16_t& s)
-{
-    char *endptr = nullptr;
-    errno = 0;
-    intmax_t l = strtoimax(buf, &endptr, 10);
-    s = int16_t(l);
-    return
-        (*endptr == 0) && (errno == 0)
-     && (l >= INT16_MIN) && (l <= INT16_MAX);
-}
-
-
-Foam::Ostream& Foam::operator<<(Ostream& os, const int16_t i)
-{
-    os.write(label(i));
-    os.check("Ostream& operator<<(Ostream&, const int16_t)");
-    return os;
+    is >> p_;
 }
 
 

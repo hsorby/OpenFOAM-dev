@@ -15,11 +15,15 @@ set(_FILES
   primitives/chars/char/charIO.C
   primitives/chars/wchar/wcharIO.C
   primitives/direction/directionIO.C
+  primitives/ints/uint16/uint16.C
+  primitives/ints/uint16/uint16IO.C
   primitives/ints/uint32/uint32.C
   primitives/ints/uint32/uint32IO.C
   primitives/ints/uint64/uint64.C
   primitives/ints/uint64/uint64IO.C
   primitives/ints/uint/uintIO.C
+  primitives/ints/int16/int16.C
+  primitives/ints/int16/int16IO.C
   primitives/ints/int32/int32.C
   primitives/ints/int32/int32IO.C
   primitives/ints/int64/int64.C

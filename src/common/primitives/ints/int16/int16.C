@@ -23,25 +23,25 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "int32.H"
+#include "int16.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-const int32_t Foam::pTraits<int32_t>::zero = 0;
-const int32_t Foam::pTraits<int32_t>::one = 1;
-const int32_t Foam::pTraits<int32_t>::min = INT32_MIN;
-const int32_t Foam::pTraits<int32_t>::max = INT32_MAX;
-const int32_t Foam::pTraits<int32_t>::rootMin = pTraits<int32_t>::min;
-const int32_t Foam::pTraits<int32_t>::rootMax = pTraits<int32_t>::max;
+const int16_t Foam::pTraits<int16_t>::zero = 0;
+const int16_t Foam::pTraits<int16_t>::one = 1;
+const int16_t Foam::pTraits<int16_t>::min = INT16_MIN;
+const int16_t Foam::pTraits<int16_t>::max = INT16_MAX;
+const int16_t Foam::pTraits<int16_t>::rootMin = pTraits<int16_t>::min;
+const int16_t Foam::pTraits<int16_t>::rootMax = pTraits<int16_t>::max;
 
-const char* const Foam::pTraits<int32_t>::componentNames[] = { "" };
+const char* const Foam::pTraits<int16_t>::componentNames[] = { "" };
 
-Foam::pTraits<int32_t>::pTraits(const int32_t& p)
+Foam::pTraits<int16_t>::pTraits(const int16_t& p)
 :
     p_(p)
 {}
 
-Foam::pTraits<int32_t>::pTraits(Istream& is)
+Foam::pTraits<int16_t>::pTraits(Istream& is)
 {
     is >> p_;
 }

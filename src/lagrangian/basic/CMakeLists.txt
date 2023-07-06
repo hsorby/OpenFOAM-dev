@@ -2,7 +2,7 @@ set(_FILES
   particle/particle.C
   particle/particleIO.C
   IOPosition/IOPositionName.C
-  cloud/cloud.C
+  cloudCamel/cloud.C
   passiveParticle/passiveParticleCloud.C
   indexedParticle/indexedParticleCloud.C
   InteractionLists/referredWallFace/referredWallFace.C
