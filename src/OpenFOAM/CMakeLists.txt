@@ -459,62 +459,57 @@ target_include_directories(OpenFOAM
   PUBLIC
     include
     includePrivate
-    containers/Lists/FixedList
-    containers/Lists/UPtrList
-    containers/Lists/PtrList
-    containers/LinkedLists/accessTypes/LPtrList
-    containers/LinkedLists/accessTypes/ULPtrList
-    containers/LinkedLists/accessTypes/LList
-    containers/LinkedLists/accessTypes/UILList
-    containers/LinkedLists/accessTypes/ILList
+    db/IOobject
+    db/IOobjects/GlobalIOList
+    primitives/Scalar
+    meshes/Residuals
     containers/HashTables/ListHashTable
-    containers/Lists/ListListOps
-    containers/HashTables/HashTable
-    containers/Lists/UIndirectList
-    containers/Lists/SortableList
-    containers/Lists/UList
-    containers/Lists/ListOps
-    containers/HashTables/HashSet
-    containers/Lists/DynamicList
-    containers/Lists/PackedList
-    containers/HashTables/HashTable
-    containers/HashTables/HashPtrTable
-    containers/Lists/List
-    containers/HashTables/HashList
-    containers/Dictionaries/DictionaryBase
-    containers/Dictionaries/PtrDictionary
-    primitives/strings/lists
-    primitives/VectorSpace
-    primitives/transform/transformer
-    containers/NamedEnum
-    containers/Lists/UCompactListList
-    containers/Lists/CompactListList
-    primitives/functions/Function1/Function1
     matrices/LduMatrix/LduMatrix
+    containers/Dictionaries/UDictionary
     algorithms/boundSphere
     includePrivate
     fields/Fields/fieldMappers/identityFieldMapper
     interpolations/interpolationWeights/interpolationWeights
+    primitives/functions/Function1/Table/TableReader/Foam
     fields/FieldFields/FieldField
+    primitives/functions/Function2/None
+    primitives/functions/Function1/Scale
+    containers/Dictionaries/PtrDictionary
     matrices/DiagonalMatrix
+    primitives/functions/Function2/Zero
     fields/DimensionedFields/SlicedDimensionedField
+    fields/FieldFields/scalarFieldField
+    primitives/functions/Function1/Uniform
     fields/pointPatchFields/constraint/internal
     matrices/MatrixBlock
     matrices/LduMatrix/Solvers/GAMG/interfaces/GAMGInterface
     fields/Fields/transformField
+    primitives/functions/Function1/Coded
+    containers/Lists/ListListOps
     fields/Fields/fieldMappers/fieldMapper
     fields/Fields/fieldMappers/reverseFieldMapper
     matrices/LduMatrix/Solvers/DiagonalSolver
+    containers/Lists/UPtrList
     fields/UniformDimensionedFields
     meshes/meshObjects
     matrices/LduMatrix/Solvers/PBiCICG
+    primitives/functions/TimeFunction1
+    primitives/functions/Function1/None
     fields/pointPatchFields/constraint/processor
     matrices/LduMatrix/lduAddressing/lduInterface
+    primitives/functions/Polynomial
     fields/pointPatchFields/constraint/empty
+    containers/Dictionaries/DictionaryBase
     fields/GeometricFields/SlicedGeometricField
     fields/DimensionedFields/DimensionedSymmTensorField
+    primitives/functions/Function2/UniformTable2
     fields/pointPatchFields/basic/fixedValue
     includePrivate
+    primitives/subModelBase
+    containers/LinkedLists/accessTypes/ILList
+    containers/Dictionaries/PtrListDictionary
+    primitives/functions/Function2/evaluate
+    containers/HashTables/HashTable
     meshes/primitiveMesh/PrimitivePatch
     matrices/LduMatrix/LduMatrix/LduInterfaceField
     meshes/polyMesh/syncTools
@@ -523,16 +518,21 @@ target_include_directories(OpenFOAM
     matrices/simpleMatrix
     fields/pointPatchFields/basic/coupled
     interpolations/interpolatePointToCell
+    containers/Lists/FixedList
     fields/Fields/Field
     fields/pointPatchFields/derived/fixedNormalSlip
     meshes/meshTools
+    fields/pointPatchFields/basic/zeroGradient
+    primitives/functions/Function1/Constant
     fields/pointPatchFields/basic/basicSymmetry
     meshes/polyMesh/zones/MeshZones
     fields/Fields/fieldMappers/setSizeFieldMapper
     fields/pointPatchFields/basic/value
+    matrices/scalarMatrices
     matrices/QRMatrix
     fields/pointPatchFields/derived/codedFixedValue
     meshes/polyMesh/polyBoundaryMesh
+    containers/Lists/UCompactListList
     meshes/meshObjects
     matrices/LduMatrix/Solvers/GAMG/GAMGAgglomerations/GAMGAgglomeration
     fields/pointPatchFields/constraint/cyclic
@@ -541,33 +541,61 @@ target_include_directories(OpenFOAM
     fields/DimensionedFields/DimensionedField
     meshes/meshShapes/triFace
     fields/pointPatchFields/constraint/cyclicSlip
+    primitives/functions/Function2/Coded
+    primitives/functions/Function1/unknownTypeFunction1
     fields/FieldFields/tensorFieldField
+    containers/Dictionaries/UPtrListDictionary
+    primitives/functions/Function1/Table/TableReader/Embedded
     fields/UniformGeometricFields
     meshes/primitiveMesh/PatchTools
     db/IOobjects/IOField
     db/IOobjects/IOList
     fields/pointPatchFields/constraint/processorCyclic
     meshes/lduMesh
+    primitives/functions/Function2/One
+    containers/LinkedLists/accessTypes/LPtrList
     matrices/LduMatrix/Solvers/PCICG
     matrices/LduMatrix/Smoothers/GaussSeidel
     meshes/lduMesh
+    containers/Lists/UIndirectList
+    primitives/functions/Function1/UniformTable1
     fields/Fields/symmTransformField
+    containers/Dictionaries/UPtrDictionary
+    containers/Lists/PtrList
+    containers/Lists/SortableList
+    containers/Lists/UList
     fields/pointPatchFields/constraint/wedge
+    primitives/VectorSpace
+    containers/Lists/ListOps
     matrices/LduMatrix/Preconditioners/DILUPreconditioner
+    primitives/functions/Function1/Sine
+    containers/Lists/BinSum
     interpolations/primitivePatchInterpolation
     meshes/polyMesh/polyDistributionMap
     db/functionObjects/regionFunctionObject
     db/IOstreams/Sstreams
     meshes/treeBoundBox
+    containers/Dictionaries/Dictionary
     matrices/LLTMatrix
+    primitives/functions/Function1/One
     db/dictionary
+    containers/LinkedLists/accessTypes/LList
     db/dictionary/primitiveEntry
     fields/Fields/fieldMappers/generalFieldMapper
     fields/DimensionedFields/DimensionedSphericalTensorField
+    primitives/functions/Function1/Table/TableReader/Csv
     fields/DimensionedFields/DimensionedScalarField
     fields/DimensionedFields/DimensionedTensorField
+    primitives/functions/Function1/Square
     fields/FieldFields/symmTensorFieldField
     fields/GeometricFields/GeometricField
+    containers/HashTables/HashSet
+    containers/Lists/DynamicList
+    containers/Lists/PackedList
+    primitives/functions/Function1/Table/TableReader/TableFileReader
+    containers/NamedEnum
+    containers/HashTables/HashTable
+    primitives/functions/Function1/Function1
     global/fileOperations/masterUncollatedFileOperation
     fields/pointPatchFields/derived/slip
     matrices/LUscalarMatrix
@@ -576,43 +604,60 @@ target_include_directories(OpenFOAM
     fields/pointPatchFields/constraint/symmetry
     fields/GeometricFields/GeometricField
     db/CallbackRegistry
+    containers/Lists/Distribution
     fields/pointPatchFields/derived/uniformFixedValue
+    primitives/functions/Function1/Table/TableReader/TableReader
+    containers/Lists/Histogram
+    containers/HashTables/HashPtrTable
     meshes/polyMesh/globalMeshData
     fields/GeometricFields/GeometricSphericalTensorField
+    primitives/functions/Function1/Polynomial1
+    primitives/functions/Function1/Table
+    primitives/transform/transformer
     db/IOobjects/IOPtrList
     dimensionedTypes/dimensionedType
     matrices/LduMatrix/Solvers/SmoothSolver
+    containers/LinkedLists/accessTypes/ULPtrList
     fields/pointPatchFields/pointPatchField
     matrices/SymmetricSquareMatrix
+    containers/Lists/List
     meshes/polyMesh/polyDistributionMap
     meshes/boundBox
+    primitives/functions/Function2/Constant
+    matrices/LduMatrix/LduMatrix
     db/objectRegistry
     meshes/polyMesh/globalMeshData
+    containers/Lists/SortableList
     fields/GeometricFields/GeometricTensorField
     fields/GeometricFields/GeometricScalarField
     fields/pointPatchFields/constraint/symmetryPlane
     matrices/solution
     fields/FieldFields/sphericalTensorFieldField
+    primitives/functions/Function1/Ramp
     db/Callback
+    fields/Fields/DynamicField
+    primitives/functions/Function2/Function2
+    primitives/functions/Function1/Zero
     fields/pointPatchFields/basic/calculated
     fields/GeometricFields/GeometricField
+    containers/LinkedLists/accessTypes/UILList
     fields/GeometricFields/transformGeometricField
+    primitives/functions/Function1/evaluate
     fields/GeometricFields/GeometricSymmTensorField
     algorithms/indexedOctree
+    containers/HashTables/HashList
+    primitives/functions/Function1/NonUniformTable1
+    primitives/strings/lists
     db/functionObjects/IOOutputFilter
     fields/FieldFields/transformFieldField
     matrices/LduMatrix/Preconditioners/NoPreconditioner
     matrices/SquareMatrix
     meshes/meshShapes/face
     matrices/LduMatrix/Solvers/PBiCCCG
+    primitives/functions/Function2/Scale
     fields/ReadFields
     db/IOobjects/CompactIOList
     fields/Fields/fieldMappers/directFieldMapper
-    db/IOobject
-    db/IOobjects/GlobalIOList
-    matrices/scalarMatrices
-    fields/Fields/DynamicField
-    fields/FieldFields/scalarFieldField
-    fields/pointPatchFields/basic/zeroGradient/
-  PRIVATE fields/Fields/Field/)
+    containers/Lists/CompactListList
+)
 target_link_libraries(OpenFOAM PUBLIC OSspecific common meshTools)

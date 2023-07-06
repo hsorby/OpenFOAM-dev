@@ -9,5 +9,14 @@ set(_FILES
 )
 add_library(lagrangian ${_FILES})
 target_compile_features(lagrangian PUBLIC cxx_std_11)
-target_include_directories(lagrangian PUBLIC include PRIVATE includePrivate)
+target_include_directories(lagrangian
+  PUBLIC
+    include
+    includePrivate
+    demandDrivenEntry
+    IOPosition
+    Cloud
+    particle
+    InteractionLists
+)
 target_link_libraries(lagrangian PUBLIC OpenFOAM)
