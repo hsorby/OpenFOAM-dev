@@ -1,5 +1,7 @@
+configure_file(global/global.Cver global/global.C @ONLY)
+
 set(_FILES
-  global/global.Cver
+  ${CMAKE_CURRENT_BINARY_DIR}/global/global.C
   global/argList/argList.C
   global/clock/clock.C
   global/etcFiles/etcFiles.C
@@ -459,6 +461,22 @@ target_include_directories(OpenFOAM
   PUBLIC
     include
     includePrivate
+    global
+    primitives/nullObject
+    db/error
+    db/IOstreams
+    db/IOstreams/token
+    global/debug
+    global/constants
+    global/jobInfo
+    global/runTimeSelectionToC
+    global/constants/fundamental
+    global/constants/universal
+    global/constants/electromagnetic
+    global/constants/atomic
+    global/constants/physicoChemical
+    global/constants/standard
+    global/constants/thermodynamic
     db/IOobject
     db/IOobjects/GlobalIOList
     primitives/Scalar
