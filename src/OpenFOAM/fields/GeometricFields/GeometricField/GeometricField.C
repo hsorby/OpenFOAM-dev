@@ -436,7 +436,7 @@ Foam::GeometricField<Type, PatchField, GeoMesh>::GeometricField
     GeometricField<Type, PatchField, GeoMesh>&& gf
 )
 :
-    Internal(move(gf)),
+    Internal(std::move(gf)),
     timeIndex_(gf.timeIndex()),
     field0Ptr_(nullptr),
     fieldPrevIterPtr_(nullptr),
