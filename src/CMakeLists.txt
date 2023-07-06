@@ -1,7 +1,6 @@
 
 
 # Add subdirectories
-add_subdirectory(common)
 add_subdirectory(OSspecific/POSIX)
 add_subdirectory(OpenFOAM)
 add_subdirectory(Pstream/dummy)

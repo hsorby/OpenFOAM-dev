@@ -11,6 +11,68 @@ set(_FILES
   global/fileOperations/collatedFileOperation/hostCollatedFileOperation.C
   global/fileOperations/collatedFileOperation/threadedCollatedOFstream.C
   global/fileOperations/collatedFileOperation/OFstreamCollator.C
+  containers/HashTables/HashTable/HashTableCore.C
+  containers/HashTables/ListHashTable/ListHashTableCore.C
+  containers/Lists/SortableList/ParSortableListName.C
+  containers/Lists/PackedList/PackedListCore.C
+  containers/Lists/PackedList/PackedBoolList.C
+  containers/Lists/ListOps/ListOps.C
+  containers/LinkedLists/linkTypes/SLListBase/SLListBase.C
+  containers/LinkedLists/linkTypes/DLListBase/DLListBase.C
+  primitives/bools/bool/bool.C
+  primitives/bools/bool/boolIO.C
+  primitives/bools/Switch/Switch.C
+  primitives/bools/Switch/SwitchIO.C
+  primitives/bools/lists/boolList.C
+  primitives/chars/char/charIO.C
+  primitives/chars/wchar/wcharIO.C
+  primitives/direction/directionIO.C
+  primitives/ints/uint16/uint16.C
+  primitives/ints/uint16/uint16IO.C
+  primitives/ints/uint32/uint32.C
+  primitives/ints/uint32/uint32IO.C
+  primitives/ints/uint64/uint64.C
+  primitives/ints/uint64/uint64IO.C
+  primitives/ints/uint/uintIO.C
+  primitives/ints/int16/int16.C
+  primitives/ints/int16/int16IO.C
+  primitives/ints/int32/int32.C
+  primitives/ints/int32/int32IO.C
+  primitives/ints/int64/int64.C
+  primitives/ints/int64/int64IO.C
+  primitives/ints/int/intIO.C
+  primitives/ints/label/label.C
+  primitives/ints/uLabel/uLabel.C
+  primitives/ints/lists/labelIOList.C
+  primitives/ints/lists/labelListIOList.C
+  primitives/Scalar/longDoubleScalar/longDoubleScalar.C
+  primitives/Scalar/doubleScalar/doubleScalar.C
+  primitives/Scalar/floatScalar/floatScalar.C
+  primitives/Scalar/scalar/scalar.C
+  primitives/Scalar/scalar/incGamma.C
+  primitives/Scalar/scalar/invIncGamma.C
+  primitives/Scalar/lists/scalarList.C
+  primitives/Scalar/lists/scalarIOList.C
+  primitives/Scalar/lists/scalarListIOList.C
+  primitives/DiagTensor/diagTensor/diagTensor.C
+  primitives/SphericalTensor/sphericalTensor/sphericalTensor.C
+  primitives/SphericalTensor/labelSphericalTensor/labelSphericalTensor.C
+  primitives/SymmTensor/labelSymmTensor/labelSymmTensor.C
+  primitives/SymmTensor/symmTensor/symmTensor.C
+  primitives/Tensor/labelTensor/labelTensor.C
+  primitives/Tensor/tensor/tensor.C
+  primitives/Tensor/lists/sphericalTensorList.C
+  primitives/Tensor/lists/symmTensorList.C
+  primitives/Tensor/lists/tensorList.C
+  primitives/Vector/complexVector/complexVector.C
+  primitives/Vector/floatVector/floatVector.C
+  primitives/Tensor/floatTensor/floatTensor.C
+  primitives/Vector/labelVector/labelVector.C
+  primitives/Vector/vector/vector.C
+  primitives/Vector/lists/vectorList.C
+  primitives/Vector/lists/vectorIOList.C
+  primitives/Vector/lists/vectorListIOList.C
+  primitives/Tensor2D/tensor2D/tensor2D.C
   db/IOstreams/token/tokenIO.C
   db/IOstreams/IOstreams/IOstream.C
   db/IOstreams/IOstreams/Istream.C
@@ -397,6 +459,37 @@ target_include_directories(OpenFOAM
   PUBLIC
     include
     includePrivate
+    containers/Lists/FixedList
+    containers/Lists/UPtrList
+    containers/Lists/PtrList
+    containers/LinkedLists/accessTypes/LPtrList
+    containers/LinkedLists/accessTypes/ULPtrList
+    containers/LinkedLists/accessTypes/LList
+    containers/LinkedLists/accessTypes/UILList
+    containers/LinkedLists/accessTypes/ILList
+    containers/HashTables/ListHashTable
+    containers/Lists/ListListOps
+    containers/HashTables/HashTable
+    containers/Lists/UIndirectList
+    containers/Lists/SortableList
+    containers/Lists/UList
+    containers/Lists/ListOps
+    containers/HashTables/HashSet
+    containers/Lists/DynamicList
+    containers/Lists/PackedList
+    containers/HashTables/HashTable
+    containers/HashTables/HashPtrTable
+    containers/Lists/List
+    containers/HashTables/HashList
+    containers/Dictionaries/DictionaryBase
+    containers/Dictionaries/PtrDictionary
+    primitives/strings/lists
+    primitives/VectorSpace
+    primitives/transform/transformer
+    containers/NamedEnum
+    containers/Lists/UCompactListList
+    containers/Lists/CompactListList
+    primitives/functions/Function1/Function1
     matrices/LduMatrix/LduMatrix
     algorithms/boundSphere
     includePrivate
