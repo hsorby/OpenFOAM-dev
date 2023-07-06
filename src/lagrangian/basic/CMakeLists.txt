@@ -19,4 +19,4 @@ target_include_directories(lagrangian
     particle
     InteractionLists
 )
-target_link_libraries(lagrangian PUBLIC OpenFOAM)
+target_link_libraries(lagrangian PUBLIC OpenFOAM finiteVolume)

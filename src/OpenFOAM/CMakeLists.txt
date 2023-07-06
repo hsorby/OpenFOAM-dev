@@ -660,4 +660,4 @@ target_include_directories(OpenFOAM
     fields/Fields/fieldMappers/directFieldMapper
     containers/Lists/CompactListList
 )
-target_link_libraries(OpenFOAM PUBLIC OSspecific common meshTools)
+target_link_libraries(OpenFOAM PUBLIC OSspecific meshTools)

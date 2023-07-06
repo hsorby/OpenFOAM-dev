@@ -546,6 +546,7 @@ target_include_directories(finiteVolume
     interpolation/interpolation/interpolationVolPointInterpolation
     interpolation/surfaceInterpolation/multivariateSchemes/multivariateSurfaceInterpolationScheme
     finiteVolume/gradSchemes/LeastSquaresGrad
+    finiteVolume/gradSchemes/leastSquaresGradCamel
     fields/fvPatchFields/basic/calculated
     fields/fvsPatchFields/constraint/nonConformalError
     fields/fvsPatchFields/constraint/symmetryPlane
