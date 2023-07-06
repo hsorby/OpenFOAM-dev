@@ -5,3 +5,4 @@ set(_FILES
 add_library(meshToMeshTopoChanger ${_FILES})
 target_compile_features(meshToMeshTopoChanger PUBLIC cxx_std_11)
 target_include_directories(meshToMeshTopoChanger PUBLIC include PRIVATE includePrivate)
+target_link_libraries(meshToMeshTopoChanger PUBLIC fvMeshTopoChangers triSurface meshTools finiteVolume dynamicMesh)
