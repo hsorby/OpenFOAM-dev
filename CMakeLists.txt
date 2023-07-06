@@ -21,6 +21,7 @@ if (HAVE_MACH0_DYLD_H)
 endif()
 
 find_package(SCOTCH REQUIRED)
+find_package(ZLIB REQUIRED)
 
 add_subdirectory(src)
 

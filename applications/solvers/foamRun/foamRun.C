@@ -148,8 +148,10 @@ int main(int argc, char *argv[])
 
         runTime.write();
 
-        Info<< "ExecutionTime = " << runTime.elapsedCpuTime() << " s"
-            << "  ClockTime = " << runTime.elapsedClockTime() << " s"
+        int64_t cpuTime = runTime.elapsedCpuTime();
+        int64_t clockTime = runTime.elapsedClockTime();
+        Info<< "ExecutionTime = " << cpuTime << " s"
+            << "  ClockTime = " << clockTime << " s"
             << nl << endl;
     }
 
