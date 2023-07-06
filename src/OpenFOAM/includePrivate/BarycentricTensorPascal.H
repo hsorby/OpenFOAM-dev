@@ -38,7 +38,7 @@ SourceFiles
 #ifndef BarycentricTensor_H
 #define BarycentricTensor_H
 
-#include "Barycentric.H"
+#include "BarycentricPascal.H"
 #include "TensorPascal.H"
 #include "VectorPascal.H"
 

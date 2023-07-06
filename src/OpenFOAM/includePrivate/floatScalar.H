@@ -107,6 +107,8 @@ MAXMINPOW(Scalar, Scalar, int)
 MAXMINPOW(Scalar, int, Scalar)
 MAXMINPOW(Scalar, Scalar, long)
 MAXMINPOW(Scalar, long, Scalar)
+MAXMINPOW(Scalar, Scalar, long long)
+MAXMINPOW(Scalar, long long, Scalar)
 
 #undef MAXMINPOW
 

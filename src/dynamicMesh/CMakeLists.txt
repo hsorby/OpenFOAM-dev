@@ -109,3 +109,4 @@ set(_FILES
 add_library(dynamicMesh ${_FILES})
 target_compile_features(dynamicMesh PUBLIC cxx_std_11)
 target_include_directories(dynamicMesh PUBLIC include PRIVATE includePrivate)
+target_link_libraries(dynamicMesh PUBLIC OpenFOAM)

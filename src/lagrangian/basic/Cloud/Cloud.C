@@ -23,7 +23,7 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "Cloud.H"
+#include "CloudPascal.H"
 #include "processorPolyPatch.H"
 #include "globalMeshData.H"
 #include "meshToMesh.H"
