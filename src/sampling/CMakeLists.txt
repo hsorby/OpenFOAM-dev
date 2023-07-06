@@ -50,17 +50,20 @@ set(_FILES
 )
 add_library(sampling ${_FILES})
 target_compile_features(sampling PUBLIC cxx_std_11)
-target_include_directories(sampling PUBLIC include PRIVATE includePrivate
-  sampledSurface/sampledPatch
-  probes
-  sampledSurface/sampledThresholdCellFaces
-  sampledSurface/sampledIsoSurfaceSurface
-  sampledSurface/sampledSurfaces
-  sampledSurface/sampledPatchInternalField
-  coordSet
-  sampledSurface/sampledSurface
-  sampledSet/writers
-  sampledSet/sampledSets
-  sampledSurface/sampledTriSurfaceMesh
+target_include_directories(sampling
+  PUBLIC
+    include
+    includePrivate
+    sampledSurface/sampledPatch
+    probes
+    sampledSurface/sampledThresholdCellFaces
+    sampledSurface/sampledIsoSurfaceSurface
+    sampledSurface/sampledSurfaces
+    sampledSurface/sampledPatchInternalField
+    coordSet
+    sampledSurface/sampledSurface
+    sampledSet/writers
+    sampledSet/sampledSets
+    sampledSurface/sampledTriSurfaceMesh
 )
 target_link_libraries(sampling PUBLIC OpenFOAM finiteVolume lagrangian conversion)

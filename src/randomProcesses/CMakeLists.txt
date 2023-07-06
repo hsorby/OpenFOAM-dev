@@ -11,3 +11,4 @@ set(_FILES
 add_library(randomProcesses ${_FILES})
 target_compile_features(randomProcesses PUBLIC cxx_std_11)
 target_include_directories(randomProcesses PUBLIC include PRIVATE includePrivate)
+target_link_libraries(randomProcesses PUBLIC sampling)

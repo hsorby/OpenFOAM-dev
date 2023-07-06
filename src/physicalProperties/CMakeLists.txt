@@ -8,3 +8,4 @@ set(_FILES
 add_library(physicalProperties ${_FILES})
 target_compile_features(physicalProperties PUBLIC cxx_std_11)
 target_include_directories(physicalProperties PUBLIC include PRIVATE includePrivate)
+target_link_libraries(physicalProperties PUBLIC finiteVolume)
