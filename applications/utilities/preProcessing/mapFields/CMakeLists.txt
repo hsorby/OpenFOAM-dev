@@ -1,0 +1,9 @@
+set(_FILES
+  mapLagrangian.C
+  mapMeshes.C
+  mapFields.C
+  meshToMesh0.C
+)
+add_executable(mapFields ${_FILES})
+target_compile_features(mapFields PUBLIC cxx_std_11)
+target_link_libraries(mapFields PUBLIC finiteVolume)

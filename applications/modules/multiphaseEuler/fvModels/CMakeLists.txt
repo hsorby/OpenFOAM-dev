@@ -1,0 +1,7 @@
+set(_FILES
+  phaseTurbulenceStabilisation/phaseTurbulenceStabilisation.C
+  interfaceTurbulenceDamping/interfaceTurbulenceDamping.C
+)
+add_library(multiphaseEulerFoamFvModels ${_FILES})
+target_compile_features(multiphaseEulerFoamFvModels PUBLIC cxx_std_11)
+target_include_directories(multiphaseEulerFoamFvModels PUBLIC include PRIVATE includePrivate)

@@ -1,0 +1,6 @@
+set(_FILES
+  VoFTurbulenceDamping.C
+)
+add_library(compressibleVoFTurbulenceDamping ${_FILES})
+target_compile_features(compressibleVoFTurbulenceDamping PUBLIC cxx_std_11)
+target_include_directories(compressibleVoFTurbulenceDamping PUBLIC include PRIVATE includePrivate)

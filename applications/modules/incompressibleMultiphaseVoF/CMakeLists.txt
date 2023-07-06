@@ -1,0 +1,10 @@
+set(_FILES
+  incompressibleMultiphaseVoFMixture/incompressibleVoFphase/incompressibleVoFphase.C
+  incompressibleMultiphaseVoFMixture/incompressibleMultiphaseVoFMixture.C
+  alphaPredictor.C
+  pressureCorrector.C
+  incompressibleMultiphaseVoF.C
+)
+add_library(incompressibleMultiphaseVoF ${_FILES})
+target_compile_features(incompressibleMultiphaseVoF PUBLIC cxx_std_11)
+target_include_directories(incompressibleMultiphaseVoF PUBLIC include PRIVATE includePrivate)

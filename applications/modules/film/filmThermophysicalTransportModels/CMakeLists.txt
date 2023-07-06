@@ -1,0 +1,6 @@
+set(_FILES
+  filmThermophysicalTransportModels.C
+)
+add_library(filmThermophysicalTransportModels ${_FILES})
+target_compile_features(filmThermophysicalTransportModels PUBLIC cxx_std_11)
+target_include_directories(filmThermophysicalTransportModels PUBLIC include PRIVATE includePrivate)

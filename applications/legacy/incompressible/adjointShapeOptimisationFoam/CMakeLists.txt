@@ -1,0 +1,8 @@
+set(_FILES
+  adjointOutletPressure/adjointOutletPressureFvPatchScalarField.C
+  adjointOutletVelocity/adjointOutletVelocityFvPatchVectorField.C
+  adjointShapeOptimisationFoam.C
+)
+add_executable(adjointShapeOptimisationFoam ${_FILES})
+target_compile_features(adjointShapeOptimisationFoam PUBLIC cxx_std_11)
+target_link_libraries(adjointShapeOptimisationFoam PUBLIC finiteVolume)

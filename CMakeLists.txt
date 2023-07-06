@@ -24,3 +24,4 @@ find_package(SCOTCH REQUIRED)
 
 add_subdirectory(src)
 
+add_subdirectory(applications)

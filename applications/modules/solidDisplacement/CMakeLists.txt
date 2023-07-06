@@ -1,0 +1,8 @@
+set(_FILES
+  derivedFvPatchFields/tractionDisplacement/tractionDisplacementFvPatchVectorField.C
+  derivedFvPatchFields/hydrostaticDisplacement/hydrostaticDisplacementFvPatchVectorField.C
+  solidDisplacement.C
+)
+add_library(solidDisplacement ${_FILES})
+target_compile_features(solidDisplacement PUBLIC cxx_std_11)
+target_include_directories(solidDisplacement PUBLIC include PRIVATE includePrivate)

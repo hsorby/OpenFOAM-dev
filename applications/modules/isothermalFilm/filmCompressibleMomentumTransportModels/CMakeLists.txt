@@ -1,0 +1,7 @@
+set(_FILES
+  filmCompressibleMomentumTransportModel.C
+  filmCompressibleMomentumTransportModels.C
+)
+add_library(filmCompressibleMomentumTransportModels ${_FILES})
+target_compile_features(filmCompressibleMomentumTransportModels PUBLIC cxx_std_11)
+target_include_directories(filmCompressibleMomentumTransportModels PUBLIC include PRIVATE includePrivate)

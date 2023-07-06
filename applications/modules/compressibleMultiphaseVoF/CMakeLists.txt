@@ -1,0 +1,13 @@
+set(_FILES
+  compressibleMultiphaseVoFMixture/compressibleVoFphase/compressibleVoFphase.C
+  compressibleMultiphaseVoFMixture/compressibleMultiphaseVoFMixtureThermo/compressibleMultiphaseVoFMixtureThermo.C
+  compressibleMultiphaseVoFMixture/compressibleMultiphaseVoFMixture.C
+  alphaPredictor.C
+  momentumPredictor.C
+  thermophysicalPredictor.C
+  pressureCorrector.C
+  compressibleMultiphaseVoF.C
+)
+add_library(compressibleMultiphaseVoF ${_FILES})
+target_compile_features(compressibleMultiphaseVoF PUBLIC cxx_std_11)
+target_include_directories(compressibleMultiphaseVoF PUBLIC include PRIVATE includePrivate)

@@ -1,0 +1,6 @@
+set(_FILES
+  VoFSolidificationMeltingSource.C
+)
+add_library(VoFSolidificationMeltingSource ${_FILES})
+target_compile_features(VoFSolidificationMeltingSource PUBLIC cxx_std_11)
+target_include_directories(VoFSolidificationMeltingSource PUBLIC include PRIVATE includePrivate)
