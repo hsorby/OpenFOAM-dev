@@ -171,8 +171,9 @@ Foam::cutPolyIsoSurface::cutPolyIsoSurface
         const label nLabels =
             sum(ListListOps::subSizes(faces(), accessOp<face>()));
 
+        uint16_t size = points().size()*sizeof(point) + nLabels*sizeof(label);
         Pout<< typeName << " : constructed surface of size "
-            << points().size()*sizeof(point) + nLabels*sizeof(label)
+            << size
             << " in " << cpuTime.cpuTimeIncrement() << "s" << nl << endl;
     }
 }

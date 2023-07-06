@@ -10,3 +10,4 @@ set(_FILES
 add_library(fvMeshMovers ${_FILES})
 target_compile_features(fvMeshMovers PUBLIC cxx_std_11)
 target_include_directories(fvMeshMovers PUBLIC include PRIVATE includePrivate)
+target_link_libraries(fvMeshMovers PUBLIC finiteVolume dynamicMesh)

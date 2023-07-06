@@ -5,3 +5,4 @@ set(_FILES
 add_library(fvMeshDistributors ${_FILES})
 target_compile_features(fvMeshDistributors PUBLIC cxx_std_11)
 target_include_directories(fvMeshDistributors PUBLIC include PRIVATE includePrivate)
+target_link_libraries(fvMeshDistributors PUBLIC finiteVolume dynamicMesh decompositionMethods)
