@@ -22,6 +22,7 @@ endif()
 
 find_package(SCOTCH REQUIRED)
 find_package(ZLIB REQUIRED)
+find_package(FLEX REQUIRED)
 
 add_subdirectory(src)
 
