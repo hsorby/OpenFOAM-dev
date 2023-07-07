@@ -134,7 +134,7 @@
 #add_subdirectory(legacy/incompressible/porousSimpleFoam)
 #add_subdirectory(legacy/incompressible/dnsFoam)
 #add_subdirectory(legacy/incompressible/shallowWaterFoam)
-#add_subdirectory(legacy/incompressible/icoFoam)
+add_subdirectory(legacy/incompressible/icoFoam)
 #add_subdirectory(legacy/lagrangian/mdEquilibrationFoam)
 #add_subdirectory(legacy/lagrangian/mdFoam)
 #add_subdirectory(legacy/lagrangian/dsmcFoam)
