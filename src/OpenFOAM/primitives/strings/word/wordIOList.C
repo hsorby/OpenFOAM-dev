@@ -54,7 +54,9 @@ void Foam::printTable
     {
         forAll(wll, i)
         {
-            columnWidth[j] = max(columnWidth[j], wll[i][j].size());
+            uint64_t size = wll[i][j].size();
+            uint64_t colWidth = columnWidth[j];
+            columnWidth[j] = max(colWidth, size);
         }
     }
 

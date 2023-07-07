@@ -48,7 +48,7 @@ See also
 #ifndef CompactSpatialTensor_H
 #define CompactSpatialTensor_H
 
-#include "SpatialTensor.H"
+#include "SpatialTensorPascal.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

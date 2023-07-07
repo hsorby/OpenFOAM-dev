@@ -25,7 +25,7 @@ License
 
 #include "None.H"
 #include "Constant.H"
-#include "Uniform.H"
+#include "UniformPascal.H"
 #include "ZeroConstant.H"
 #include "OneConstant.H"
 #include "Polynomial1.H"
