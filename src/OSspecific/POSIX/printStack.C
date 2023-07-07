@@ -32,11 +32,25 @@ License
 #include <cxxabi.h>
 #include <execinfo.h>
 #include <dlfcn.h>
+#include <stdio.h>
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 namespace Foam
 {
+
+std::string exec(const char* cmd) {
+    std::array<char, 128> buffer;
+    std::string result;
+    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
+    if (!pipe) {
+        throw std::runtime_error("popen() failed!");
+    }
+    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
+        result += buffer.data();
+    }
+    return result;
+}
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -110,18 +124,24 @@ void printSourceFileAndLine
 
     if (filename[0] == '/')
     {
-        string line = pOpen
-        (
-            "addr2line -f --demangle=auto --exe "
+#ifdef __APPLE__
+        string cmd = "atos -o " + filename + " " + myAddress;
+        string line = pOpen(cmd, 0);
+#else
+        string cmd = "addr2line -f --demangle=auto --exe "
           + filename
           + " "
-          + myAddress,
-            1
-        );
+          + myAddress;
+        string line = pOpen(cmd, 1);
+#endif
 
         if (line == "")
         {
+#ifdef __APPLE__
+            os  << " atos failed";
+#else
             os  << " addr2line failed";
+#endif
         }
         else if (line == "??:0")
         {
