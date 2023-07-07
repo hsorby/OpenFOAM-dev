@@ -48,7 +48,7 @@ Usage
 
 \*---------------------------------------------------------------------------*/
 
-#include "Time.H"
+#include "TimeOpenFOAM.H"
 #include "IOdictionary.H"
 #include "IOPtrList.H"
 #include "systemDict.H"
