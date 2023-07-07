@@ -100,6 +100,7 @@ primitives/functions/Function2/makeFunction2s.C
 
 primitives/subModelBase/subModelBase.C
 
+primitives/strings/string/string.C
 primitives/strings/string/stringIO.C
 primitives/strings/string/stringIOList.C
 primitives/strings/verbatimString/verbatimString.C
@@ -810,4 +811,4 @@ target_include_directories(OpenFOAM
     fields/Fields/fieldMappers/directFieldMapper
     containers/Lists/CompactListList
 )
-target_link_libraries(OpenFOAM PUBLIC OSspecific meshTools ZLIB::ZLIB)
+target_link_libraries(OpenFOAM PUBLIC OSspecific Pstream meshTools ZLIB::ZLIB)
