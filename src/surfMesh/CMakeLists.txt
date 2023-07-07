@@ -36,7 +36,9 @@ set(_FILES
   surfaceFormats/x3d/X3DsurfaceFormatCore.C
   surfaceFormats/x3d/X3DsurfaceFormatRunTime.C
 )
-add_library(surfMesh ${_FILES})
+set(_INTERFACE_FILES ${CMAKE_CURRENT_BINARY_DIR}/STLsurfaceFormatASCII.C)
+FLEX_TARGET(MyScanner surfaceFormats/stl/STLsurfaceFormatASCII.L "${_INTERFACE_FILES}" COMPILE_FLAGS --c++)
+add_library(surfMesh ${_FILES} ${FLEX_MyScanner_OUTPUTS})
 target_compile_features(surfMesh PUBLIC cxx_std_11)
 target_include_directories(surfMesh
   PUBLIC
