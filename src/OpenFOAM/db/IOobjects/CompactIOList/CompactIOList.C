@@ -307,7 +307,7 @@ CompactIOListBase
 )
 :
     regIOobject(io),
-    Container<Type>(move(l))
+    Container<Type>(std::move(l))
 {
     if
     (
@@ -333,8 +333,8 @@ CompactIOListBase
     CompactIOListBase<Container, IOContainer, CompactIOContainer, Type>&& l
 )
 :
-    regIOobject(move(l)),
-    Container<Type>(move(l))
+    regIOobject(std::move(l)),
+    Container<Type>(std::move(l))
 {}
 
 
@@ -463,7 +463,7 @@ operator=
     CompactIOListBase<Container, IOContainer, CompactIOContainer, Type>&& rhs
 )
 {
-    Container<Type>::operator=(move(rhs));
+    Container<Type>::operator=(std::move(rhs));
 }
 
 

@@ -334,7 +334,7 @@ Foam::wordList Foam::fileName::components(const char delimiter) const
     }
 
     // Transfer to wordList
-    return wordList(move(wrdList));
+    return wordList(std::move(wrdList));
 }
 
 
@@ -358,7 +358,7 @@ void Foam::fileName::operator=(const fileName& str)
 
 void Foam::fileName::operator=(fileName&& str)
 {
-    string::operator=(move(str));
+    string::operator=(std::move(str));
 }
 
 

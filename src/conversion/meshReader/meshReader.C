@@ -142,9 +142,9 @@ Foam::autoPtr<Foam::polyMesh> Foam::meshReader::mesh
                 registry.time().constant(),
                 registry
             ),
-            move(points_),
-            move(meshFaces_),
-            move(cellPolys_)
+            std::move(points_),
+            std::move(meshFaces_),
+            std::move(cellPolys_)
         )
     );
 

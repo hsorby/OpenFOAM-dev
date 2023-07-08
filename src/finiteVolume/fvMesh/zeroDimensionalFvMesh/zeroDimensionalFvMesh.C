@@ -55,10 +55,10 @@ Foam::fvMesh Foam::zeroDimensionalFvMesh(const objectRegistry& db)
             db,
             IOobject::READ_IF_PRESENT
         ),
-        move(points),
-        move(faces),
-        move(owner),
-        move(neighbour)
+        std::move(points),
+        std::move(faces),
+        std::move(owner),
+        std::move(neighbour)
     );
 
     List<polyPatch*> patches

@@ -347,8 +347,8 @@ Foam::distributedTriSurfaceMesh::distributeSegments
         new distributionMap
         (
             segmentI,       // size after construction
-            move(sendMap),
-            move(constructMap)
+            std::move(sendMap),
+            std::move(constructMap)
         )
     );
 }
@@ -640,8 +640,8 @@ Foam::distributedTriSurfaceMesh::calcLocalQueries
         new distributionMap
         (
             segmentI,       // size after construction
-            move(sendMap),
-            move(constructMap)
+            std::move(sendMap),
+            std::move(constructMap)
         )
     );
     const distributionMap& map = mapPtr();
@@ -793,8 +793,8 @@ Foam::distributedTriSurfaceMesh::calcLocalQueries
         new distributionMap
         (
             segmentI,       // size after construction
-            move(sendMap),
-            move(constructMap)
+            std::move(sendMap),
+            std::move(constructMap)
         )
     );
     return mapPtr;
@@ -2301,8 +2301,8 @@ void Foam::distributedTriSurfaceMesh::distribute
         new distributionMap
         (
             allTris.size(),
-            move(faceSendMap),
-            move(faceConstructMap)
+            std::move(faceSendMap),
+            std::move(faceConstructMap)
         )
     );
     pointMap.reset
@@ -2310,8 +2310,8 @@ void Foam::distributedTriSurfaceMesh::distribute
         new distributionMap
         (
             allPoints.size(),
-            move(pointSendMap),
-            move(pointConstructMap)
+            std::move(pointSendMap),
+            std::move(pointConstructMap)
         )
     );
 

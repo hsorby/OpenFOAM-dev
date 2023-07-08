@@ -1340,10 +1340,10 @@ void Foam::polyDualMesh::calcDual
     // Assign to mesh.
     resetPrimitives
     (
-        move(dualPoints),
-        move(dualFaces),
-        move(dualOwner),
-        move(dualNeighbour),
+        std::move(dualPoints),
+        std::move(dualFaces),
+        std::move(dualOwner),
+        std::move(dualNeighbour),
         patchSizes,
         patchStarts
     );

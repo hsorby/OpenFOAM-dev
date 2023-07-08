@@ -567,7 +567,7 @@ void Foam::Field<Type>::operator=(const UList<Type>& rhs)
 template<class Type>
 void Foam::Field<Type>::operator=(List<Type>&& rhs)
 {
-    List<Type>::operator=(move(rhs));
+    List<Type>::operator=(std::move(rhs));
 }
 
 

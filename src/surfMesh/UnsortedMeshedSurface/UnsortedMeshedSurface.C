@@ -158,9 +158,9 @@ Foam::UnsortedMeshedSurface<Face>::UnsortedMeshedSurface
     surfZoneIdentifierList&& zoneTofc
 )
 :
-    ParentType(move(pointLst), move(faceLst)),
-    zoneIds_(move(zoneIds)),
-    zoneToc_(move(zoneTofc))
+    ParentType(std::move(pointLst), std::move(faceLst)),
+    zoneIds_(std::move(zoneIds)),
+    zoneToc_(std::move(zoneTofc))
 {}
 
 
@@ -173,7 +173,7 @@ Foam::UnsortedMeshedSurface<Face>::UnsortedMeshedSurface
     const UList<word>& zoneNames
 )
 :
-    ParentType(move(pointLst), move(faceLst))
+    ParentType(std::move(pointLst), std::move(faceLst))
 {
     if (zoneSizes.size())
     {
@@ -572,9 +572,9 @@ Foam::UnsortedMeshedSurface<Face>::subsetMesh
     // construct a sub-surface
     return UnsortedMeshedSurface
     (
-        move(newPoints),
-        move(newFaces),
-        move(newZones),
+        std::move(newPoints),
+        std::move(newFaces),
+        std::move(newZones),
         List<surfZoneIdentifier>(zoneToc_)
     );
 }
@@ -601,8 +601,8 @@ void Foam::UnsortedMeshedSurface<Face>::reset
 {
     ParentType::reset
     (
-        move(pointLst),
-        move(faceLst),
+        std::move(pointLst),
+        std::move(faceLst),
         NullObjectMove<surfZoneList>()
     );
 
@@ -623,8 +623,8 @@ void Foam::UnsortedMeshedSurface<Face>::reset
 {
     ParentType::reset
     (
-        move(pointLst),
-        move(faceLst),
+        std::move(pointLst),
+        std::move(faceLst),
         NullObjectMove<surfZoneList>()
     );
 
@@ -643,8 +643,8 @@ void Foam::UnsortedMeshedSurface<Face>::transfer
 {
     ParentType::reset
     (
-        move(surf.storedPoints()),
-        move(surf.storedFaces()),
+        std::move(surf.storedPoints()),
+        std::move(surf.storedFaces()),
         NullObjectMove<surfZoneList>()
     );
 
@@ -663,8 +663,8 @@ void Foam::UnsortedMeshedSurface<Face>::transfer
 {
     ParentType::reset
     (
-        move(surf.storedPoints()),
-        move(surf.storedFaces()),
+        std::move(surf.storedPoints()),
+        std::move(surf.storedFaces()),
         NullObjectMove<surfZoneList>()
     );
 

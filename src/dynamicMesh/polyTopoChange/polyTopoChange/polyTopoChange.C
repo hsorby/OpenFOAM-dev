@@ -3190,10 +3190,10 @@ Foam::autoPtr<Foam::polyTopoChangeMap> Foam::polyTopoChange::changeMesh
 
         mesh.resetPrimitives
         (
-            move(renumberedMeshPoints),
-            move(faces_),
-            move(faceOwner_),
-            move(faceNeighbour_),
+            std::move(renumberedMeshPoints),
+            std::move(faces_),
+            std::move(faceOwner_),
+            std::move(faceNeighbour_),
             patchSizes,
             patchStarts,
             syncParallel
@@ -3204,10 +3204,10 @@ Foam::autoPtr<Foam::polyTopoChangeMap> Foam::polyTopoChange::changeMesh
         // Set new points.
         mesh.resetPrimitives
         (
-            move(newPoints),
-            move(faces_),
-            move(faceOwner_),
-            move(faceNeighbour_),
+            std::move(newPoints),
+            std::move(faces_),
+            std::move(faceOwner_),
+            std::move(faceNeighbour_),
             patchSizes,
             patchStarts,
             syncParallel
@@ -3438,10 +3438,10 @@ Foam::autoPtr<Foam::polyTopoChangeMap> Foam::polyTopoChange::makeMesh
         new fvMesh
         (
             noReadIO,
-            move(newPoints),
-            move(faces_),
-            move(faceOwner_),
-            move(faceNeighbour_)
+            std::move(newPoints),
+            std::move(faces_),
+            std::move(faceOwner_),
+            std::move(faceNeighbour_)
         )
     );
     fvMesh& newMesh = newMeshPtr();

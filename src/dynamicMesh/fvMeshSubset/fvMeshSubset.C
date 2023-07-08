@@ -821,9 +821,9 @@ void Foam::fvMeshSubset::setCellSubset
                 IOobject::NO_READ,
                 IOobject::NO_WRITE
             ),
-            move(newPoints),
-            move(newFaces),
-            move(newCells)
+            std::move(newPoints),
+            std::move(newFaces),
+            std::move(newCells)
         )
     );
 
@@ -1320,9 +1320,9 @@ void Foam::fvMeshSubset::setLargeCellSubset
                 IOobject::NO_READ,
                 IOobject::NO_WRITE
             ),
-            move(newPoints),
-            move(newFaces),
-            move(newCells),
+            std::move(newPoints),
+            std::move(newFaces),
+            std::move(newCells),
             syncPar           // parallel synchronisation
         )
     );

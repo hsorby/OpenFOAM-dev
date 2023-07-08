@@ -173,7 +173,7 @@ Foam::MeshedSurface<Face>::MeshedSurface
     ParentType(List<Face>(), pointField()),
     zones_()
 {
-    reset(move(pointLst), move(faceLst), move(zoneLst));
+    reset(std::move(pointLst), std::move(faceLst), std::move(zoneLst));
 }
 
 
@@ -188,7 +188,7 @@ Foam::MeshedSurface<Face>::MeshedSurface
 :
     ParentType(List<Face>(), pointField())
 {
-    reset(move(pointLst), move(faceLst), surfZoneList());
+    reset(std::move(pointLst), std::move(faceLst), surfZoneList());
 
     if (zoneSizes.size())
     {
@@ -323,7 +323,7 @@ Foam::MeshedSurface<Face>::MeshedSurface
     (
         pointField(bPoints),
         faceList(bFaces),
-        move(newZones)
+        std::move(newZones)
     );
 
     this->transcribe(surf);
@@ -378,9 +378,9 @@ Foam::MeshedSurface<Face>::MeshedSurface
     // same face type as surfMesh
     MeshedSurface<face> surf
     (
-        move(mesh.storedPoints()),
-        move(mesh.storedFaces()),
-        move(mesh.storedZones())
+        std::move(mesh.storedPoints()),
+        std::move(mesh.storedFaces()),
+        std::move(mesh.storedZones())
     );
 
     this->transcribe(surf);
@@ -981,9 +981,9 @@ Foam::MeshedSurface<Face> Foam::MeshedSurface<Face>::subsetMesh
     // construct a sub-surface
     return MeshedSurface
     (
-        move(newPoints),
+        std::move(newPoints),
         move(newFaces),
-        move(newZones)
+        std::move(newZones)
     );
 }
 
@@ -1008,9 +1008,9 @@ void Foam::MeshedSurface<Face>::transfer
 {
     reset
     (
-        move(surf.storedPoints()),
-        move(surf.storedFaces()),
-        move(surf.storedZones())
+        std::move(surf.storedPoints()),
+        std::move(surf.storedFaces()),
+        std::move(surf.storedZones())
     );
 }
 
@@ -1030,8 +1030,8 @@ void Foam::MeshedSurface<Face>::transfer
     {
         reset
         (
-            move(surf.storedPoints()),
-            move(surf.storedFaces()),
+            std::move(surf.storedPoints()),
+            std::move(surf.storedFaces()),
             surfZoneList()
         );
     }
@@ -1047,9 +1047,9 @@ void Foam::MeshedSurface<Face>::transfer
 
         reset
         (
-            move(surf.storedPoints()),
-            move(newFaces),
-            move(zoneLst)
+            std::move(surf.storedPoints()),
+            std::move(newFaces),
+            std::move(zoneLst)
         );
     }
 

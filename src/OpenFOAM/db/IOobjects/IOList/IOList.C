@@ -224,7 +224,7 @@ Foam::IOListBase<Container, IOContainer, Type>::IOListBase
 )
 :
     regIOobject(io),
-    Container<Type>(move(l))
+    Container<Type>(std::move(l))
 {
     // Check for MUST_READ_IF_MODIFIED
     if (!IOContainer<Type>::rereading)
@@ -280,8 +280,8 @@ Foam::IOListBase<Container, IOContainer, Type>::IOListBase
     IOListBase<Container, IOContainer, Type>&& f
 )
 :
-    regIOobject(move(f)),
-    Container<Type>(move(f))
+    regIOobject(std::move(f)),
+    Container<Type>(std::move(f))
 {}
 
 
@@ -342,7 +342,7 @@ void Foam::IOListBase<Container, IOContainer, Type>::operator=
     IOListBase<Container, IOContainer, Type>&& rhs
 )
 {
-    Container<Type>::operator=(move(rhs));
+    Container<Type>::operator=(std::move(rhs));
 }
 
 

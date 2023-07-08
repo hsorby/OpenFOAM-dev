@@ -72,9 +72,9 @@ bool Foam::fileFormats::OFSsurfaceFormat<Face>::read
 
         MeshedSurface<face> surf
         (
-            move(this->storedPoints()),
-            move(faceLst),
-            move(this->storedZones())
+            std::move(this->storedPoints()),
+            std::move(faceLst),
+            std::move(this->storedZones())
         );
 
         this->transcribe(surf);
@@ -119,9 +119,9 @@ bool Foam::fileFormats::OFSsurfaceFormat<Face>::read
 
         MeshedSurface<face> origSurf
         (
-            move(pointLst),
-            move(origFaces),
-            move(zoneLst)
+            std::move(pointLst),
+            std::move(origFaces),
+            std::move(zoneLst)
         );
 
         MeshedSurface<Face> surf;
@@ -161,9 +161,9 @@ bool Foam::fileFormats::OFSsurfaceFormat<Face>::read
 
     surf.reset
     (
-        move(pointLst),
+        std::move(pointLst),
         move(faceLst),
-        move(zoneLst)
+        std::move(zoneLst)
     );
 
     return true;

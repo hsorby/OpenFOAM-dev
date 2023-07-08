@@ -225,7 +225,7 @@ bool Foam::fileFormats::STARCDsurfaceFormat<Face>::read
     }
     mapPointId.clear();
 
-    this->sortFacesAndStore(move(dynFaces), move(dynZones), sorted);
+    this->sortFacesAndStore(std::move(dynFaces), std::move(dynZones), sorted);
 
     // add zones, culling empty ones
     this->addZones(dynSizes, dynNames, true);

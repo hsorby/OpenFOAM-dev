@@ -65,8 +65,8 @@ Foam::PrimitivePatch<FaceList, PointField>::PrimitivePatch
     Field<PointType>&& points
 )
 :
-    FaceList(move(faces)),
-    points_(move(points)),
+    FaceList(std::move(faces)),
+    points_(std::move(points)),
     edgesPtr_(nullptr),
     nInternalEdges_(-1),
     boundaryPointsPtr_(nullptr),

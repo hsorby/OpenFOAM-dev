@@ -199,7 +199,7 @@ bool Foam::fileFormats::OBJsurfaceFormat<Face>::read
     // transfer to normal lists
     this->storedPoints().transfer(dynPoints);
 
-    this->sortFacesAndStore(move(dynFaces), move(dynZones), sorted);
+    this->sortFacesAndStore(std::move(dynFaces), std::move(dynZones), sorted);
 
     // add zones, culling empty ones
     this->addZones(dynSizes, dynNames, true);

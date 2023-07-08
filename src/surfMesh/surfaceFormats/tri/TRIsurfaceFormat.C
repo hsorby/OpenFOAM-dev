@@ -85,8 +85,8 @@ bool Foam::fileFormats::TRIsurfaceFormat<Face>::read
     this->storedPoints().transfer(reader.points());
 
     // retrieve the original zone information
-    List<label> sizes(move(reader.sizes()));
-    List<label> zoneIds(move(reader.zoneIds()));
+    List<label> sizes(std::move(reader.sizes()));
+    List<label> zoneIds(std::move(reader.zoneIds()));
 
     // generate the (sorted) faces
     List<Face> faceLst(zoneIds.size());

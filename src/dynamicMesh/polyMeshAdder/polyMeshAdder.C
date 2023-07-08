@@ -1433,10 +1433,10 @@ Foam::autoPtr<Foam::mapAddedPolyMesh> Foam::polyMeshAdder::add
     mesh0.resetMotion();    // delete any oldPoints.
     mesh0.resetPrimitives
     (
-        move(allPoints),
-        move(allFaces),
-        move(allOwner),
-        move(allNeighbour),
+        std::move(allPoints),
+        std::move(allFaces),
+        std::move(allOwner),
+        std::move(allNeighbour),
         patchSizes,     // size
         patchStarts,    // patchstarts
         validBoundary   // boundary valid?

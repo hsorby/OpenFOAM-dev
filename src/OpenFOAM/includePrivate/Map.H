@@ -108,7 +108,7 @@ public:
 
         void operator=(Map<T>&& map)
         {
-            HashTable<T, label, Hash<label>>::operator=(move(map));
+            HashTable<T, label, Hash<label>>::operator=(std::move(map));
         }
 };
 

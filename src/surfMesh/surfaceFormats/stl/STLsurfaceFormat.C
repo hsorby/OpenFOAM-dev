@@ -135,9 +135,9 @@ bool Foam::fileFormats::STLsurfaceFormat<Face>::read
     this->storedPoints().transfer(reader.points());
 
     // retrieve the original zone information
-    List<word>  names(move(reader.names()));
-    List<label> sizes(move(reader.sizes()));
-    List<label> zoneIds(move(reader.zoneIds()));
+    List<word>  names(std::move(reader.names()));
+    List<label> sizes(std::move(reader.sizes()));
+    List<label> zoneIds(std::move(reader.zoneIds()));
 
     // generate the (sorted) faces
     List<Face> faceLst(zoneIds.size());

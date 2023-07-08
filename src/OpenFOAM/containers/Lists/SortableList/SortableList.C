@@ -44,7 +44,7 @@ Foam::SortableList<T>::SortableList(const UList<T>& values)
 template<class T>
 Foam::SortableList<T>::SortableList(List<T>&& values)
 :
-    List<T>(move(values))
+    List<T>(std::move(values))
 {
     sort();
 }

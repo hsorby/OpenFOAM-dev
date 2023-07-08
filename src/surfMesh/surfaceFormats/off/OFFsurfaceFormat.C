@@ -135,7 +135,7 @@ bool Foam::fileFormats::OFFsurfaceFormat<Face>::read
     }
 
     // transfer to normal lists, no zone information
-    this->reset(move(pointLst), move(dynFaces), NullObjectMove<surfZoneList>());
+    this->reset(std::move(pointLst), std::move(dynFaces), NullObjectMove<surfZoneList>());
 
     return true;
 }

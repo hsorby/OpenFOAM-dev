@@ -769,9 +769,9 @@ void Foam::domainDecomposition::decompose()
                     completeMesh().facesInstance(),
                     runTimes_.procTimes()[proci]
                 ),
-                move(procPoints),
-                move(procFaces),
-                move(procCells)
+                std::move(procPoints),
+                std::move(procFaces),
+                std::move(procCells)
             )
         );
         fvMesh& procMesh = procMeshes_[proci];

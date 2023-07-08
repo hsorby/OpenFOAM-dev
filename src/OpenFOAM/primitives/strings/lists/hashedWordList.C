@@ -63,14 +63,14 @@ Foam::hashedWordList::hashedWordList(const hashedWordList& names)
 
 Foam::hashedWordList::hashedWordList(hashedWordList&& names)
 :
-    List<word>(move(names)),
-    indices_(move(names.indices_))
+    List<word>(std::move(names)),
+    indices_(std::move(names.indices_))
 {}
 
 
 Foam::hashedWordList::hashedWordList(List<word>&& names)
 :
-    List<word>(move(names))
+    List<word>(std::move(names))
 {
     rehash();
 }

@@ -1646,10 +1646,10 @@ Foam::autoPtr<Foam::fvMesh> Foam::fvMeshDistribute::receiveMesh
                 runTime,
                 IOobject::NO_READ
             ),
-            move(domainPoints),
-            move(domainFaces),
-            move(domainAllOwner),
-            move(domainAllNeighbour),
+            std::move(domainPoints),
+            std::move(domainFaces),
+            std::move(domainAllOwner),
+            std::move(domainAllNeighbour),
             false                   // no parallel comms
         )
     );
@@ -1802,8 +1802,8 @@ Foam::autoPtr<Foam::polyDistributionMap> Foam::fvMeshDistribute::distribute
                 nOldPoints,
                 nOldFaces,
                 nOldCells,
-                move(oldPatchStarts),
-                move(oldPatchNMeshPoints),
+                std::move(oldPatchStarts),
+                std::move(oldPatchNMeshPoints),
 
                 labelListList(1, identityMap(mesh_.nPoints())),
                 labelListList(1, identityMap(mesh_.nFaces())),
@@ -3041,18 +3041,18 @@ Foam::autoPtr<Foam::polyDistributionMap> Foam::fvMeshDistribute::distribute
             nOldPoints,
             nOldFaces,
             nOldCells,
-            move(oldPatchStarts),
-            move(oldPatchNMeshPoints),
+            std::move(oldPatchStarts),
+            std::move(oldPatchNMeshPoints),
 
-            move(subPointMap),
-            move(subFaceMap),
-            move(subCellMap),
-            move(subPatchMap),
+            std::move(subPointMap),
+            std::move(subFaceMap),
+            std::move(subCellMap),
+            std::move(subPatchMap),
 
-            move(constructPointMap),
-            move(constructFaceMap),
-            move(constructCellMap),
-            move(constructPatchMap),
+            std::move(constructPointMap),
+            std::move(constructFaceMap),
+            std::move(constructCellMap),
+            std::move(constructPatchMap),
 
             true,           // subFaceMap has flip
             true            // constructFaceMap has flip

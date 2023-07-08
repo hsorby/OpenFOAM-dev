@@ -179,7 +179,7 @@ bool Foam::fileFormats::VTKsurfaceFormat<Face>::read
             zoneSizes[dynZones[triI]]++;
         }
 
-        this->sortFacesAndStore(move(dynFaces), move(dynZones), sorted);
+        this->sortFacesAndStore(std::move(dynFaces), std::move(dynZones), sorted);
 
         // add zones, culling empty ones
         this->addZones(zoneSizes, zoneNames, true);
@@ -200,7 +200,7 @@ bool Foam::fileFormats::VTKsurfaceFormat<Face>::read
             zoneSizes[zones[facei]]++;
         }
 
-        this->sortFacesAndStore(move(dynFaces), move(zones), sorted);
+        this->sortFacesAndStore(std::move(dynFaces), std::move(zones), sorted);
 
         // add zones, culling empty ones
         this->addZones(zoneSizes, zoneNames, true);

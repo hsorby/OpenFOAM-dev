@@ -145,7 +145,7 @@ void Foam::HashSet<Key, Hash>::operator=(HashSet<Key, Hash>&& rhs)
             << abort(FatalError);
     }
 
-    HashTable<nil, Key, Hash>::operator=(move(rhs));
+    HashTable<nil, Key, Hash>::operator=(std::move(rhs));
 }
 
 

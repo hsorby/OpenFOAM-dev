@@ -78,6 +78,8 @@ Foam::autoPtr<Foam::block> Foam::block::New
 
     const word blockOrCellShapeType(is);
 
+Info << "here: " << IstreamConstructorTablePtr_ << nl;
+
     IstreamConstructorTable::iterator cstrIter =
         IstreamConstructorTablePtr_->find(blockOrCellShapeType);
 
